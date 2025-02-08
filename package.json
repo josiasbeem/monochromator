@@ -1,0 +1,33 @@
+{
+    "name": "monochromator",
+    "displayName": "Monochromator",
+    "description": "A simple monochrome theme",
+    "license": "MIT",
+    "version": "0.1.0",
+    "publisher": "beem",
+    "icon": "images/logo.png",
+    "engines": {
+        "vscode": "^1.97.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://codeberg.org/beem/monochromator"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Monochromator Light",
+                "uiTheme": "vs",
+                "path": "./themes/monochromator-light.json"
+            },
+            {
+                "label": "Monochromator Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochromator-dark.json"
+            }
+        ]
+    }
+}

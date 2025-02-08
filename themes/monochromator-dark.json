@@ -1,0 +1,135 @@
+{
+    "name": "Monochromator Dark",
+    "colors": {
+        "editor.background": "#000000",
+        "editor.foreground": "#ffffff",
+        "cursor.foreground": "#ffffff",
+        "titleBar.activeBackground": "#2d2d2d",
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveBackground": "#2d2d2d",
+        "titleBar.inactiveForeground": "#808080",
+        "titleBar.border": "#222222",
+        "statusBar.background": "#2d2d2d",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.border": "#222222",
+        "statusBar.noFolderBackground": "#2d2d2d",
+        "statusBarItem.hoverBackground": "#222222",
+        "statusBarItem.remoteBackground": "#2d2d2d",
+        "statusBarItem.remoteForeground": "#ffffff",
+        "list.activeSelectionBackground": "#222222",
+        "list.activeSelectionForeground": "#ffffff",
+        "list.inactiveSelectionBackground": "#222222",
+        "list.inactiveSelectionForeground": "#ffffff",
+        "list.hoverBackground": "#222222",
+        "list.hoverForeground": "#ffffff",
+        "activityBar.background": "#2d2d2d",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.inactiveForeground": "#808080",
+        "activityBar.border": "#222222",
+        "focusBorder": "#222222",
+        "editorLineNumber.foreground": "#808080",
+        "editorLineNumber.activeForeground": "#ffffff",
+        "sideBar.background": "#2d2d2d",
+        "sideBarSectionHeader.background": "#2d2d2d",
+        "sideBar.foreground": "#ffffff",
+        "sideBarSectionHeader.foreground": "#ffffff",
+        "sideBarTitle.foreground": "#ffffff",
+        "sideBarSectionHeader.border": "#222222",
+        "sideBar.border": "#222222"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#808080"
+            }
+        },
+        {
+            "name": "Operators",
+            "scope": [
+                "keyword.operator",
+                "punctuation"
+            ],
+            "settings": {
+                "fontStyle": "normal",
+                "foreground": "#808080"
+            }
+        },
+        {
+            "name": "Keywords",
+            "scope": [
+                "keyword",
+                "storage"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Types",
+            "scope": [
+                "storage.type",
+                "support.type"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Functions",
+            "scope": [
+                "entity.name.function",
+                "support.function"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "ffffff"
+            }
+        },
+        {
+            "name": "Classes",
+            "scope": [
+                "entity.name.type",
+                "entity.other.inherited-class",
+                "support.class"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Sections",
+            "scope": "entity.name.section",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Numbers, Characters",
+            "scope": [
+                "constant.numeric",
+                "constant.character",
+                "constant"
+            ],
+            "settings": {
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "#808080"
+            }
+        }
+    ]
+}

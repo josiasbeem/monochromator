@@ -1,11 +1,9 @@
 # Monochromator
 
-A simple **monochrome** theme for VS Code. It is designed so that it also looks **harmonious** with the **GNOME** desktop environment. Following **four variants** are included:
+A simple **monochrome** theme for VS Code. Too many **colors distract** you from **thinking clearly**. This theme has been designed to match the **GNOME** desktop environment. Following **two variants** are included:
 
 - `Monochromator Light`
 - `Monochromator Dark`
-- `Monochromator Light (High Contrast)`
-- `Monochromator Dark (High Contrast)`
 
 ## Installation
 

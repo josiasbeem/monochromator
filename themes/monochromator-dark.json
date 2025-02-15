@@ -4,38 +4,67 @@
         "activityBar.background": "#303030",
         "activityBar.border": "#444444",
         "activityBar.foreground": "#ffffff",
-        "activityBar.inactiveForeground": "#bfbfbf",
         "cursor.foreground": "#ffffff",
         "editor.background": "#1e1e1e",
         "editor.foreground": "#ffffff",
+        "editorGroupHeader.tabsBackground": "#303030",
+        "editorGutter.addedBackground": "#33d17a",
+        "editorGutter.deletedBackground": "#f66151",
+        "editorGutter.modifiedBackground": "#e9ad0c",
         "editorLineNumber.activeForeground": "#ffffff",
-        "editorLineNumber.foreground": "#bfbfbf",
+        "editorLineNumber.foreground": "#808080",
         "focusBorder": "#444444",
+        "gitDecoration.deletedResourceForeground": "#f66151",
+        "gitDecoration.modifiedResourceForeground": "#e9ad0c",
+        "gitDecoration.untrackedResourceForeground": "#33d17a",
         "list.activeSelectionBackground": "#444444",
         "list.activeSelectionForeground": "#ffffff",
+        "list.errorForeground": "#f66151",
         "list.hoverBackground": "#444444",
-        "list.hoverForeground": "#ffffff",
         "list.inactiveSelectionBackground": "#444444",
-        "list.inactiveSelectionForeground": "#ffffff",
+        "panel.border": "#444444",
+        "quickInput.background": "#303030",
+        "quickInputList.focusBackground": "#444444",
+        "quickInputList.focusForeground": "#ffffff",
         "sideBar.background": "#303030",
         "sideBar.border": "#444444",
-        "sideBar.foreground": "#ffffff",
         "sideBarSectionHeader.background": "#303030",
         "sideBarSectionHeader.border": "#444444",
-        "sideBarSectionHeader.foreground": "#ffffff",
-        "sideBarTitle.foreground": "#ffffff",
         "statusBar.background": "#303030",
         "statusBar.border": "#444444",
+        "statusBar.debuggingBackground": "#303030",
         "statusBar.foreground": "#ffffff",
+        "statusBar.noFolderBackground": "#303030",
         "statusBarItem.hoverBackground": "#444444",
         "statusBarItem.remoteBackground": "#303030",
         "statusBarItem.remoteForeground": "#ffffff",
-        "statusBar.noFolderBackground": "#303030",
+        "tab.border": "#444444",
+        "tab.hoverBackground": "#444444",
+        "tab.hoverBorder": "#444444",
+        "terminal.ansiBlack": "#1e1e1e",
+        "terminal.ansiBlue": "#12488b",
+        "terminal.ansiBrightBlack": "#5d5d5d",
+        "terminal.ansiBrightBlue": "#2a7bde",
+        "terminal.ansiBrightCyan": "#33c7de",
+        "terminal.ansiBrightGreen": "#33d17a",
+        "terminal.ansiBrightMagenta": "#c061cb",
+        "terminal.ansiBrightRed": "#f66151",
+        "terminal.ansiBrightWhite": "#ffffff",
+        "terminal.ansiBrightYellow": "#e9ad0c",
+        "terminal.ansiCyan": "#2aa1b3",
+        "terminal.ansiGreen": "#26a269",
+        "terminal.ansiMagenta": "#a347ba",
+        "terminal.ansiRed": "#c01c28",
+        "terminal.ansiWhite": "#cfcfcf",
+        "terminal.ansiYellow": "#a2734c",
+        "terminal.background": "#1e1e1e",
+        "terminal.foreground": "#ffffff",
+        "terminal.selectionBackground": "#ffffff",
+        "terminal.selectionForeground": "#1e1e1e",
         "titleBar.activeBackground": "#303030",
         "titleBar.activeForeground": "#ffffff",
         "titleBar.border": "#444444",
-        "titleBar.inactiveBackground": "#303030",
-        "titleBar.inactiveForeground": "#bfbfbf"
+        "titleBar.inactiveBackground": "#303030"
     },
     "tokenColors": [
         {
@@ -46,7 +75,7 @@
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#bfbfbf"
+                "foreground": "#808080"
             }
         },
         {
@@ -57,7 +86,7 @@
             ],
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#bfbfbf"
+                "foreground": "#808080"
             }
         },
         {
@@ -114,21 +143,31 @@
             }
         },
         {
-            "name": "Numbers, Characters",
+            "name": "Constants",
             "scope": [
-                "constant.numeric",
-                "constant.character",
                 "constant"
             ],
             "settings": {
-                "foreground": "#ffffff"
+                "fontStyle": "bold",
+                "foreground": "#33d17a"
+            }
+        },
+        {
+            "name": "Numbers, Characters",
+            "scope": [
+                "constant.numeric",
+                "constant.character"
+            ],
+            "settings": {
+                "fontStyle": "normal",
+                "foreground": "#33d17a"
             }
         },
         {
             "name": "Strings",
             "scope": "string",
             "settings": {
-                "foreground": "#bfbfbf"
+                "foreground": "#33d17a"
             }
         }
     ]

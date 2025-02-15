@@ -2,40 +2,69 @@
     "name": "Monochromator Light",
     "colors": {
         "activityBar.background": "#ebebeb",
-        "activityBar.border": "#dadada",
+        "activityBar.border": "#d9d9d9",
         "activityBar.foreground": "#000000",
-        "activityBar.inactiveForeground": "#808080",
         "cursor.foreground": "#000000",
         "editor.background": "#ffffff",
         "editor.foreground": "#000000",
+        "editorGroupHeader.tabsBackground": "#ebebeb",
+        "editorGutter.addedBackground": "#26a269",
+        "editorGutter.deletedBackground": "#c01c28",
+        "editorGutter.modifiedBackground": "#a2734c",
         "editorLineNumber.activeForeground": "#000000",
         "editorLineNumber.foreground": "#808080",
-        "focusBorder": "#dadada",
+        "focusBorder": "#d9d9d9",
+        "gitDecoration.deletedResourceForeground": "#c01c28",
+        "gitDecoration.modifiedResourceForeground": "#a2734c",
+        "gitDecoration.untrackedResourceForeground": "#26a269",
         "list.activeSelectionBackground": "#d9d9d9",
         "list.activeSelectionForeground": "#000000",
+        "list.errorForeground": "#c01c28",
         "list.hoverBackground": "#d9d9d9",
-        "list.hoverForeground": "#000000",
         "list.inactiveSelectionBackground": "#d9d9d9",
-        "list.inactiveSelectionForeground": "#000000",
+        "panel.border": "#d9d9d9",
+        "quickInput.background": "#ebebeb",
+        "quickInputList.focusBackground": "#d9d9d9",
+        "quickInputList.focusForeground": "#000000",
         "sideBar.background": "#ebebeb",
-        "sideBar.border": "#dadada",
-        "sideBar.foreground": "#000000",
+        "sideBar.border": "#d9d9d9",
         "sideBarSectionHeader.background": "#ebebeb",
-        "sideBarSectionHeader.border": "#dadada",
-        "sideBarSectionHeader.foreground": "#000000",
-        "sideBarTitle.foreground": "#000000",
+        "sideBarSectionHeader.border": "#d9d9d9",
         "statusBar.background": "#ebebeb",
-        "statusBar.border": "#dadada",
+        "statusBar.border": "#d9d9d9",
+        "statusBar.debuggingBackground": "#ebebeb",
         "statusBar.foreground": "#000000",
+        "statusBar.noFolderBackground": "#ebebeb",
         "statusBarItem.hoverBackground": "#d9d9d9",
         "statusBarItem.remoteBackground": "#ebebeb",
         "statusBarItem.remoteForeground": "#000000",
-        "statusBar.noFolderBackground": "#ebebeb",
+        "tab.border": "#d9d9d9",
+        "tab.hoverBackground": "#d9d9d9",
+        "tab.hoverBorder": "#d9d9d9",
+        "terminal.ansiBlack": "#1e1e1e",
+        "terminal.ansiBlue": "#12488b",
+        "terminal.ansiBrightBlack": "#5d5d5d",
+        "terminal.ansiBrightBlue": "#2a7bde",
+        "terminal.ansiBrightCyan": "#33c7de",
+        "terminal.ansiBrightGreen": "#33d17a",
+        "terminal.ansiBrightMagenta": "#c061cb",
+        "terminal.ansiBrightRed": "#f66151",
+        "terminal.ansiBrightWhite": "#ffffff",
+        "terminal.ansiBrightYellow": "#e9ad0c",
+        "terminal.ansiCyan": "#2aa1b3",
+        "terminal.ansiGreen": "#26a269",
+        "terminal.ansiMagenta": "#a347ba",
+        "terminal.ansiRed": "#c01c28",
+        "terminal.ansiWhite": "#cfcfcf",
+        "terminal.ansiYellow": "#a2734c",
+        "terminal.background": "#ffffff",
+        "terminal.foreground": "#000000",
+        "terminal.selectionBackground": "#000000",
+        "terminal.selectionForeground": "#ffffff",
         "titleBar.activeBackground": "#ebebeb",
         "titleBar.activeForeground": "#000000",
-        "titleBar.border": "#dadada",
-        "titleBar.inactiveBackground": "#ebebeb",
-        "titleBar.inactiveForeground": "#808080"
+        "titleBar.border": "#d9d9d9",
+        "titleBar.inactiveBackground": "#ebebeb"
     },
     "tokenColors": [
         {
@@ -114,21 +143,31 @@
             }
         },
         {
-            "name": "Numbers, Characters",
+            "name": "Constants",
             "scope": [
-                "constant.numeric",
-                "constant.character",
                 "constant"
             ],
             "settings": {
-                "foreground": "#000000"
+                "fontStyle": "bold",
+                "foreground": "#b50b68"
+            }
+        },
+        {
+            "name": "Numbers, Characters",
+            "scope": [
+                "constant.numeric",
+                "constant.character"
+            ],
+            "settings": {
+                "fontStyle": "normal",
+                "foreground": "#b50b68"
             }
         },
         {
             "name": "Strings",
             "scope": "string",
             "settings": {
-                "foreground": "#808080"
+                "foreground": "#b50b68"
             }
         }
     ]

@@ -10,12 +10,12 @@
         "editorGroupHeader.tabsBackground": "#ebebeb",
         "editorGutter.addedBackground": "#26a269",
         "editorGutter.deletedBackground": "#c01c28",
-        "editorGutter.modifiedBackground": "#a2734c",
+        "editorGutter.modifiedBackground": "#b5835a",
         "editorLineNumber.activeForeground": "#000000",
-        "editorLineNumber.foreground": "#808080",
+        "editorLineNumber.foreground": "#77767b",
         "focusBorder": "#d9d9d9",
         "gitDecoration.deletedResourceForeground": "#c01c28",
-        "gitDecoration.modifiedResourceForeground": "#a2734c",
+        "gitDecoration.modifiedResourceForeground": "#b5835a",
         "gitDecoration.untrackedResourceForeground": "#26a269",
         "list.activeSelectionBackground": "#d9d9d9",
         "list.activeSelectionForeground": "#000000",
@@ -75,7 +75,7 @@
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#808080"
+                "foreground": "#77767b"
             }
         },
         {
@@ -86,7 +86,7 @@
             ],
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#808080"
+                "foreground": "#77767b"
             }
         },
         {
@@ -149,7 +149,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#b50b68"
+                "foreground": "#a347ba"
             }
         },
         {
@@ -160,14 +160,14 @@
             ],
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#b50b68"
+                "foreground": "#a347ba"
             }
         },
         {
             "name": "Strings",
             "scope": "string",
             "settings": {
-                "foreground": "#b50b68"
+                "foreground": "#a347ba"
             }
         }
     ]

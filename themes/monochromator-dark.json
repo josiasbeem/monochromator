@@ -8,15 +8,15 @@
         "editor.background": "#1e1e1e",
         "editor.foreground": "#ffffff",
         "editorGroupHeader.tabsBackground": "#303030",
-        "editorGutter.addedBackground": "#33d17a",
+        "editorGutter.addedBackground": "#57e389",
         "editorGutter.deletedBackground": "#f66151",
-        "editorGutter.modifiedBackground": "#e9ad0c",
+        "editorGutter.modifiedBackground": "#cdab8f",
         "editorLineNumber.activeForeground": "#ffffff",
-        "editorLineNumber.foreground": "#808080",
+        "editorLineNumber.foreground": "#9a9996",
         "focusBorder": "#444444",
         "gitDecoration.deletedResourceForeground": "#f66151",
-        "gitDecoration.modifiedResourceForeground": "#e9ad0c",
-        "gitDecoration.untrackedResourceForeground": "#33d17a",
+        "gitDecoration.modifiedResourceForeground": "#cdab8f",
+        "gitDecoration.untrackedResourceForeground": "#57e389",
         "list.activeSelectionBackground": "#444444",
         "list.activeSelectionForeground": "#ffffff",
         "list.errorForeground": "#f66151",
@@ -75,7 +75,7 @@
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#808080"
+                "foreground": "#9a9996"
             }
         },
         {
@@ -86,7 +86,7 @@
             ],
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#808080"
+                "foreground": "#9a9996"
             }
         },
         {

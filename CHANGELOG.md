@@ -2,7 +2,7 @@
 
 ## [0.8.1] - 2025-03-02
 
-## Fixed
+### Fixed
 
 - Screenshots in README.md by changing the git repository
 
@@ -21,7 +21,7 @@
 - Improve readability by changing the colors of URLs to blue
 - `textBlockQuote` for better readability (in Markdown Preview)
 
-## Fixed
+### Fixed
 
 - Color of `focusBorder` in the dark theme
 

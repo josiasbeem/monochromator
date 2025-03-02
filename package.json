@@ -3,7 +3,7 @@
     "displayName": "Monochromator",
     "description": "A simple monochrome theme",
     "license": "MIT",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "publisher": "beem",
     "icon": "images/logo.png",
     "engines": {
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://codeberg.org/beem/monochromator"
+        "url": "https://github.com/josiasbeem/monochromator"
     },
     "categories": [
         "Themes"

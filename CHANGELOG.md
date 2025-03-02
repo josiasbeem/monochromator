@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.1] - 2025-03-02
+
+## Fixed
+
+- Screenshots in README.md by changing the git repository
+
 ## [0.8.0] - 2025-03-02
 
 ### Added

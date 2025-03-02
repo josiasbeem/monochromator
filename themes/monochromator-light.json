@@ -70,7 +70,7 @@
         "notificationsWarningIcon.foreground": "#3b3b3b",
         "panel.border": "#ffffff",
         "pickerGroup.foreground": "#616161",
-        "progressBar.background": "#000000",
+        "progressBar.background": "#3b3b3b",
         "quickInput.background": "#ebebeb",
         "quickInputList.focusBackground": "#ffffff",
         "quickInputList.focusForeground": "#000000",
@@ -114,16 +114,17 @@
         "terminal.foreground": "#000000",
         "terminal.selectionBackground": "#000000",
         "terminal.selectionForeground": "#ffffff",
-        "textBlockQuote.background": "#ebebeb",
-        "textBlockQuote.border": "#000000",
+        "textBlockQuote.background": "#ffffff",
+        "textBlockQuote.border": "#3b3b3b",
         "textCodeBlock.background": "#ebebeb",
-        "textLink.activeForeground": "#000000",
-        "textLink.foreground": "#000000",
+        "textLink.activeForeground": "#3584e4",
+        "textLink.foreground": "#3584e4",
         "textPreformat.background": "#ebebeb",
         "textPreformat.foreground": "#000000",
         "titleBar.activeBackground": "#ebebeb",
         "titleBar.border": "#ffffff",
-        "titleBar.inactiveBackground": "#ebebeb"
+        "titleBar.inactiveBackground": "#ebebeb",
+        "welcomePage.progress.foreground": "#3b3b3b"
     },
     "tokenColors": [
         {
@@ -227,6 +228,39 @@
             "scope": "string",
             "settings": {
                 "foreground": "#3584e4"
+            }
+        },
+        {
+            "scope": "markup.bold",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#000000"
+            }
+        },
+        {
+            "scope": "markup.italic",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#000000"
+            }
+        },
+        {
+            "scope": "markup.inline.raw",
+            "settings": {
+                "foreground": "#3584e4"
+            }
+        },
+        {
+            "scope": "markup.quote",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#77767b"
+            }
+        },
+        {
+            "scope": "markup.underline",
+            "settings": {
+                "fontStyle": "underline"
             }
         }
     ]

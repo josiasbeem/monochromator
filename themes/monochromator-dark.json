@@ -47,7 +47,7 @@
         "editorSuggestWidget.selectionBackground": "#1e1e1e",
         "editorWarning.foreground": "#ffa348",
         "extensionButton.background": "#303030",
-        "focusBorder": "#161616",
+        "focusBorder": "#1e1e1e",
         "gitDecoration.deletedResourceForeground": "#ed333b",
         "gitDecoration.modifiedResourceForeground": "#ffa348",
         "gitDecoration.renamedResourceForeground": "#33d17a",
@@ -70,7 +70,7 @@
         "notificationsWarningIcon.foreground": "#cccccc",
         "panel.border": "#1e1e1e",
         "pickerGroup.foreground": "#cccccc",
-        "progressBar.background": "#ffffff",
+        "progressBar.background": "#cccccc",
         "quickInput.background": "#303030",
         "quickInputList.focusBackground": "#1e1e1e",
         "quickInputList.focusForeground": "#ffffff",
@@ -114,16 +114,17 @@
         "terminal.foreground": "#ffffff",
         "terminal.selectionBackground": "#ffffff",
         "terminal.selectionForeground": "#1e1e1e",
-        "textBlockQuote.background": "#303030",
-        "textBlockQuote.border": "#ffffff",
+        "textBlockQuote.background": "#1e1e1e",
+        "textBlockQuote.border": "#cccccc",
         "textCodeBlock.background": "#303030",
-        "textLink.activeForeground": "#ffffff",
-        "textLink.foreground": "#ffffff",
+        "textLink.activeForeground": "#62a0ea",
+        "textLink.foreground": "#62a0ea",
         "textPreformat.background": "#303030",
         "textPreformat.foreground": "#ffffff",
         "titleBar.activeBackground": "#303030",
         "titleBar.border": "#1e1e1e",
-        "titleBar.inactiveBackground": "#303030"
+        "titleBar.inactiveBackground": "#303030",
+        "welcomePage.progress.foreground": "#cccccc"
     },
     "tokenColors": [
         {
@@ -227,6 +228,39 @@
             "scope": "string",
             "settings": {
                 "foreground": "#62a0ea"
+            }
+        },
+        {
+            "scope": "markup.bold",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "scope": "markup.italic",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "scope": "markup.inline.raw",
+            "settings": {
+                "foreground": "#62a0ea"
+            }
+        },
+        {
+            "scope": "markup.quote",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#9a9996"
+            }
+        },
+        {
+            "scope": "markup.underline",
+            "settings": {
+                "fontStyle": "underline"
             }
         }
     ]

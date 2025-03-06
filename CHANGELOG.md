@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.2] - 2025-03-06
+
+### Fixed
+
+- Info color to match theme
+
 ## [0.8.1] - 2025-03-02
 
 ### Fixed

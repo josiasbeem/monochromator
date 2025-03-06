@@ -3,7 +3,7 @@
     "displayName": "Monochromator",
     "description": "A simple monochrome theme",
     "license": "MIT",
-    "version": "0.8.1",
+    "version": "0.8.2",
     "publisher": "beem",
     "icon": "images/logo.png",
     "engines": {

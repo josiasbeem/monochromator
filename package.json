@@ -1,22 +1,26 @@
 {
     "name": "monochromator",
     "displayName": "Monochromator",
-    "description": "A simple monochrome theme",
-    "license": "MIT",
     "version": "0.8.2",
     "publisher": "beem",
-    "icon": "images/logo.png",
-    "engines": {
-        "vscode": "^1.97.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/josiasbeem/monochromator"
-    },
+    "description": "A simple monochrome theme",
     "categories": [
         "Themes"
     ],
-    "homepage": "https://codeberg.org/beem/monochromator",
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.97.0"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://codeberg.org/beem/monochromator.git"
+    },
+    "bugs": {
+        "url": "https://codeberg.org/beem/monochromator/issues",
+        "email": "mail@beem.software"
+    },
+    "homepage": "https://codeberg.org/beem/monochromator/src/branch/master/README.md",
     "contributes": {
         "themes": [
             {
@@ -30,5 +34,8 @@
                 "path": "./themes/monochromator-light.json"
             }
         ]
+    },
+    "vsce": {
+        "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
     }
 }

@@ -52,6 +52,6 @@ code --install-extension monochromator-*.vsix
 
 ## License
 
-© 2025 Josias Beem
+Copyright © 2025 Josias Beem
 
 This project is licensed under the **MIT License** - see the `LICENSE` file for details.

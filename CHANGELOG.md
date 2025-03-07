@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.8.3] - 2025-03-07
+
+### Added
+
+- Download section to `README.md`
+- Bugs section to `package.json`
+
+### Changed
+
+- Name of `logo.png` to `icon.png`
+- Structure of screenshots (created a directory for screenshots)
+- Structure of `README.md`
+
+### Fixed
+
+- Formatting in `CHANGELOG.md`
+
 ## [0.8.2] - 2025-03-06
 
 ### Fixed
@@ -10,13 +27,13 @@
 
 ### Fixed
 
-- Screenshots in README.md by changing the git repository
+- Screenshots in `README.md` by changing the git repository
 
 ## [0.8.0] - 2025-03-02
 
 ### Added
 
-- CHANGELOG.md
+- `CHANGELOG.md`
 - More information, a "License" section and screenshots to `README.md`
 - Theme colors to support Markdown better (in the editor)
 
@@ -113,7 +130,7 @@
 
 ### Added
 
-- License
-- Readme
+- `LICENSE`
+- `README.md`
 - Monochromator Dark
 - Monochromator Light

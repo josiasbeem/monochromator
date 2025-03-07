@@ -4,28 +4,27 @@ A simple **monochrome** theme for **Visual Studio Code**.
 
 If you also get a **headache** from the **color fiasco** of mainstream color schemes, then this extension is **just for you**. Too many **colors distract** you from **thinking clearly**.
 
-That's why this theme uses only **black**, **white**, **gray** and the color **blue** (which highlights URLs, literals, etc.). The only exception to this rule are the colors for the Git decorations and errors / warnings, which also use red, orange and green. Additionally, if you are working under GNOME, this theme will fit very well into the overall desktop environment.
+That's why this theme uses only **black**, **white**, **gray** and the color **blue** (which highlights URLs, literals, etc.). The only exception to this rule are the colors for the Git decorations and errors / warnings, which also use red, orange and green.
+
+Additionally, if you are working under **GNOME**, this theme will fit very well into the overall desktop environment.
 
 Following **two variants** are included:
 
-### Monochromator Dark
+| Monochromator Dark                                           | Monochromator Light                                           |
+| :----------------------------------------------------------: | :-----------------------------------------------------------: |
+| ![Markdown Screenshot](images/screenshots/dark_markdown.png) | ![Markdown Screenshot](images/screenshots/light_markdown.png) |
+| ![Java Screenshot](images/screenshots/dark_java.png)         | ![Java Screenshot](images/screenshots/light_java.png)         |
 
-![Markdown Screenshot](images/screenshot_dark_markdown.png)
+## Download
 
-![Java Screenshot](images/screenshot_dark_java.png)
+The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator).
 
-### Monochromator Light
-
-![Markdown Screenshot](images/screenshot_light_markdown.png)
-
-![Java Screenshot](images/screenshot_light_java.png)
-
-## Installation
+## Building from source
 
 Make sure that the **npm package** `vsce` is installed. If not, do the following:
 
 ```sh
-npm install -g vsce
+npm install -g @vscode/vsce
 ```
 
 Clone the repository:
@@ -41,10 +40,12 @@ Build the `.vsix` file:
 vsce package
 ```
 
-> [!NOTE]
-> Depending on your Visual Studio Code installation, the command `code` could also be `code-insiders`, `codium` or `codium-insiders`.
+## Installation
 
-Install the extension:
+⚠️ **Note:** Depending on your [Code - OSS](https://github.com/microsoft/vscode) distribution, the command `code` could also be named ...
+- `codium` (VSCodium)
+- `code-insiders` (Visual Studio Code Insiders)
+- `codium-insiders` (VSCodium Insiders).
 
 ```sh
 code --install-extension monochromator-*.vsix

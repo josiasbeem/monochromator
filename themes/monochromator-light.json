@@ -182,7 +182,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "000000"
+                "foreground": "#000000"
             }
         },
         {

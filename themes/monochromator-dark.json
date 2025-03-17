@@ -126,7 +126,7 @@
         "textPreformat.foreground": "#ffffff",
         "titleBar.activeBackground": "#303030",
         "titleBar.border": "#1e1e1e",
-        "titleBar.inactiveBackground": "#303030",
+        "titleBar.inactiveBackground": "#2a2a2a",
         "welcomePage.progress.foreground": "#cccccc"
     },
     "tokenColors": [

@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.4] - 2025-03-17
+
+### Fixed
+
+- Color for inactive background
+    - `titleBar.inactiveBackground` from #ebebeb to #f0f0f0 in Monochromator Light
+    - `titleBar.inactiveBackground` from #303030 to #2a2a2a in Monochromator Dark
+
 ## [0.8.3] - 2025-03-07
 
 ### Added

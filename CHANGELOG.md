@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.10.0 - 2025-03-21
+
+- Add boldness solely for `constant.language`
+- Fix menu selection color in light theme
+- Increase overall contrast
+- Improve look of ...
+    - Activity bar
+    - Command palette
+    - Keybindings
+
 ## v0.9.0 - 2025-03-21
 
 - Integrate more components to fit the theme such as ...

@@ -1,6 +1,10 @@
 # Monochromator
 
-A simple **monochrome** theme for **Visual Studio Code**.
+<p align="center"><img src="./images/icon1024.png" height=250 width=250 /></p>
+
+<p align="center">A simple <b>monochrome</b> theme for <b>Visual Studio Code</b></p>
+
+---
 
 If you also get a **headache** from the **color fiasco** of mainstream color schemes, then this extension is **just for you**. Too many **colors distract** you from **thinking clearly**.
 
@@ -8,12 +12,9 @@ That's why this theme uses only **black**, **white**, **gray** and the color **b
 
 Additionally, if you are working under **GNOME**, this theme will fit very well into the overall desktop environment.
 
-Following **two variants** are included:
+Following **two variants** are included: `Monochromator Dark` and `Monochromator Light`
 
-| Monochromator Dark                                           | Monochromator Light                                           |
-| :----------------------------------------------------------: | :-----------------------------------------------------------: |
-| ![Markdown Screenshot](images/screenshots/dark_markdown.png) | ![Markdown Screenshot](images/screenshots/light_markdown.png) |
-| ![Java Screenshot](images/screenshots/dark_java.png)         | ![Java Screenshot](images/screenshots/light_java.png)         |
+![Screenshots](./images/screenshots.png)
 
 ## Download
 

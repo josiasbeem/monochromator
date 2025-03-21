@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.10.1 - 2025-03-21
+
+- Replace `icon.png` with `icon128.png` and `icon1024.png`
+- Merge screenshots
+- Beautify `README.md`
+- Fix changelog formatting
+
 ## v0.10.0 - 2025-03-21
 
 - Add boldness solely for `constant.language`
@@ -25,13 +32,13 @@
 - Set semantic highlighting to true
 - Fix missing hashtag for hex code
 - Remove boldness of constants
-- Revoke changes of v0.8.4
+- Revoke changes of `v0.8.4`
 
 ## v0.8.4 - 2025-03-17
 
 - Fix color for inactive background
-    - `titleBar.inactiveBackground` from #ebebeb to #f0f0f0 in Monochromator Light
-    - `titleBar.inactiveBackground` from #303030 to #2a2a2a in Monochromator Dark
+    - `titleBar.inactiveBackground` from `#ebebeb` to `#f0f0f0` in light theme
+    - `titleBar.inactiveBackground` from `#303030` to `#2a2a2a` in dark theme
 
 ## v0.8.3 - 2025-03-07
 

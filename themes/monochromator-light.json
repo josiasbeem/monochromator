@@ -1,7 +1,6 @@
 // Copyright (c) 2025 Josias Beem
 // SPDX-License-Identifier: MIT
 {
-    "name": "Monochromator Light",
     "colors": {
         "activityBar.background": "#ebebeb",
         "activityBar.border": "#ffffff",
@@ -10,8 +9,10 @@
         "activityBarBadge.foreground": "#ffffff",
         "badge.background": "#ffffff",
         "badge.foreground": "#3b3b3b",
+        "breadcrumb.foreground": "#77767b",
         "button.background": "#ffffff",
         "button.foreground": "#3b3b3b",
+        "checkbox.background": "#ebebeb",
         "editor.background": "#ffffff",
         "editor.foreground": "#000000",
         "editorBracketHighlight.foreground1": "#77767b",
@@ -31,6 +32,7 @@
         "editorGutter.deletedBackground": "#e01b24",
         "editorGutter.modifiedBackground": "#e66100",
         "editorIndentGuide.activeBackground": "#77767b",
+        "editorIndentGuide.background": "#77767b50",
         "editorInfo.foreground": "#3584e4",
         "editorInlayHint.background": "#ebebeb",
         "editorInlayHint.foreground": "#77767b",
@@ -43,14 +45,18 @@
         "editorOverviewRuler.errorForeground": "#e01b24",
         "editorOverviewRuler.infoForeground": "#3584e4",
         "editorOverviewRuler.warningForeground": "#e66100",
+        "editorStickyScroll.shadow": "#77767b",
+        "editorStickyScrollHover.background": "#ebebeb",
         "editorSuggestWidget.background": "#ebebeb",
         "editorSuggestWidget.focusHighlightForeground": "#000000",
         "editorSuggestWidget.highlightForeground": "#000000",
         "editorSuggestWidget.selectionBackground": "#ffffff",
         "editorWarning.foreground": "#e66100",
+        "editorWidget.background": "#ebebeb",
         "extensionButton.background": "#ebebeb",
         "focusBorder": "#ffffff",
         "gitDecoration.deletedResourceForeground": "#e01b24",
+        "gitDecoration.ignoredResourceForeground": "#3b3b3b80",
         "gitDecoration.modifiedResourceForeground": "#e66100",
         "gitDecoration.renamedResourceForeground": "#26a269",
         "gitDecoration.stageDeletedResourceForeground": "#e01b24",
@@ -65,13 +71,18 @@
         "list.hoverBackground": "#ffffff",
         "list.inactiveSelectionBackground": "#ffffff",
         "list.warningForeground": "#e66100",
+        "menu.background": "#ffffff",
+        "menu.border": "#ebebeb",
+        "menu.separatorBackground": "#ebebeb",
         "minimap.errorHighlight": "#e01b24",
         "minimap.infoHighlight": "#3584e4",
         "minimap.warningHighlight": "#e66100",
+        "notifications.background": "#ebebeb",
         "notificationsErrorIcon.foreground": "#3b3b3b",
         "notificationsInfoIcon.foreground": "#3b3b3b",
         "notificationsWarningIcon.foreground": "#3b3b3b",
         "panel.border": "#ffffff",
+        "pickerGroup.border": "#ffffff",
         "pickerGroup.foreground": "#616161",
         "progressBar.background": "#3b3b3b",
         "quickInput.background": "#ebebeb",
@@ -82,8 +93,10 @@
         "scmGraph.historyItemHoverLabelForeground": "#ffffff",
         "scmGraph.historyItemRefColor": "#3b3b3b",
         "scmGraph.historyItemRemoteRefColor": "#77767b",
+        "scrollbar.shadow": "#77767b",
         "sideBar.background": "#ebebeb",
         "sideBar.border": "#ffffff",
+        "sideBar.foreground": "#3b3b3b",
         "sideBarSectionHeader.background": "#ebebeb",
         "sideBarSectionHeader.border": "#ffffff",
         "statusBar.background": "#ebebeb",
@@ -97,6 +110,7 @@
         "tab.border": "#ffffff",
         "tab.hoverBackground": "#ffffff",
         "tab.inactiveBackground": "#ebebeb",
+        "tab.selectedForeground": "#ffffff",
         "terminal.ansiBlack": "#1e1e1e",
         "terminal.ansiBlue": "#12488b",
         "terminal.ansiBrightBlack": "#5d5d5d",
@@ -126,9 +140,12 @@
         "textPreformat.foreground": "#000000",
         "titleBar.activeBackground": "#ebebeb",
         "titleBar.border": "#ffffff",
-        "titleBar.inactiveBackground": "#f0f0f0",
+        "titleBar.inactiveBackground": "#ebebeb",
+        "tree.indentGuidesStroke": "#77767b50",
         "welcomePage.progress.foreground": "#3b3b3b"
     },
+    "name": "Monochromator Light",
+    "semanticHighlighting": true,
     "tokenColors": [
         {
             "name": "Comments",
@@ -209,17 +226,6 @@
             "name": "Constants",
             "scope": [
                 "constant"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#3584e4"
-            }
-        },
-        {
-            "name": "Numbers, Characters",
-            "scope": [
-                "constant.numeric",
-                "constant.character"
             ],
             "settings": {
                 "fontStyle": "normal",

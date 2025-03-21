@@ -1,66 +1,59 @@
 # Changelog
 
-## [0.8.4] - 2025-03-17
+## v0.9.0 - 2025-03-21
 
-### Fixed
+- Integrate more components to fit the theme such as ...
+    - Checkboxes
+    - Breadcrumbs
+    - Git decoration for ignored files
+    - Indent guides
+    - Sticky scroll shadow
+    - Menu (which is displayed when you right-click)
+    - Widgets
+    - Notifications
+- Simplify changelog format
+- Set semantic highlighting to true
+- Fix missing hashtag for hex code
+- Remove boldness of constants
+- Revoke changes of v0.8.4
 
-- Color for inactive background
+## v0.8.4 - 2025-03-17
+
+- Fix color for inactive background
     - `titleBar.inactiveBackground` from #ebebeb to #f0f0f0 in Monochromator Light
     - `titleBar.inactiveBackground` from #303030 to #2a2a2a in Monochromator Dark
 
-## [0.8.3] - 2025-03-07
+## v0.8.3 - 2025-03-07
 
-### Added
+- Add download section to `README.md`
+- Add bugs section to `package.json`
+- Change name of `logo.png` to `icon.png`
+- Change structure of screenshots (created a directory for screenshots)
+- Change structure of `README.md`
+- Fixed formatting in `CHANGELOG.md`
 
-- Download section to `README.md`
-- Bugs section to `package.json`
+## v0.8.2 - 2025-03-06
 
-### Changed
+- Change info color to match theme
 
-- Name of `logo.png` to `icon.png`
-- Structure of screenshots (created a directory for screenshots)
-- Structure of `README.md`
+## v0.8.1 - 2025-03-02
 
-### Fixed
+- Fix screenshots in `README.md` by changing the git repository
 
-- Formatting in `CHANGELOG.md`
+## v0.8.0 - 2025-03-02
 
-## [0.8.2] - 2025-03-06
-
-### Fixed
-
-- Info color to match theme
-
-## [0.8.1] - 2025-03-02
-
-### Fixed
-
-- Screenshots in `README.md` by changing the git repository
-
-## [0.8.0] - 2025-03-02
-
-### Added
-
-- `CHANGELOG.md`
-- More information, a "License" section and screenshots to `README.md`
-- Theme colors to support Markdown better (in the editor)
-
-### Changed
-
-- Font in logo from "Fira Code" to "IBM Plex Mono"
+- Add `CHANGELOG.md`
+- Add more information, a "License" section and screenshots to `README.md`
+- Add theme colors to support Markdown better (in the editor)
+- Change font in logo from "Fira Code" to "IBM Plex Mono"
 - Make color of progress bars less aggressive
 - Improve readability by changing the colors of URLs to blue
 - `textBlockQuote` for better readability (in Markdown Preview)
+- Fix color of `focusBorder` in the dark theme
 
-### Fixed
+## v0.7.0 - 2025-02-28
 
-- Color of `focusBorder` in the dark theme
-
-## [0.7.0] - 2025-02-28
-
-### Added
-
-- Theme colors to ...
+- Add theme colors to ...
     - Source control page
     - Code lens
     - Indent guide
@@ -70,75 +63,45 @@
     - Git decoration
     - Input background
     - Markdown preview
+- Change color of literals to blue for dark and light theme
 
-### Changed
+## v0.6.0 - 2025-02-27
 
-- Color of literals to blue for dark and light theme
+- Change color of borders
+- Change colors of errors and warnings in the minimap
 
-## [0.6.0] - 2025-02-27
+## v0.5.0 - 2025-02-24
 
-### Changed
-
-- Color of borders
-- Colors of errors and warnings in the minimap
-
-## [0.5.0] - 2025-02-24
-
-### Added
-
-- Theme colors to ...
+- Add theme colors to ...
     - Icons
     - Progress bar
     - Badges
     - URLs
+- Change git colors to make them more vibrant
+- Change some colors to fit in better with the theme
 
-### Changed
+## v0.4.0 - 2025-02-21
 
-- Git colors to make them more vibrant
-- Some colors to fit in better with the theme
-
-## [0.4.0] - 2025-02-21
-
-### Changed
-
-- Logo to fit in with the new theme changes
-- Git decorations to make them more readable
+- Change logo to fit in with the new theme changes
+- Change git decorations to make them more readable
 - Change color of light theme to magenta
 
-## [0.3.0] - 2025-02-15
-
-### Added
+## v0.3.0 - 2025-02-15
 
 - Add one color for literals
-- Terminal colors
+- Add terminal colors
+- Change logo to fit in with the new theme changes
+- Remove high contrast variants
 
-### Changed
+## v0.2.0 - 2025-02-08
 
-- Logo to fit in with the new theme changes
-
-### Removed
-
-- High contrast variants
-
-## [0.2.0] - 2025-02-08
-
-### Added
-
-- High contrast variants
-
-### Changed
-
+- Add high contrast variants
 - Improve theme colors
+- Fix font in logo
 
-### Fixed
+## v0.1.0 - 2025-02-08
 
-- Font in logo
-
-## [0.1.0] - 2025-02-08
-
-### Added
-
-- `LICENSE`
-- `README.md`
-- Monochromator Dark
-- Monochromator Light
+- Add `LICENSE`
+- Add `README.md`
+- Add Monochromator Dark
+- Add Monochromator Light

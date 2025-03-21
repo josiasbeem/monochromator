@@ -1,7 +1,6 @@
 // Copyright (c) 2025 Josias Beem
 // SPDX-License-Identifier: MIT
 {
-    "name": "Monochromator Dark",
     "colors": {
         "activityBar.background": "#303030",
         "activityBar.border": "#1e1e1e",
@@ -10,8 +9,10 @@
         "activityBarBadge.foreground": "#000000",
         "badge.background": "#1e1e1e",
         "badge.foreground": "#ffffff",
+        "breadcrumb.foreground": "#9a9996",
         "button.background": "#1e1e1e",
         "button.foreground": "#ffffff",
+        "checkbox.background": "#303030",
         "editor.background": "#1e1e1e",
         "editor.foreground": "#ffffff",
         "editorBracketHighlight.foreground1": "#9a9996",
@@ -31,6 +32,7 @@
         "editorGutter.deletedBackground": "#ed333b",
         "editorGutter.modifiedBackground": "#ffa348",
         "editorIndentGuide.activeBackground": "#9a9996",
+        "editorIndentGuide.background": "#9a999650",
         "editorInfo.foreground": "#62a0ea",
         "editorInlayHint.background": "#303030",
         "editorInlayHint.foreground": "#9a9996",
@@ -43,14 +45,18 @@
         "editorOverviewRuler.errorForeground": "#ed333b",
         "editorOverviewRuler.infoForeground": "#62a0ea",
         "editorOverviewRuler.warningForeground": "#ffa348",
+        "editorStickyScroll.shadow": "#000000",
+        "editorStickyScrollHover.background": "#303030",
         "editorSuggestWidget.background": "#303030",
         "editorSuggestWidget.focusHighlightForeground": "#ffffff",
         "editorSuggestWidget.highlightForeground": "#ffffff",
         "editorSuggestWidget.selectionBackground": "#1e1e1e",
         "editorWarning.foreground": "#ffa348",
+        "editorWidget.background": "#303030",
         "extensionButton.background": "#303030",
         "focusBorder": "#1e1e1e",
         "gitDecoration.deletedResourceForeground": "#ed333b",
+        "gitDecoration.ignoredResourceForeground": "#cccccc80",
         "gitDecoration.modifiedResourceForeground": "#ffa348",
         "gitDecoration.renamedResourceForeground": "#33d17a",
         "gitDecoration.stageDeletedResourceForeground": "#ed333b",
@@ -65,13 +71,18 @@
         "list.hoverBackground": "#1e1e1e",
         "list.inactiveSelectionBackground": "#1e1e1e",
         "list.warningForeground": "#ffa348",
+        "menu.background": "#303030",
+        "menu.border": "#1e1e1e",
+        "menu.separatorBackground": "#1e1e1e",
         "minimap.errorHighlight": "#ed333b",
         "minimap.infoHighlight": "#62a0ea",
         "minimap.warningHighlight": "#ffa348",
+        "notifications.background": "#303030",
         "notificationsErrorIcon.foreground": "#cccccc",
         "notificationsInfoIcon.foreground": "#cccccc",
         "notificationsWarningIcon.foreground": "#cccccc",
         "panel.border": "#1e1e1e",
+        "pickerGroup.border": "#1e1e1e",
         "pickerGroup.foreground": "#cccccc",
         "progressBar.background": "#cccccc",
         "quickInput.background": "#303030",
@@ -82,8 +93,10 @@
         "scmGraph.historyItemHoverLabelForeground": "#000000",
         "scmGraph.historyItemRefColor": "#cccccc",
         "scmGraph.historyItemRemoteRefColor": "#9a9996",
+        "scrollbar.shadow": "#000000",
         "sideBar.background": "#303030",
         "sideBar.border": "#1e1e1e",
+        "sideBar.foreground": "#cccccc",
         "sideBarSectionHeader.background": "#303030",
         "sideBarSectionHeader.border": "#1e1e1e",
         "statusBar.background": "#303030",
@@ -126,9 +139,12 @@
         "textPreformat.foreground": "#ffffff",
         "titleBar.activeBackground": "#303030",
         "titleBar.border": "#1e1e1e",
-        "titleBar.inactiveBackground": "#2a2a2a",
+        "titleBar.inactiveBackground": "#303030",
+        "tree.indentGuidesStroke": "#9a999650",
         "welcomePage.progress.foreground": "#cccccc"
     },
+    "name": "Monochromator Dark",
+    "semanticHighlighting": true,
     "tokenColors": [
         {
             "name": "Comments",
@@ -209,17 +225,6 @@
             "name": "Constants",
             "scope": [
                 "constant"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#62a0ea"
-            }
-        },
-        {
-            "name": "Numbers, Characters",
-            "scope": [
-                "constant.numeric",
-                "constant.character"
             ],
             "settings": {
                 "fontStyle": "normal",

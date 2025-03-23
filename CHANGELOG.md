@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.10.2 - 2025-03-23
+
+- Fix color of ...
+    - Scrollbar slider
+    - Panel title
+    - Fold background
+
 ## v0.10.1 - 2025-03-21
 
 - Replace `icon.png` with `icon128.png` and `icon1024.png`

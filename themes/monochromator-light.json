@@ -91,6 +91,8 @@
         "notificationsInfoIcon.foreground": "#241f31",
         "notificationsWarningIcon.foreground": "#241f31",
         "panel.border": "#ffffff",
+        "panelTitle.activeForeground": "#000000",
+        "panelTitle.inactiveForeground": "#5e5c64",
         "pickerGroup.border": "#ffffff",
         "pickerGroup.foreground": "#616161",
         "progressBar.background": "#241f31",

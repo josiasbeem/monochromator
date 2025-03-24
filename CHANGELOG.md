@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.3 - 2025-03-24
+
+- Fix dropdown background color
+- Decrease contrast of inlay hints
+
 ## v0.10.2 - 2025-03-23
 
 - Fix color of ...

@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.11.1 - 2025-04-10
+
+- Fix tabs color
+- Fix screenshots
+
 ## v0.11.0 - 2025-04-10
 
 - General UI overhaul

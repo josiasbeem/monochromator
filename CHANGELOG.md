@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.11.0 - 2025-04-10
+
+- General UI overhaul
+- Add color for `gitDecoration.addedResourceForeground`
+
 ## v0.10.3 - 2025-03-24
 
 - Fix dropdown background color

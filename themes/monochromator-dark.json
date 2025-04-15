@@ -42,9 +42,9 @@
         "editorInfo.foreground": "#3584e4",
         "editorInlayHint.background": "#30303080",
         "editorInlayHint.foreground": "#9a9996",
-        "editorLightBulb.foreground:": "#f6f5f4",
-        "editorLightBulbAi.foreground": "#f6f5f4",
-        "editorLightBulbAutoFix.foreground:": "#f6f5f4",
+        "editorLightBulb.foreground": "#9a9996",
+        "editorLightBulbAi.foreground": "#9a9996",
+        "editorLightBulbAutoFix.foreground": "#9a9996",
         "editorLineNumber.activeForeground": "#ffffff",
         "editorLineNumber.foreground": "#9a9996",
         "editorLink.activeForeground": "#ffffff",
@@ -148,20 +148,23 @@
         "terminal.foreground": "#ffffff",
         "terminal.selectionBackground": "#ffffff",
         "terminal.selectionForeground": "#1e1e1e",
-        "textBlockQuote.background": "#1e1e1e",
-        "textBlockQuote.border": "#f6f5f4",
+        "textBlockQuote.background": "#242424",
+        "textBlockQuote.border": "#3f3f3f",
         "textCodeBlock.background": "#303030",
+        "textCodeBlock.border": "#3f3f3f",
         "textLink.activeForeground": "#3584e4",
         "textLink.foreground": "#3584e4",
         "textPreformat.background": "#303030",
         "textPreformat.foreground": "#ffffff",
+        "textSeparator.foreground": "#3f3f3f",
         "titleBar.activeBackground": "#303030",
         "titleBar.activeForeground": "#f6f5f4",
         "titleBar.border": "#3f3f3f",
         "titleBar.inactiveBackground": "#303030",
         "titleBar.inactiveForeground": "#9a9996",
         "tree.indentGuidesStroke": "#9a999650",
-        "welcomePage.progress.foreground": "#f6f5f4"
+        "welcomePage.progress.foreground": "#f6f5f4",
+        "widget.border": "#3f3f3f"
     },
     "name": "Monochromator Dark",
     "tokenColors": [
@@ -270,7 +273,6 @@
             "name": "Literal constants",
             "scope": "constant",
             "settings": {
-                "fontStyle": "underline",
                 "foreground": "#ffffff"
             }
         },

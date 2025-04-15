@@ -17,7 +17,7 @@
   <a href="https://open-vsx.org/extension/beem/monochromator">
     <img src="https://img.shields.io/open-vsx/dt/beem/monochromator?label=Downloads&color=%233584e4" alt="Downloads" />
   </a>
-  <a href="./LICENSE">
+  <a href="https://codeberg.org/beem/monochromator/raw/branch/master/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-%233584e4" alt="License" />
   </a>
 </p>

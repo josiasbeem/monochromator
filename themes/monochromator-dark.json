@@ -164,7 +164,6 @@
         "welcomePage.progress.foreground": "#f6f5f4"
     },
     "name": "Monochromator Dark",
-    "semanticHighlighting": true,
     "tokenColors": [
         {
             "name": "Comments",
@@ -191,8 +190,7 @@
         {
             "name": "Keywords",
             "scope": [
-                "keyword",
-                "storage"
+                "keyword"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -200,13 +198,21 @@
             }
         },
         {
-            "name": "Types",
+            "name": "Storage types",
             "scope": [
-                "storage.type",
-                "support.type"
+                "storage.type"
             ],
             "settings": {
                 "fontStyle": "bold",
+                "foreground": "#ffffff"
+            }
+        },
+        {
+            "name": "Support types",
+            "scope": [
+                "support.type"
+            ],
+            "settings": {
                 "foreground": "#ffffff"
             }
         },
@@ -242,18 +248,30 @@
             }
         },
         {
-            "name": "Constants",
-            "scope": "constant",
+            "name": "Literals",
+            "scope": [
+                "constant.numeric",
+                "constant.character"
+            ],
             "settings": {
                 "fontStyle": "normal",
                 "foreground": "#3584e4"
             }
         },
         {
-            "name": "Important constants",
+            "name": "Booleans",
             "scope": "constant.language",
             "settings": {
-                "fontStyle": "bold"
+                "fontStyle": "bold",
+                "foreground": "#3584e4"
+            }
+        },
+        {
+            "name": "Literal constants",
+            "scope": "constant",
+            "settings": {
+                "fontStyle": "underline",
+                "foreground": "#ffffff"
             }
         },
         {

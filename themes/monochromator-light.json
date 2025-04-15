@@ -17,6 +17,8 @@
         "checkbox.background": "#ebebeb",
         "dropdown.background": "#ebebeb",
         "editor.background": "#ffffff",
+        "editor.findMatchBackground": "#3584e430",
+        "editor.findMatchHighlightBackground": "#3584e420",
         "editor.foldBackground": "#ebebeb80",
         "editor.foreground": "#000000",
         "editorBracketHighlight.foreground1": "#77767b",

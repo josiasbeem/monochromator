@@ -37,7 +37,7 @@
         "editorGutter.modifiedBackground": "#ffa348",
         "editorIndentGuide.activeBackground": "#9a9996",
         "editorIndentGuide.background": "#9a999650",
-        "editorInfo.foreground": "#62a0ea",
+        "editorInfo.foreground": "#3584e4",
         "editorInlayHint.background": "#30303080",
         "editorInlayHint.foreground": "#9a9996",
         "editorLightBulb.foreground:": "#f6f5f4",
@@ -47,7 +47,7 @@
         "editorLineNumber.foreground": "#9a9996",
         "editorLink.activeForeground": "#ffffff",
         "editorOverviewRuler.errorForeground": "#ed333b",
-        "editorOverviewRuler.infoForeground": "#62a0ea",
+        "editorOverviewRuler.infoForeground": "#3584e4",
         "editorOverviewRuler.warningForeground": "#ffa348",
         "editorStickyScrollHover.background": "#303030",
         "editorSuggestWidget.background": "#242424",
@@ -85,7 +85,7 @@
         "menu.selectionForeground": "#f6f5f4",
         "menu.separatorBackground": "#3f3f3f",
         "minimap.errorHighlight": "#ed333b",
-        "minimap.infoHighlight": "#62a0ea",
+        "minimap.infoHighlight": "#3584e4",
         "minimap.warningHighlight": "#ffa348",
         "notifications.background": "#242424",
         "notifications.foreground": "#f6f5f4",
@@ -149,8 +149,8 @@
         "textBlockQuote.background": "#1e1e1e",
         "textBlockQuote.border": "#f6f5f4",
         "textCodeBlock.background": "#303030",
-        "textLink.activeForeground": "#62a0ea",
-        "textLink.foreground": "#62a0ea",
+        "textLink.activeForeground": "#3584e4",
+        "textLink.foreground": "#3584e4",
         "textPreformat.background": "#303030",
         "textPreformat.foreground": "#ffffff",
         "titleBar.activeBackground": "#303030",
@@ -244,7 +244,7 @@
             "scope": "constant",
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#62a0ea"
+                "foreground": "#3584e4"
             }
         },
         {
@@ -258,7 +258,7 @@
             "name": "Strings",
             "scope": "string",
             "settings": {
-                "foreground": "#62a0ea"
+                "foreground": "#3584e4"
             }
         },
         {
@@ -278,7 +278,7 @@
         {
             "scope": "markup.inline.raw",
             "settings": {
-                "foreground": "#62a0ea"
+                "foreground": "#3584e4"
             }
         },
         {

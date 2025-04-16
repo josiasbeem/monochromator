@@ -1,14 +1,8 @@
 # Monochromator
 
 <p align="center">
-  <img src="./images/icon1024.png" height=250 width=250 />
+  <img src="./images/icon.png" height=250 width=250 />
 </p>
-
-<p align="center">
-  A simple <b>monochrome</b> theme for <b>Visual Studio Code</b>
-</p>
-
----
 
 <p align="center">
   <a href="https://open-vsx.org/extension/beem/monochromator">
@@ -21,6 +15,12 @@
     <img src="https://img.shields.io/badge/License-MIT-%233584e4" alt="License" />
   </a>
 </p>
+
+<p align="center">
+  A simple <b>monochrome</b> theme for <b>Visual Studio Code</b>
+</p>
+
+---
 
 If you also get a **headache** from the **color fiasco** of mainstream color schemes, then this extension is **just for you**. Too many **colors distract** you from **thinking clearly**.
 

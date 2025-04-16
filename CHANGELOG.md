@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.12.0 - 2025-04-16
+
+- Darken shade of blue in `Monochromator Dark`
+- Reduce use of bold emphasis
+- Integrate selections into the theme
+- Fix highlighting of constants (has been wrong in e.g. Rust)
+- Improve Markdown preview
+- Fix lightbulb color to finally display in the right shade of gray
+- Change icon design
+- Add badges to `README.md`
+- Remove redundant code
+
 ## v0.11.1 - 2025-04-10
 
 - Fix tabs color

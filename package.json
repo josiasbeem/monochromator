@@ -7,7 +7,7 @@
     "categories": [
         "Themes"
     ],
-    "icon": "images/icon128.png",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.97.0"
     },

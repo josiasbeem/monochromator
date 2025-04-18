@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.13.0 - 2025-04-18
+
+- Fix highlight color of selections in minimap
+- Change `scrollbarSlider.background` to match `editorGroupHeader.tabsBackground`
+- Change `textCodeBlock.background` to match `textBlockQuote.background`
+- Change icon design
+- Change colors to match https://gitlab.gnome.org/GNOME/libadwaita/-/merge_requests/1317
+    - `#1e1e1e` -> `#1d1d20`
+    - `#242424` -> `#222226`
+    - `#303030` -> `#2e2e32`
+    - `#3f3f3f` -> `#424246`
+    - `#dfdfdf` -> `#d9d9da`
+    - `#ebebeb` -> `#ebebed`
+    - `#f5f5f5` -> `#f2f2f4`
+
 ## v0.12.0 - 2025-04-16
 
 - Darken shade of blue in `Monochromator Dark`

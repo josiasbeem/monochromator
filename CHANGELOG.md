@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.13.1 - 2025-04-21
+
+- Correct selection highlighting
+- Fix inconsistencies
+- Remove redundant code
+
 ## v0.13.0 - 2025-04-18
 
 - Fix highlight color of selections in minimap

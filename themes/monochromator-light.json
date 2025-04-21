@@ -65,7 +65,7 @@
         "editorSuggestWidget.selectionBackground": "#d9d9da",
         "editorWarning.foreground": "#e66100",
         "editorWidget.background": "#ebebed",
-        "extensionButton.background": "#ebebed",
+        "extensionButton.background": "#d9d9da",
         "focusBorder": "#d9d9da",
         "gitDecoration.addedResourceForeground": "#26a269",
         "gitDecoration.deletedResourceForeground": "#e01b24",

@@ -182,6 +182,7 @@
             "name": "Comments",
             "scope": [
                 "comment",
+                "string.quoted.docstring",
                 "punctuation.definition.comment"
             ],
             "settings": {
@@ -201,39 +202,17 @@
             }
         },
         {
-            "name": "Keywords",
-            "scope": [
-                "keyword"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Storage types",
-            "scope": [
-                "storage.type"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Support types",
-            "scope": [
-                "support.type"
-            ],
-            "settings": {
-                "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Functions",
+            "name": "Functions, classes, keywords, types",
             "scope": [
                 "entity.name.function",
-                "support.function"
+                "entity.name.type",
+                "entity.other.inherited-class",
+                "keyword",
+                "storage.type",
+                "support.class",
+                "support.function",
+                "support.type",
+                "support.type.property-name.table.toml"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -241,14 +220,13 @@
             }
         },
         {
-            "name": "Classes",
+            "name": "JSON and YAML",
             "scope": [
-                "entity.name.type",
-                "entity.other.inherited-class",
-                "support.class"
+                "support.type.property-name",
+                "entity.name.tag.yaml"
             ],
             "settings": {
-                "fontStyle": "bold",
+                "fontStyle": "normal",
                 "foreground": "#ffffff"
             }
         },
@@ -280,7 +258,7 @@
             }
         },
         {
-            "name": "Literal constants",
+            "name": "Constants",
             "scope": "constant",
             "settings": {
                 "foreground": "#ffffff"

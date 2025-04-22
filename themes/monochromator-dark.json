@@ -220,10 +220,11 @@
             }
         },
         {
-            "name": "JSON and YAML",
+            "name": "JSON, YAML and LaTeX",
             "scope": [
                 "support.type.property-name",
-                "entity.name.tag.yaml"
+                "entity.name.tag.yaml",
+                "support.class.latex"
             ],
             "settings": {
                 "fontStyle": "normal",

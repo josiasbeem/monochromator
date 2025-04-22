@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.13.2 - 2025-04-22
+
+- Fix highlighting in Python, Typescript, LaTeX, YAML and TOML
+
 ## v0.13.1 - 2025-04-21
 
 - Correct selection highlighting

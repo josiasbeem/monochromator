@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.14.0 - 2025-05-04
+
+- Add the following themes:
+    - `Monochromator Dark Amber`
+    - `Monochromator Dark Emerald`
+    - `Monochromator Dark Ruby`
+    - `Monochromator Light Amber`
+    - `Monochromator Light Emerald`
+    - `Monochromator Light Ruby`
+- Highlight timestamps as literals
+- Reduce contrast of `editor.wordHighlightStrongBackground`
+
 ## v0.13.3 - 2025-05-04
 
 - Fix highlighting of preprocessor names and hexadecimal numbers

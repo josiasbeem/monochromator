@@ -26,7 +26,7 @@
         "editor.selectionBackground": "#424246",
         "editor.selectionHighlightBackground": "#424246",
         "editor.wordHighlightBackground": "#42424680",
-        "editor.wordHighlightStrongBackground": "#1a5fb480",
+        "editor.wordHighlightStrongBackground": "#3584e440",
         "editor.wordHighlightTextBackground": "#42424680",
         "editorBracketHighlight.foreground1": "#9a9996",
         "editorBracketHighlight.foreground2": "#9a9996",
@@ -246,7 +246,8 @@
                 "constant.numeric",
                 "constant.character",
                 "string",
-                "keyword.other.unit.hexadecimal"
+                "keyword.other.unit.hexadecimal",
+                "constant.other.time"
             ],
             "settings": {
                 "fontStyle": "normal",

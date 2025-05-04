@@ -1,0 +1,39 @@
+// Copyright (c) 2025 Josias Beem
+// SPDX-License-Identifier: MIT
+{
+    "colors": {
+        "editor.wordHighlightStrongBackground": "#e6610040"
+    },
+    "include": "./default.json",
+    "name": "Monochromator Light Amber",
+    "tokenColors": [
+        {
+            "name": "Literals",
+            "scope": [
+                "constant.numeric",
+                "constant.character",
+                "string",
+                "keyword.other.unit.hexadecimal",
+                "constant.other.time"
+            ],
+            "settings": {
+                "fontStyle": "normal",
+                "foreground": "#e66100"
+            }
+        },
+        {
+            "name": "Booleans",
+            "scope": "constant.language",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#e66100"
+            }
+        },
+        {
+            "scope": "markup.inline.raw",
+            "settings": {
+                "foreground": "#e66100"
+            }
+        }
+    ]
+}

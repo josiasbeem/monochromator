@@ -1,7 +1,7 @@
 {
     "name": "monochromator",
     "displayName": "Monochromator",
-    "version": "0.13.3",
+    "version": "0.14.0",
     "publisher": "beem",
     "description": "A simple monochrome theme",
     "categories": [
@@ -26,12 +26,42 @@
             {
                 "label": "Monochromator Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/monochromator-dark.json"
+                "path": "./themes/dark/default.json"
+            },
+            {
+                "label": "Monochromator Dark Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark/amber.json"
+            },
+            {
+                "label": "Monochromator Dark Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark/emerald.json"
+            },
+            {
+                "label": "Monochromator Dark Ruby",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark/ruby.json"
             },
             {
                 "label": "Monochromator Light",
                 "uiTheme": "vs",
-                "path": "./themes/monochromator-light.json"
+                "path": "./themes/light/default.json"
+            },
+            {
+                "label": "Monochromator Light Amber",
+                "uiTheme": "vs",
+                "path": "./themes/light/amber.json"
+            },
+            {
+                "label": "Monochromator Light Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/light/emerald.json"
+            },
+            {
+                "label": "Monochromator Light Ruby",
+                "uiTheme": "vs",
+                "path": "./themes/light/ruby.json"
             }
         ]
     },

@@ -220,11 +220,12 @@
             }
         },
         {
-            "name": "JSON, YAML and LaTeX",
+            "name": "Normal",
             "scope": [
                 "support.type.property-name",
                 "entity.name.tag.yaml",
-                "support.class.latex"
+                "support.class.latex",
+                "entity.name.function.preprocessor"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -243,7 +244,9 @@
             "name": "Literals",
             "scope": [
                 "constant.numeric",
-                "constant.character"
+                "constant.character",
+                "string",
+                "keyword.other.unit.hexadecimal"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -263,13 +266,6 @@
             "scope": "constant",
             "settings": {
                 "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Strings",
-            "scope": "string",
-            "settings": {
-                "foreground": "#3584e4"
             }
         },
         {

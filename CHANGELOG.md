@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.13.3 - 2025-05-04
+
+- Fix highlighting of preprocessor names and hexadecimal numbers
+
 ## v0.13.2 - 2025-04-22
 
 - Fix highlighting in Python, Typescript, LaTeX, YAML and TOML

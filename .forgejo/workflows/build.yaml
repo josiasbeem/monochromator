@@ -1,0 +1,30 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: codeberg-tiny-lazy
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
+      - name: Install vsce
+        run: npm install -g @vscode/vsce@latest
+
+      - name: Get version from package.json
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+
+      - name: Package Extension
+        run: vsce package
+
+      - name: Upload VSIX as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: "monochromator-${{ env.VERSION }}"
+          path: "*.vsix"

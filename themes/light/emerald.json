@@ -13,8 +13,9 @@
                 "constant.numeric",
                 "constant.character",
                 "string",
-                "keyword.other.unit.hexadecimal",
-                "constant.other.time"
+                "keyword.other.unit",
+                "constant.other.time",
+                "constant.other.character-class"
             ],
             "settings": {
                 "fontStyle": "normal",

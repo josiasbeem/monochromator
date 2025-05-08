@@ -191,10 +191,13 @@
             }
         },
         {
-            "name": "Operators",
+            "name": "Punctuation",
             "scope": [
                 "keyword.operator",
-                "punctuation"
+                "punctuation",
+                "keyword.control.ternary",
+                "storage.type.function.arrow",
+                "keyword.other.r"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -212,7 +215,8 @@
                 "support.class",
                 "support.function",
                 "support.type",
-                "support.type.property-name.table.toml"
+                "support.type.property-name.table.toml",
+                "keyword.operator.new"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -225,7 +229,11 @@
                 "support.type.property-name",
                 "entity.name.tag.yaml",
                 "support.class.latex",
-                "entity.name.function.preprocessor"
+                "entity.name.function.preprocessor",
+                "variable.other",
+                "variable.parameter.positional.shell",
+                "variable.language.this",
+                "support.type.vendored.property-name"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -246,8 +254,9 @@
                 "constant.numeric",
                 "constant.character",
                 "string",
-                "keyword.other.unit.hexadecimal",
-                "constant.other.time"
+                "keyword.other.unit",
+                "constant.other.time",
+                "constant.other.character-class"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -300,6 +309,12 @@
             "scope": "markup.underline",
             "settings": {
                 "fontStyle": "underline"
+            }
+        },
+        {
+            "scope": "markup.strikethrough",
+            "settings": {
+                "fontStyle": "strikethrough"
             }
         }
     ]

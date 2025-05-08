@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.14.1 - 2025-05-08
+
+- Fix unit highlighting (such as "px" in CSS)
+- Fix variable highlighting of shell scripts and JavaScript
+- Fix punctuation highlighting of some characters in Java and R
+- Fix regex highlighting
+
 ## v0.14.0 - 2025-05-04
 
 - Add the following themes:

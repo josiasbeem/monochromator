@@ -14,8 +14,7 @@
                 "constant.character",
                 "string",
                 "keyword.other.unit",
-                "constant.other.time",
-                "constant.other.character-class"
+                "constant.other"
             ],
             "settings": {
                 "fontStyle": "normal",

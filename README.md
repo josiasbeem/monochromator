@@ -16,13 +16,13 @@
 
 ---
 
-![Screenshots](./images/screenshots.gif)
-
 If you also get a **headache** from the **color fiasco** of mainstream color schemes, then this extension is **just for you**. Too many **colors distract** you from **thinking clearly**.
 
 Following **two variants** are included: `Monochromator Dark` and `Monochromator Light`, both of which have an additional **three versions** that change the **standard blue** to **orange** (`Amber`), **green** (`Emerald`) or **red** (`Ruby`).
 
 Additionally, if you are working under **GNOME**, this theme will fit very well into the overall desktop environment.
+
+![Screenshots](./images/screenshots.gif)
 
 ## Download
 

@@ -191,13 +191,16 @@
             }
         },
         {
-            "name": "Punctuation",
+            "name": "Gray",
             "scope": [
                 "keyword.operator",
                 "punctuation",
                 "keyword.control.ternary",
                 "storage.type.function.arrow",
-                "keyword.other.r"
+                "keyword.other.r",
+                "keyword.control.newline.tex",
+                "keyword.control.equation.newline.latex",
+                "keyword.control.equation.align.latex"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -205,7 +208,19 @@
             }
         },
         {
-            "name": "Functions, classes, keywords, types",
+            "name": "Important gray",
+            "scope": [
+                "storage.type.annotation",
+                "keyword.other.documentation",
+                "storage.type.class.doxygen.cpp"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#77767b"
+            }
+        },
+        {
+            "name": "Important white",
             "scope": [
                 "entity.name.function",
                 "entity.name.type",
@@ -216,7 +231,12 @@
                 "support.function",
                 "support.type",
                 "support.type.property-name.table.toml",
-                "keyword.operator.new"
+                "entity.name.section",
+                "constant.other.math.tex",
+                "constant.character.math.tex",
+                "constant.other.general.math.tex",
+                "entity.name.tag",
+                "entity.other.attribute-name.class.css"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -232,8 +252,11 @@
                 "entity.name.function.preprocessor",
                 "variable.other",
                 "variable.parameter.positional.shell",
-                "variable.language.this",
-                "support.type.vendored.property-name"
+                "support.type.vendored.property-name",
+                "storage.modifier.import",
+                "support.class.math.block.tex",
+                "support.class.math.block.environment.latex",
+                "constant.other.caps.rust"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -241,11 +264,18 @@
             }
         },
         {
-            "name": "Sections",
-            "scope": "entity.name.section",
+            "name": "Italic normal",
+            "scope": [
+                "storage.modifier",
+                "variable.language.this",
+                "storage.type.modifier.access.control",
+                "keyword.operator.new",
+                "keyword.control.new",
+                "keyword.operator.instanceof"
+            ],
             "settings": {
-                "fontStyle": "bold",
-                "foreground": "#000000"
+                "fontStyle": "italic",
+                "foreground": "#ffffff"
             }
         },
         {

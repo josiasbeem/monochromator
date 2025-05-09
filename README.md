@@ -24,6 +24,8 @@ Additionally, if you are working under **GNOME**, this theme will fit very well 
 
 ![Screenshots](./images/screenshots.gif)
 
+*(**Font:** Adwaita Mono)*
+
 ## Download
 
 The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator) or the [Actions](https://codeberg.org/beem/monochromator/actions) tab.

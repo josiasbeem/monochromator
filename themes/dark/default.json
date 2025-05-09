@@ -200,7 +200,10 @@
                 "keyword.other.r",
                 "keyword.control.newline.tex",
                 "keyword.control.equation.newline.latex",
-                "keyword.control.equation.align.latex"
+                "keyword.control.equation.align.latex",
+                "keyword.control.table.cell.latex",
+                "keyword.control.table.newline.latex",
+                "storage.modifier.array"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -212,7 +215,9 @@
             "scope": [
                 "storage.type.annotation",
                 "keyword.other.documentation",
-                "storage.type.class.doxygen.cpp"
+                "storage.type.class.doxygen.cpp",
+                "keyword.control.directive.include",
+                "keyword.control.directive.define"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -220,7 +225,7 @@
             }
         },
         {
-            "name": "Important white",
+            "name": "Important",
             "scope": [
                 "entity.name.function",
                 "entity.name.type",
@@ -256,25 +261,15 @@
                 "storage.modifier.import",
                 "support.class.math.block.tex",
                 "support.class.math.block.environment.latex",
-                "constant.other.caps.rust"
+                "constant.other.caps.rust",
+                "meta.interpolation.rust",
+                "constant.other.enum",
+                "constant.other.placeholder",
+                "string.quoted.other.lt-gt.include",
+                "storage.modifier.package"
             ],
             "settings": {
                 "fontStyle": "normal",
-                "foreground": "#ffffff"
-            }
-        },
-        {
-            "name": "Italic normal",
-            "scope": [
-                "storage.modifier",
-                "variable.language.this",
-                "storage.type.modifier.access.control",
-                "keyword.operator.new",
-                "keyword.control.new",
-                "keyword.operator.instanceof"
-            ],
-            "settings": {
-                "fontStyle": "italic",
                 "foreground": "#ffffff"
             }
         },
@@ -293,8 +288,11 @@
             }
         },
         {
-            "name": "Booleans",
-            "scope": "constant.language",
+            "name": "Bold literals",
+            "scope": [
+                "constant.language",
+                "constant.character.escape"
+            ],
             "settings": {
                 "fontStyle": "bold",
                 "foreground": "#3584e4"

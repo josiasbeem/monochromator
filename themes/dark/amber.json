@@ -22,8 +22,11 @@
             }
         },
         {
-            "name": "Booleans",
-            "scope": "constant.language",
+            "name": "Bold literals",
+            "scope": [
+                "constant.language",
+                "constant.character.escape"
+            ],
             "settings": {
                 "fontStyle": "bold",
                 "foreground": "#ffa348"

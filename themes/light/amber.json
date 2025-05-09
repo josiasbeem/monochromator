@@ -25,7 +25,8 @@
             "name": "Bold literals",
             "scope": [
                 "constant.language",
-                "constant.character.escape"
+                "constant.character.escape",
+                "constant.other.placeholder"
             ],
             "settings": {
                 "fontStyle": "bold",

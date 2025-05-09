@@ -203,7 +203,8 @@
                 "keyword.control.equation.align.latex",
                 "keyword.control.table.cell.latex",
                 "keyword.control.table.newline.latex",
-                "storage.modifier.array"
+                "storage.modifier.array",
+                "keyword.control.flow.block-scalar.literal.yaml"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -217,7 +218,10 @@
                 "keyword.other.documentation",
                 "storage.type.class.doxygen.cpp",
                 "keyword.control.directive.include",
-                "keyword.control.directive.define"
+                "keyword.control.directive.define",
+                "entity.name.function.decorator",
+                "meta.shebang.shell",
+                "keyword.control.at-rule.media.css"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -241,7 +245,9 @@
                 "constant.character.math.tex",
                 "constant.other.general.math.tex",
                 "entity.name.tag",
-                "entity.other.attribute-name.class.css"
+                "entity.other.attribute-name.class.css",
+                "keyword.operator.new",
+                "punctuation.definition.string.heredoc.delimiter.shell"
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -261,12 +267,14 @@
                 "storage.modifier.import",
                 "support.class.math.block.tex",
                 "support.class.math.block.environment.latex",
-                "constant.other.caps.rust",
+                "constant.other.caps",
                 "meta.interpolation.rust",
                 "constant.other.enum",
-                "constant.other.placeholder",
                 "string.quoted.other.lt-gt.include",
-                "storage.modifier.package"
+                "storage.modifier.package",
+                "variable.language",
+                "constant.other.option",
+                "string.unquoted.argument.shell"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -291,7 +299,8 @@
             "name": "Bold literals",
             "scope": [
                 "constant.language",
-                "constant.character.escape"
+                "constant.character.escape",
+                "constant.other.placeholder"
             ],
             "settings": {
                 "fontStyle": "bold",

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.15.0 - 2025-05-10
+
+- Fix LaTeX math mode
+- Fix more constants
+- Various QOL improvements
+    - Documentation keywords bold and gray (also things like `@Override` in Java or shebangs)
+    - Preprocessor directives are now bold and gray
+    - Better highlighting for escaped characters
+    - HTML and CSS tags are now bold
+
 ## v0.14.1 - 2025-05-08
 
 - Fix unit highlighting (such as "px" in CSS)

@@ -247,7 +247,8 @@
                 "entity.name.tag",
                 "entity.other.attribute-name.class.css",
                 "keyword.operator.new",
-                "punctuation.definition.string.heredoc.delimiter.shell"
+                "punctuation.definition.string.heredoc.delimiter.shell",
+                "storage.modifier.sql"
             ],
             "settings": {
                 "fontStyle": "bold",

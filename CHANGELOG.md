@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.15.1 - 2025-05-17
+
+- Fix highlighting of `storage.modifier.sql`
+
 ## v0.15.0 - 2025-05-10
 
 - Fix LaTeX math mode

@@ -1,71 +1,70 @@
 {
-    "name": "monochromator",
-    "displayName": "Monochromator",
-    "version": "0.15.1",
-    "publisher": "beem",
-    "description": "A simple monochrome theme",
-    "categories": [
-        "Themes"
-    ],
-    "icon": "images/icon.png",
-    "engines": {
-        "vscode": "^1.97.0"
-    },
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://codeberg.org/beem/monochromator.git"
-    },
-    "bugs": {
-        "url": "https://codeberg.org/beem/monochromator/issues",
-        "email": "mail@beem.software"
-    },
-    "homepage": "https://codeberg.org/beem/monochromator/src/branch/master/README.md",
-    "contributes": {
-        "themes": [
-            {
-                "label": "Monochromator Dark",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark/default.json"
-            },
-            {
-                "label": "Monochromator Dark Amber",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark/amber.json"
-            },
-            {
-                "label": "Monochromator Dark Emerald",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark/emerald.json"
-            },
-            {
-                "label": "Monochromator Dark Ruby",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark/ruby.json"
-            },
-            {
-                "label": "Monochromator Light",
-                "uiTheme": "vs",
-                "path": "./themes/light/default.json"
-            },
-            {
-                "label": "Monochromator Light Amber",
-                "uiTheme": "vs",
-                "path": "./themes/light/amber.json"
-            },
-            {
-                "label": "Monochromator Light Emerald",
-                "uiTheme": "vs",
-                "path": "./themes/light/emerald.json"
-            },
-            {
-                "label": "Monochromator Light Ruby",
-                "uiTheme": "vs",
-                "path": "./themes/light/ruby.json"
-            }
-        ]
-    },
-    "vsce": {
-        "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
-    }
+  "name": "monochromator",
+  "displayName": "Monochromator",
+  "description": "A simple monochrome theme",
+  "version": "0.15.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "publisher": "beem",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://codeberg.org/beem/monochromator.git"
+  },
+  "bugs": {
+    "url": "https://codeberg.org/beem/monochromator/issues",
+    "email": "mail@beem.software"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Monochromator Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/default.json"
+      },
+      {
+        "label": "Monochromator Dark Amber",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/amber.json"
+      },
+      {
+        "label": "Monochromator Dark Emerald",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/emerald.json"
+      },
+      {
+        "label": "Monochromator Dark Ruby",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/ruby.json"
+      },
+      {
+        "label": "Monochromator Light",
+        "uiTheme": "vs",
+        "path": "./themes/light/default.json"
+      },
+      {
+        "label": "Monochromator Light Amber",
+        "uiTheme": "vs",
+        "path": "./themes/light/amber.json"
+      },
+      {
+        "label": "Monochromator Light Emerald",
+        "uiTheme": "vs",
+        "path": "./themes/light/emerald.json"
+      },
+      {
+        "label": "Monochromator Light Ruby",
+        "uiTheme": "vs",
+        "path": "./themes/light/ruby.json"
+      }
+    ]
+  },
+  "vsce": {
+    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
+  }
 }

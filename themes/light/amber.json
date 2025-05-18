@@ -1,43 +1,43 @@
 // Copyright (c) 2025 Josias Beem
 // SPDX-License-Identifier: MIT
 {
-    "colors": {
-        "editor.wordHighlightStrongBackground": "#e6610040"
+  "colors": {
+    "editor.wordHighlightStrongBackground": "#e6610040"
+  },
+  "include": "./default.json",
+  "name": "Monochromator Light Amber",
+  "tokenColors": [
+    {
+      "name": "Literals",
+      "scope": [
+        "constant.numeric",
+        "constant.character",
+        "string",
+        "keyword.other.unit",
+        "constant.other"
+      ],
+      "settings": {
+        "fontStyle": "normal",
+        "foreground": "#e66100"
+      }
     },
-    "include": "./default.json",
-    "name": "Monochromator Light Amber",
-    "tokenColors": [
-        {
-            "name": "Literals",
-            "scope": [
-                "constant.numeric",
-                "constant.character",
-                "string",
-                "keyword.other.unit",
-                "constant.other"
-            ],
-            "settings": {
-                "fontStyle": "normal",
-                "foreground": "#e66100"
-            }
-        },
-        {
-            "name": "Bold literals",
-            "scope": [
-                "constant.language",
-                "constant.character.escape",
-                "constant.other.placeholder"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#e66100"
-            }
-        },
-        {
-            "scope": "markup.inline.raw",
-            "settings": {
-                "foreground": "#e66100"
-            }
-        }
-    ]
+    {
+      "name": "Bold literals",
+      "scope": [
+        "constant.language",
+        "constant.character.escape",
+        "constant.other.placeholder"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#e66100"
+      }
+    },
+    {
+      "scope": "markup.inline.raw",
+      "settings": {
+        "foreground": "#e66100"
+      }
+    }
+  ]
 }

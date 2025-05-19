@@ -275,7 +275,9 @@
         "storage.modifier.package",
         "variable.language",
         "constant.other.option",
-        "string.unquoted.argument.shell"
+        "string.unquoted.argument.shell",
+        "constant.other.database-name",
+        "constant.other.table-name"
       ],
       "settings": {
         "fontStyle": "normal",

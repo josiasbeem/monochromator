@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.15.2 - 2025-05-19
+
+- Fix highlighting of SQL database names and table names
+
 ## v0.15.1 - 2025-05-17
 
 - Fix highlighting of `storage.modifier.sql`

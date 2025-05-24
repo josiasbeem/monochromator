@@ -218,7 +218,13 @@
         "keyword.control.table.cell.latex",
         "keyword.control.table.newline.latex",
         "storage.modifier.array",
-        "keyword.control.flow.block-scalar.literal.yaml"
+        "keyword.control.flow.block-scalar.literal.yaml",
+        "punctuation.definition.string.begin.latex",
+        "punctuation.definition.string.end.latex",
+        "punctuation.definition.string.begin.tex",
+        "punctuation.definition.string.end.tex",
+        "punctuation.definition.constant.math.tex",
+        "storage.modifier.reference"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -229,7 +235,6 @@
       "name": "Important",
       "scope": [
         "storage.modifier",
-        "entity.name.type",
         "entity.other.inherited-class",
         "keyword",
         "storage.type",
@@ -254,7 +259,8 @@
         "punctuation.definition.decorator",
         "entity.name.command.shell",
         "variable.language.this",
-        "variable.language.special.self"
+        "variable.language.special.self",
+        "variable.language.super"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -265,7 +271,6 @@
       "name": "Normal",
       "scope": [
         "support.type.property-name",
-        "entity.name.tag.yaml",
         "support.class.latex",
         "entity.name.function.preprocessor",
         "variable.other",
@@ -282,7 +287,8 @@
         "constant.other.option",
         "string.unquoted.argument.shell",
         "constant.other.database-name",
-        "constant.other.table-name"
+        "constant.other.table-name",
+        "string.unquoted.plain.out.yaml"
       ],
       "settings": {
         "fontStyle": "normal",

@@ -191,6 +191,19 @@
       }
     },
     {
+      "name": "Important comments",
+      "scope": [
+        "keyword.other.documentation",
+        "storage.type.class.doxygen.cpp",
+        "entity.name.function.decorator",
+        "meta.shebang.shell"
+      ],
+      "settings": {
+        "fontStyle": "bold italic",
+        "foreground": "#9a9996"
+      }
+    },
+    {
       "name": "Gray",
       "scope": [
         "keyword.operator",
@@ -208,23 +221,6 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#9a9996"
-      }
-    },
-    {
-      "name": "Important gray",
-      "scope": [
-        "storage.type.annotation",
-        "keyword.other.documentation",
-        "storage.type.class.doxygen.cpp",
-        "keyword.control.directive.include",
-        "keyword.control.directive.define",
-        "entity.name.function.decorator",
-        "meta.shebang.shell",
-        "keyword.control.at-rule.media.css"
-      ],
-      "settings": {
-        "fontStyle": "bold",
         "foreground": "#9a9996"
       }
     },
@@ -248,7 +244,10 @@
         "entity.other.attribute-name.class.css",
         "keyword.operator.new",
         "punctuation.definition.string.heredoc.delimiter.shell",
-        "storage.modifier.sql"
+        "storage.modifier.sql",
+        "punctuation.definition.directive",
+        "punctuation.definition.include",
+        "punctuation.definition.annotation"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -271,7 +270,6 @@
         "constant.other.caps",
         "meta.interpolation.rust",
         "constant.other.enum",
-        "string.quoted.other.lt-gt.include",
         "storage.modifier.package",
         "variable.language",
         "constant.other.option",

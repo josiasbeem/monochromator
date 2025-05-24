@@ -224,7 +224,8 @@
         "punctuation.definition.string.begin.tex",
         "punctuation.definition.string.end.tex",
         "punctuation.definition.constant.math.tex",
-        "storage.modifier.reference"
+        "storage.modifier.reference",
+        "meta.separator.markdown"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -260,7 +261,8 @@
         "entity.name.command.shell",
         "variable.language.this",
         "variable.language.special.self",
-        "variable.language.super"
+        "variable.language.super",
+        "entity.name.type"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -288,7 +290,8 @@
         "string.unquoted.argument.shell",
         "constant.other.database-name",
         "constant.other.table-name",
-        "string.unquoted.plain.out.yaml"
+        "string.unquoted.plain.out.yaml",
+        "entity.name.type.class"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -305,7 +308,8 @@
         "constant.other",
         "markup.inline.raw",
         "punctuation.definition.constant",
-        "punctuation.definition.string"
+        "punctuation.definition.string",
+        "punctuation.separator.dot.decimal"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -318,7 +322,8 @@
         "constant.language",
         "constant.character.escape",
         "constant.other.placeholder",
-        "punctuation.definition.interpolation"
+        "punctuation.definition.interpolation",
+        "punctuation.definition.variable.shell"
       ],
       "settings": {
         "fontStyle": "bold",

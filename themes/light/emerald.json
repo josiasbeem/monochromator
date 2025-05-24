@@ -17,7 +17,8 @@
         "constant.other",
         "markup.inline.raw",
         "punctuation.definition.constant",
-        "punctuation.definition.string"
+        "punctuation.definition.string",
+        "punctuation.separator.dot.decimal"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -30,7 +31,8 @@
         "constant.language",
         "constant.character.escape",
         "constant.other.placeholder",
-        "punctuation.definition.interpolation"
+        "punctuation.definition.interpolation",
+        "punctuation.definition.variable.shell"
       ],
       "settings": {
         "fontStyle": "bold",

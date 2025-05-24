@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.16.0 - 2025-05-24
+
+- Bold formatting limited to keywords only (functions no longer bolded)
+- String quotation marks now match literal text color
+- Preprocessor directive styling reverted to pre-`0.15.0` appearance
+- Enhanced YAML file appearance
+- Documentation keywords now display in italics
+- Fixed hex code highlighting issues in HTML
+
 ## v0.15.2 - 2025-05-19
 
 - Fix highlighting of SQL database names and table names

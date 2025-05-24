@@ -24,7 +24,7 @@ Additionally, if you are working under **GNOME**, this theme will fit very well 
 
 ![Screenshots](./images/screenshots.gif)
 
-*(**Font:** Adwaita Mono)*
+[Font: [Adwaita Mono](https://gitlab.gnome.org/GNOME/adwaita-fonts)]
 
 ## Download
 

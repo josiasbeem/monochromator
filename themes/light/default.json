@@ -292,7 +292,8 @@
         "constant.other.database-name",
         "constant.other.table-name",
         "string.unquoted.plain.out.yaml",
-        "entity.name.type.class"
+        "entity.name.type.class",
+        "constant"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -329,13 +330,6 @@
       "settings": {
         "fontStyle": "bold",
         "foreground": "#3584e4"
-      }
-    },
-    {
-      "name": "Constants",
-      "scope": "constant",
-      "settings": {
-        "foreground": "#000000"
       }
     },
     {

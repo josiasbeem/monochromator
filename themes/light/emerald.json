@@ -16,7 +16,8 @@
         "keyword.other.unit",
         "constant.other",
         "markup.inline.raw",
-        "punctuation.definition.constant"
+        "punctuation.definition.constant",
+        "punctuation.definition.string"
       ],
       "settings": {
         "fontStyle": "normal",

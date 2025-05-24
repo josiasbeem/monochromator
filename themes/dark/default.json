@@ -182,7 +182,6 @@
       "name": "Comments",
       "scope": [
         "comment",
-        "string.quoted.docstring",
         "punctuation.definition.comment"
       ],
       "settings": {
@@ -195,7 +194,6 @@
       "scope": [
         "keyword.other.documentation",
         "storage.type.class.doxygen.cpp",
-        "entity.name.function.decorator",
         "meta.shebang.shell"
       ],
       "settings": {
@@ -209,7 +207,6 @@
         "keyword.operator",
         "punctuation",
         "keyword.control.ternary",
-        "storage.type.function.arrow",
         "keyword.other.r",
         "keyword.control.newline.tex",
         "keyword.control.equation.newline.latex",
@@ -227,7 +224,7 @@
     {
       "name": "Important",
       "scope": [
-        "entity.name.function",
+        "storage.modifier",
         "entity.name.type",
         "entity.other.inherited-class",
         "keyword",
@@ -249,7 +246,8 @@
         "punctuation.definition.include",
         "punctuation.definition.annotation",
         "punctuation.definition.keyword",
-        "punctuation.definition.entity"
+        "punctuation.definition.entity",
+        "punctuation.definition.decorator"
       ],
       "settings": {
         "fontStyle": "bold",

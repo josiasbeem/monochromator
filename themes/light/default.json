@@ -247,7 +247,8 @@
         "punctuation.definition.annotation",
         "punctuation.definition.keyword",
         "punctuation.definition.entity",
-        "punctuation.definition.decorator"
+        "punctuation.definition.decorator",
+        "entity.name.command.shell"
       ],
       "settings": {
         "fontStyle": "bold",

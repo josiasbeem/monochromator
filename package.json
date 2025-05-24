@@ -9,6 +9,18 @@
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "monochrome",
+    "monochromatic",
+    "minimal",
+    "minimalist",
+    "minimalism",
+    "black and white",
+    "grayscale",
+    "greyscale",
+    "clean",
+    "focus"
+  ],
   "publisher": "beem",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -38,6 +50,11 @@
         "path": "./themes/dark/emerald.json"
       },
       {
+        "label": "Monochromator Dark Plain",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/plain.json"
+      },
+      {
         "label": "Monochromator Dark Ruby",
         "uiTheme": "vs-dark",
         "path": "./themes/dark/ruby.json"
@@ -56,6 +73,11 @@
         "label": "Monochromator Light Emerald",
         "uiTheme": "vs",
         "path": "./themes/light/emerald.json"
+      },
+      {
+        "label": "Monochromator Light Plain",
+        "uiTheme": "vs",
+        "path": "./themes/light/plain.json"
       },
       {
         "label": "Monochromator Light Ruby",

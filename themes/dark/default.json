@@ -225,7 +225,8 @@
         "punctuation.definition.string.end.tex",
         "punctuation.definition.constant.math.tex",
         "storage.modifier.reference",
-        "meta.separator.markdown"
+        "meta.separator.markdown",
+        "punctuation.definition.keyword.tex"
       ],
       "settings": {
         "fontStyle": "normal",

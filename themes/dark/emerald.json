@@ -14,7 +14,9 @@
         "constant.character",
         "string",
         "keyword.other.unit",
-        "constant.other"
+        "constant.other",
+        "markup.inline.raw",
+        "punctuation.definition.constant"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -30,12 +32,6 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#33d17a"
-      }
-    },
-    {
-      "scope": "markup.inline.raw",
-      "settings": {
         "foreground": "#33d17a"
       }
     }

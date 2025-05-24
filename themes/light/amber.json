@@ -29,7 +29,8 @@
       "scope": [
         "constant.language",
         "constant.character.escape",
-        "constant.other.placeholder"
+        "constant.other.placeholder",
+        "punctuation.definition.interpolation"
       ],
       "settings": {
         "fontStyle": "bold",

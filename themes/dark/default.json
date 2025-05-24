@@ -182,7 +182,9 @@
       "name": "Comments",
       "scope": [
         "comment",
-        "punctuation.definition.comment"
+        "punctuation.definition.comment",
+        "variable.other.jsdoc",
+        "entity.name.type.instance.jsdoc"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -194,7 +196,9 @@
       "scope": [
         "keyword.other.documentation",
         "storage.type.class.doxygen.cpp",
-        "meta.shebang.shell"
+        "meta.shebang.shell",
+        "storage.type.class.jsdoc",
+        "punctuation.definition.block.tag.jsdoc"
       ],
       "settings": {
         "fontStyle": "bold italic",
@@ -248,7 +252,9 @@
         "punctuation.definition.keyword",
         "punctuation.definition.entity",
         "punctuation.definition.decorator",
-        "entity.name.command.shell"
+        "entity.name.command.shell",
+        "variable.language.this",
+        "variable.language.special.self"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -305,7 +311,8 @@
       "scope": [
         "constant.language",
         "constant.character.escape",
-        "constant.other.placeholder"
+        "constant.other.placeholder",
+        "punctuation.definition.interpolation"
       ],
       "settings": {
         "fontStyle": "bold",

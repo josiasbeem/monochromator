@@ -226,7 +226,8 @@
         "punctuation.definition.constant.math.tex",
         "storage.modifier.reference",
         "meta.separator.markdown",
-        "punctuation.definition.keyword.tex"
+        "punctuation.definition.keyword.tex",
+        "punctuation.definition.keyword.latex"
       ],
       "settings": {
         "fontStyle": "normal",

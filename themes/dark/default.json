@@ -247,7 +247,9 @@
         "storage.modifier.sql",
         "punctuation.definition.directive",
         "punctuation.definition.include",
-        "punctuation.definition.annotation"
+        "punctuation.definition.annotation",
+        "punctuation.definition.keyword",
+        "punctuation.definition.entity"
       ],
       "settings": {
         "fontStyle": "bold",

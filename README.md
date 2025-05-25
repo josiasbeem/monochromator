@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://open-vsx.org/extension/beem/monochromator"><img src="https://img.shields.io/open-vsx/v/beem/monochromator?label=Version&color=%233584e4" alt="Version" /></a>
-  <a href="https://open-vsx.org/extension/beem/monochromator"><img src="https://img.shields.io/open-vsx/dt/beem/monochromator?label=Downloads&color=%233584e4" alt="Downloads" /></a>
-  <a href="https://codeberg.org/beem/monochromator/raw/branch/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-%233584e4" alt="License" /></a>
+  <a href="https://open-vsx.org/extension/beem/monochromator"><img src="https://img.shields.io/open-vsx/v/beem/monochromator?label=Version&color=%23ffffff" alt="Version" /></a>
+  <a href="https://open-vsx.org/extension/beem/monochromator"><img src="https://img.shields.io/open-vsx/dt/beem/monochromator?label=Downloads&color=%23ffffff" alt="Downloads" /></a>
+  <a href="https://codeberg.org/beem/monochromator/raw/branch/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-%23ffffff" alt="License" /></a>
 </p>
 
 <p align="center">
@@ -16,11 +16,16 @@
 
 ---
 
-If you also get a **headache** from the **color fiasco** of mainstream color schemes, then this extension is **just for you**. Too many **colors distract** you from **thinking clearly**.
+If you find colorful syntax highlighting distracting and prefer a more focused coding environment, this extension offers a minimalist alternative designed to reduce visual noise and improve concentration.
 
-Following **two variants** are included: `Monochromator Dark` and `Monochromator Light`, both of which have an additional **three versions** that change the **standard blue** to **orange** (`Amber`), **green** (`Emerald`) or **red** (`Ruby`).
+The extension includes two main variants: **Monochromator Dark** and **Monochromator Light**. Each variant comes with several accent color options:
 
-Additionally, if you are working under **GNOME**, this theme will fit very well into the overall desktop environment.
+- **Amber** - Orange accent color
+- **Emerald** - Green accent color
+- **Ruby** - Red accent color
+- **Plain** - Minimal highlighting with only comments emphasized
+
+This theme integrates seamlessly with GNOME desktop environments, providing a cohesive visual experience across your development workflow.
 
 ![Screenshots](./images/screenshots.gif)
 

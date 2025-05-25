@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.17.0 - 2025-05-25
+
+- Add `Monochromator Dark Plain` and `Monochromator Light Plain`
+- Correct the syntax highlighting for backslashes that precede LaTeX keywords
+- Redesign extension icon
+
 ## v0.16.0 - 2025-05-24
 
 - Bold formatting limited to keywords only (functions no longer bolded)

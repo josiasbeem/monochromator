@@ -25,7 +25,7 @@ The extension includes two main variants: **Monochromator Dark** and **Monochrom
 - **Ruby** - Red accent color
 - **Plain** - Minimal highlighting with only comments emphasized
 
-This theme integrates seamlessly with GNOME desktop environments, providing a cohesive visual experience across your development workflow.
+This theme integrates seamlessly with the GNOME desktop environment, providing a cohesive visual experience across your development workflow.
 
 ![Screenshots](./images/screenshots.gif)
 

@@ -18,7 +18,7 @@
 
 If you find colorful syntax highlighting distracting and prefer a more focused coding environment, this extension offers a minimalist alternative designed to reduce visual noise and improve concentration.
 
-The extension includes two main variants: **Monochromator Dark** and **Monochromator Light**. Each variant comes with several accent color options:
+The extension includes two main variants: **Monochromator Dark** and **Monochromator Light**. Each variant comes with several additional accent color options:
 
 - **Amber** - Orange accent color
 - **Emerald** - Green accent color

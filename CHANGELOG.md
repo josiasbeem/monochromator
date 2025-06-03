@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.17.1 - 2025-06-03
+
+- Fix Code Actions Menu
+
 ## v0.17.0 - 2025-05-25
 
 - Add `Monochromator Dark Plain` and `Monochromator Light Plain`

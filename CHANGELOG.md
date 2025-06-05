@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.17.2 - 2025-06-05
+
+- Fix Doxygen comments for languages other than C++
+
 ## v0.17.1 - 2025-06-03
 
 - Fix Code Actions Menu

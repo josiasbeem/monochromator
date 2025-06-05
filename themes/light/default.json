@@ -201,7 +201,7 @@
       "name": "Important comments",
       "scope": [
         "keyword.other.documentation",
-        "storage.type.class.doxygen.cpp",
+        "storage.type.class.doxygen",
         "meta.shebang.shell",
         "storage.type.class.jsdoc",
         "punctuation.definition.block.tag.jsdoc"

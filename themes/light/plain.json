@@ -185,10 +185,7 @@
   "name": "Monochromator Light Plain",
   "tokenColors": [
     {
-      "name": "Comments",
-      "scope": [
-        "comment"
-      ],
+      "scope": "comment",
       "settings": {
         "fontStyle": "italic",
         "foreground": "#77767b"

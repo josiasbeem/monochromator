@@ -291,6 +291,7 @@
         "constant.other.caps",
         "constant.other.database-name",
         "constant.other.enum",
+        "constant.other.haskell",
         "constant.other.option",
         "constant.other.table-name",
         "entity.name.function",

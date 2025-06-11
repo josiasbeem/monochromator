@@ -31,41 +31,32 @@ This theme integrates seamlessly with the GNOME desktop environment, providing a
 
 [Font: [Adwaita Mono](https://gitlab.gnome.org/GNOME/adwaita-fonts)]
 
-## Download
+## Installation
 
-The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator) or the [Actions](https://codeberg.org/beem/monochromator/actions) tab.
+To ensure 100% correct behaviour, it is recommended to add the following to your `settings.json`:
 
-## Building from source
+```
+"editor.bracketPairColorization.enabled": false
+```
 
-Make sure that the **npm package** `vsce` is installed. If not, do the following:
+### Download
+
+The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Actions](https://codeberg.org/beem/monochromator/actions) tab or directly in VSCodium.
+
+### Building from source
 
 ```sh
 npm install -g @vscode/vsce
-```
-
-Clone the repository:
-
-```sh
 git clone https://codeberg.org/beem/monochromator.git
 cd monochromator
-```
-
-Build the `.vsix` file:
-
-```sh
 vsce package
+code --install-extension monochromator-*.vsix
 ```
-
-## Installation
 
 ⚠️ **Note:** Depending on your [Code - OSS](https://github.com/microsoft/vscode) distribution, the command `code` could also be named ...
 - `codium` (VSCodium)
 - `code-insiders` (Visual Studio Code Insiders)
 - `codium-insiders` (VSCodium Insiders).
-
-```sh
-code --install-extension monochromator-*.vsix
-```
 
 ## Contributing
 

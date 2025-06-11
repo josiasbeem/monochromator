@@ -26,7 +26,7 @@
     "editor.selectionBackground": "#d9d9da",
     "editor.selectionHighlightBackground": "#d9d9da",
     "editor.wordHighlightBackground": "#d9d9da80",
-    "editor.wordHighlightStrongBackground": "#3584e440",
+    "editor.wordHighlightStrongBackground": "#2563eb40",
     "editor.wordHighlightTextBackground": "#d9d9da80",
     "editorBracketHighlight.foreground1": "#77767b",
     "editorBracketHighlight.foreground2": "#77767b",
@@ -46,7 +46,7 @@
     "editorGutter.modifiedBackground": "#e66100",
     "editorIndentGuide.activeBackground": "#77767b",
     "editorIndentGuide.background": "#77767b50",
-    "editorInfo.foreground": "#3584e4",
+    "editorInfo.foreground": "#2563eb",
     "editorInlayHint.background": "#ebebed80",
     "editorInlayHint.foreground": "#77767b",
     "editorLightBulb.foreground": "#77767b",
@@ -56,7 +56,7 @@
     "editorLineNumber.foreground": "#77767b",
     "editorLink.activeForeground": "#000000",
     "editorOverviewRuler.errorForeground": "#e01b24",
-    "editorOverviewRuler.infoForeground": "#3584e4",
+    "editorOverviewRuler.infoForeground": "#2563eb",
     "editorOverviewRuler.warningForeground": "#e66100",
     "editorStickyScrollHover.background": "#ebebed",
     "editorSuggestWidget.background": "#f2f2f4",
@@ -101,7 +101,7 @@
     "menu.separatorBackground": "#d9d9da",
     "minimap.errorHighlight": "#e01b24",
     "minimap.findMatchHighlight": "#d9d9da",
-    "minimap.infoHighlight": "#3584e4",
+    "minimap.infoHighlight": "#2563eb",
     "minimap.selectionHighlight": "#d9d9da",
     "minimap.selectionOccurrenceHighlight": "#d9d9da",
     "minimap.warningHighlight": "#e66100",
@@ -168,8 +168,8 @@
     "textBlockQuote.border": "#d9d9da",
     "textCodeBlock.background": "#f2f2f4",
     "textCodeBlock.border": "#d9d9da",
-    "textLink.activeForeground": "#3584e4",
-    "textLink.foreground": "#3584e4",
+    "textLink.activeForeground": "#2563eb",
+    "textLink.foreground": "#2563eb",
     "textPreformat.background": "#ebebed",
     "textPreformat.foreground": "#000000",
     "textSeparator.foreground": "#d9d9da",
@@ -190,7 +190,8 @@
         "comment",
         "punctuation.definition.comment",
         "variable.other.jsdoc",
-        "entity.name.type.instance.jsdoc"
+        "entity.name.type.instance.jsdoc",
+        "markup.quote"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -233,7 +234,10 @@
         "storage.modifier.reference",
         "meta.separator.markdown",
         "punctuation.definition.keyword.tex",
-        "punctuation.definition.keyword.latex"
+        "punctuation.definition.keyword.latex",
+        "storage.type.function.arrow",
+        "storage.modifier.pointer",
+        "entity.name.operator.cpp"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -270,7 +274,10 @@
         "variable.language.this",
         "variable.language.special.self",
         "variable.language.super",
-        "entity.name.type"
+        "entity.name.type",
+        "variable.language.self",
+        "entity.other.attribute-name.pseudo-class",
+        "markup.bold"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -300,7 +307,12 @@
         "constant.other.table-name",
         "string.unquoted.plain.out.yaml",
         "entity.name.type.class",
-        "constant"
+        "constant",
+        "entity.name.function",
+        "entity.name.type.rust",
+        "entity.name.type.enum.rust",
+        "entity.name.type.trait.rust",
+        "entity.name.type.struct.rust"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -322,7 +334,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#3584e4"
+        "foreground": "#2563eb"
       }
     },
     {
@@ -336,14 +348,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#3584e4"
-      }
-    },
-    {
-      "scope": "markup.bold",
-      "settings": {
-        "fontStyle": "bold",
-        "foreground": "#000000"
+        "foreground": "#2563eb"
       }
     },
     {
@@ -351,13 +356,6 @@
       "settings": {
         "fontStyle": "italic",
         "foreground": "#000000"
-      }
-    },
-    {
-      "scope": "markup.quote",
-      "settings": {
-        "fontStyle": "italic",
-        "foreground": "#77767b"
       }
     },
     {

@@ -29,10 +29,15 @@
       "name": "Bold Literals",
       "scope": [
         "constant.character.escape",
+        "constant.character.format.placeholder",
         "constant.language",
         "constant.other.placeholder",
+        "keyword.constant",
+        "keyword.format.specifier",
         "punctuation.definition.interpolation",
-        "punctuation.definition.variable.shell"
+        "punctuation.definition.variable.shell",
+        "storage.type.string",
+        "string.quoted.byte.raw"
       ],
       "settings": {
         "fontStyle": "bold",

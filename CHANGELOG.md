@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.18.0 - 2025-06-11
+
+- Improve shade of blue to be more visible
+- Improve string highlighting
+- Fix C++ pointers
+- Fix `self` and entity names in Rust
+- Fix enums and function arrows in Java
+- Fix constants in Haskell, Perl, Ruby, PHP, ...
+- Fix support functions in Lua, Julia, ...
+- Fix strings and symbols in F#
+- Fix null and booleans in Zig
+- Decrease minimum VS code engine version
+
 ## v0.17.2 - 2025-06-05
 
 - Fix Doxygen comments for languages other than C++

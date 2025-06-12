@@ -21,6 +21,7 @@ If you find colorful syntax highlighting distracting and prefer a more focused c
 The extension includes two main variants: **Monochromator Dark** and **Monochromator Light**. Each variant comes with several additional accent color options:
 
 - **Amber** - Orange accent color
+- **Amethyst** - Purple accent color
 - **Emerald** - Green accent color
 - **Ruby** - Red accent color
 - **Plain** - Minimal highlighting with only comments emphasized

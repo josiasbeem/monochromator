@@ -2,7 +2,7 @@
   "name": "monochromator",
   "displayName": "Monochromator",
   "description": "A simple monochrome theme",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -46,6 +46,11 @@
         "path": "./themes/dark/amber.json"
       },
       {
+        "label": "Monochromator Dark Amethyst",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/amethyst.json"
+      },
+      {
         "label": "Monochromator Dark Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/dark/emerald.json"
@@ -69,6 +74,11 @@
         "label": "Monochromator Light Amber",
         "uiTheme": "vs",
         "path": "./themes/light/amber.json"
+      },
+      {
+        "label": "Monochromator Light Amethyst",
+        "uiTheme": "vs",
+        "path": "./themes/light/amethyst.json"
       },
       {
         "label": "Monochromator Light Emerald",

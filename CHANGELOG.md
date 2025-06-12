@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.19.0 - 2025-06-12
+
+- Add new variant with purple accent color
+    - `Monochromator Dark Amethyst`
+    - `Monochromator Light Amethyst`
+
 ## v0.18.0 - 2025-06-11
 
 - Improve shade of blue to be more visible

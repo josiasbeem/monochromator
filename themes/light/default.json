@@ -404,12 +404,6 @@
       }
     },
     {
-      "scope": "markup.underline.link",
-      "settings": {
-        "foreground": "#2563eb"
-      }
-    },
-    {
       "scope": "markup.strikethrough",
       "settings": {
         "fontStyle": "strikethrough"

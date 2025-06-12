@@ -35,6 +35,7 @@
         "keyword.constant",
         "keyword.format.specifier",
         "punctuation.definition.interpolation",
+        "punctuation.definition.template-expression",
         "punctuation.definition.variable.shell",
         "storage.type.string",
         "string.quoted.byte.raw"

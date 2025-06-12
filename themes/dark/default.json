@@ -332,6 +332,8 @@
         "markup.italic.emph.latex",
         "markup.italic.textit.latex",
         "meta.interpolation.rust",
+        "punctuation.support.type.property-name.begin.json",
+        "punctuation.support.type.property-name.end.json",
         "storage.modifier.import",
         "storage.modifier.package",
         "string.other.link.description.markdown",
@@ -362,6 +364,7 @@
         "keyword.other.unit",
         "markup.inline.raw",
         "punctuation.definition.constant",
+        "punctuation.definition.raw",
         "punctuation.definition.string",
         "punctuation.separator.dot.decimal",
         "string"
@@ -381,6 +384,7 @@
         "keyword.constant",
         "keyword.format.specifier",
         "punctuation.definition.interpolation",
+        "punctuation.definition.template-expression",
         "punctuation.definition.variable.shell",
         "storage.type.string",
         "string.quoted.byte.raw"

@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.20.0 - 2025-06-13
+
+- Fine-tune Markdown and LaTeX highlighting
+- Improve JavaScript string interpolation
+
 ## v0.19.0 - 2025-06-12
 
 - Add new variant with purple accent color

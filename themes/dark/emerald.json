@@ -16,6 +16,7 @@
         "keyword.other.unit",
         "markup.inline.raw",
         "punctuation.definition.constant",
+        "punctuation.definition.raw",
         "punctuation.definition.string",
         "punctuation.separator.dot.decimal",
         "string"

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.20.1 - 2025-06-16
+
+- Fix backtick symbol in Markdown for accent color variants
+
 ## v0.20.0 - 2025-06-13
 
 - Fine-tune Markdown and LaTeX highlighting

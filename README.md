@@ -30,7 +30,7 @@ This theme integrates seamlessly with the GNOME desktop environment, providing a
 
 ![Screenshots](./images/screenshots.webp)
 
-[Font: [Adwaita Mono](https://gitlab.gnome.org/GNOME/adwaita-fonts)]
+*Font: Fira Code*
 
 ## Installation
 

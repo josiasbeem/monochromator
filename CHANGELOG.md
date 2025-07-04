@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.21.0 - 2025-07-04
+
+- Add x86_64, ARM, RISC-V, MIPS support for the following OpenVSX extensions:
+    - x86_64: `13xforever.language-x86-64-assembly`, `basdp.language-gas-x86`
+    - ARM: `dan-c-underwood.arm`
+    - RISC-V: `sunshaoce.RISC-V`
+    - MIPS: `kdarkhan.mips`
+
 ## v0.20.1 - 2025-06-16
 
 - Fix backtick symbol in Markdown for accent color variants

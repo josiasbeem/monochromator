@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.22.0 - 2025-07-15
+
+- Improve color readability:
+    - Adjust purple in dark themes (`#c61aff` -> `#ee40ff`)
+    - Adjust green in light themes (`#26a269` -> `#017f45`)
+- Fix "Plain" theme variants by correcting values that should have been changed in `v0.18.0`
+
 ## v0.21.0 - 2025-07-04
 
 - Add x86_64, ARM, RISC-V, MIPS support for the following OpenVSX extensions:

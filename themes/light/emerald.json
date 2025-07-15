@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editor.wordHighlightStrongBackground": "#26a26940"
+    "editor.wordHighlightStrongBackground": "#017f4540"
   },
   "include": "./default.json",
   "name": "Monochromator Light Emerald",
@@ -23,7 +23,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#26a269"
+        "foreground": "#017f45"
       }
     },
     {
@@ -43,7 +43,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#26a269"
+        "foreground": "#017f45"
       }
     }
   ]

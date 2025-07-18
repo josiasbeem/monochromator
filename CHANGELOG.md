@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.23.0 - 2025-07-18
+
+- Add new variant with yellow accent color
+    - `Monochromator Dark Sulfur`
+    - `Monochromator Light Sulfur`
+- Add status bar error and warning background colors to theme
+
+
 ## v0.22.0 - 2025-07-15
 
 - Improve color readability:

@@ -2,7 +2,7 @@
   "name": "monochromator",
   "displayName": "Monochromator",
   "description": "A simple monochrome theme",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -66,6 +66,11 @@
         "path": "./themes/dark/ruby.json"
       },
       {
+        "label": "Monochromator Dark Sulfur",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/sulfur.json"
+      },
+      {
         "label": "Monochromator Light",
         "uiTheme": "vs",
         "path": "./themes/light/default.json"
@@ -94,6 +99,11 @@
         "label": "Monochromator Light Ruby",
         "uiTheme": "vs",
         "path": "./themes/light/ruby.json"
+      },
+      {
+        "label": "Monochromator Light Sulfur",
+        "uiTheme": "vs",
+        "path": "./themes/light/sulfur.json"
       }
     ]
   },

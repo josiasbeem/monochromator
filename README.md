@@ -18,12 +18,13 @@
 
 If you find colorful syntax highlighting distracting and prefer a more focused coding environment, this extension offers a minimalist alternative designed to reduce visual noise and improve concentration.
 
-The extension includes two main variants: **Monochromator Dark** and **Monochromator Light**. Each variant comes with several additional accent color options:
+The extension includes two main variants: **Monochromator Dark** and **Monochromator Light** (blue accent color). Each variant comes with several additional accent color options:
 
-- **Amber** - Orange accent color
-- **Amethyst** - Purple accent color
-- **Emerald** - Green accent color
 - **Ruby** - Red accent color
+- **Amber** - Orange accent color
+- **Sulfur** - Yellow accent color
+- **Emerald** - Green accent color
+- **Amethyst** - Purple accent color
 - **Plain** - Minimal highlighting with only comments emphasized
 
 This theme integrates seamlessly with the GNOME desktop environment, providing a cohesive visual experience across your development workflow.

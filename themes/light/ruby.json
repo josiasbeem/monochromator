@@ -15,6 +15,7 @@
         "constant.other",
         "keyword.other.unit",
         "markup.inline.raw",
+        "punctuation.definition.char",
         "punctuation.definition.constant",
         "punctuation.definition.raw",
         "punctuation.definition.string",

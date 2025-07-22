@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.23.3 - 2025-07-22
+
+- Fixed string storage type in Go
+
 ## v0.23.2 - 2025-07-22
 
 - Fixed highlighting of assignment operator

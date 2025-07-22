@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.23.2 - 2025-07-22
+
+- Fixed highlighting of assignment operator
+
 ## v0.23.1 - 2025-07-20
 
 - Fixed syntax highlighting for char literals (single quotes) in Rust

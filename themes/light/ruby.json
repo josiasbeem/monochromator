@@ -39,7 +39,7 @@
         "punctuation.definition.interpolation",
         "punctuation.definition.template-expression",
         "punctuation.definition.variable.shell",
-        "storage.type.string",
+        "storage.type.string.python",
         "string.quoted.byte.raw"
       ],
       "settings": {

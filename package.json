@@ -36,6 +36,41 @@
   "contributes": {
     "themes": [
       {
+        "label": "Monochromator Black",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/default.json"
+      },
+      {
+        "label": "Monochromator Black Amber",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/amber.json"
+      },
+      {
+        "label": "Monochromator Black Amethyst",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/amethyst.json"
+      },
+      {
+        "label": "Monochromator Black Emerald",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/emerald.json"
+      },
+      {
+        "label": "Monochromator Black Plain",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/plain.json"
+      },
+      {
+        "label": "Monochromator Black Ruby",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/ruby.json"
+      },
+      {
+        "label": "Monochromator Black Sulfur",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black/sulfur.json"
+      },
+      {
         "label": "Monochromator Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/dark/default.json"

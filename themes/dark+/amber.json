@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editor.wordHighlightStrongBackground": "#f2e55340"
+    "editor.wordHighlightStrongBackground": "#ffae4940"
   },
   "include": "./default.json",
-  "name": "Monochromator Black Sulfur",
+  "name": "Monochromator Dark+ Amber",
   "tokenColors": [
     {
       "name": "Literals",
@@ -24,7 +24,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#f2e553"
+        "foreground": "#ffae49"
       }
     },
     {
@@ -44,7 +44,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#f2e553"
+        "foreground": "#ffae49"
       }
     }
   ]

@@ -12,7 +12,7 @@
     "editorBracketMatch.border": "#9a9996"
   },
   "include": "./plain.json",
-  "name": "Monochromator Black",
+  "name": "Monochromator Dark+",
   "tokenColors": [
     {
       "name": "Italic Gray",
@@ -210,7 +210,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#179fff"
+        "foreground": "#02a9ff"
       }
     },
     {
@@ -230,7 +230,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#179fff"
+        "foreground": "#02a9ff"
       }
     },
     {

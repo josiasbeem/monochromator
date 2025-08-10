@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.24.0 - 2025-08-10
+
+- Introduced `Dark+` theme variants (enhanced `Dark` theme with improved contrast)
+- Updated terminal color scheme for better theme integration
+
 ## v0.23.3 - 2025-07-22
 
 - Fixed string storage type in Go

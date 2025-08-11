@@ -51,6 +51,11 @@
         "path": "./themes/dark/amethyst.json"
       },
       {
+        "label": "Monochromator Dark Aquamarine",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/aquamarine.json"
+      },
+      {
         "label": "Monochromator Dark Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/dark/emerald.json"
@@ -86,6 +91,11 @@
         "path": "./themes/dark+/amethyst.json"
       },
       {
+        "label": "Monochromator Dark+ Aquamarine",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark+/aquamarine.json"
+      },
+      {
         "label": "Monochromator Dark+ Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/dark+/emerald.json"
@@ -119,6 +129,11 @@
         "label": "Monochromator Light Amethyst",
         "uiTheme": "vs",
         "path": "./themes/light/amethyst.json"
+      },
+      {
+        "label": "Monochromator Light Aquamarine",
+        "uiTheme": "vs",
+        "path": "./themes/light/aquamarine.json"
       },
       {
         "label": "Monochromator Light Emerald",

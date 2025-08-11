@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.25.0 - 2025-08-11
+
+- Added new theme variant with cyan accent color called `Aquamarine`
+- Added integration of git diff editor colors into the themes
+- Changed orange terminal color to yellow
+- Changed cyan terminal color to be more fitting to the new `Aquamarine` variant
+- Fixed purple terminal color in light themes
+
 ## v0.24.0 - 2025-08-10
 
 - Introduced `Dark+` theme variants (enhanced `Dark` theme with improved contrast)

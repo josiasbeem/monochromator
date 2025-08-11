@@ -16,17 +16,11 @@
 
 ---
 
-A minimalist color theme that reduces visual distractions for better focus while coding. The extension includes three main variants: **Dark**, **Dark+** and **Light**. Each variant comes with several accent color options:
+A minimalist color theme that reduces visual distractions for better focus while coding. The extension includes three main variants: **Dark**, **Dark+** and **Light**. Each variant comes with several accent color options.
 
-- 🔴 **Ruby** - *Red accent color*
-- 🟠 **Amber** - *Orange accent color*
-- 🟡 **Sulfur** - *Yellow accent color*
-- 🟢 **Emerald** - *Green accent color*
-- 🔵 **Default** - *Blue accent color*
-- 🟣 **Amethyst** - *Purple accent color*
-- ⚪️ **Plain** - *Minimal highlighting with only comments emphasized*
-
-![Screenshots](./images/screenshots.webp)
+| Dark | Dark+ | Light |
+|:----:|:-----:|:-----:|
+| ![Screenshots](./images/screenshots-dark.webp) | ![Screenshots](./images/screenshots-dark+.webp) | ![Screenshots](./images/screenshots-light.webp) |
 
 *Font: Fira Code*
 

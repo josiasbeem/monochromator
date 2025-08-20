@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.25.1 - 2025-08-20
+
+- Improved syntax highlighting for Nix function arguments (`{`, `}` and `_` characters)
+
 ## v0.25.0 - 2025-08-11
 
 - Added new theme variant with cyan accent color called `Aquamarine`

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.25.2 - 2025-09-15
+
+- Fixed colors of status bar elements
+
 ## v0.25.1 - 2025-08-20
 
 - Improved syntax highlighting for Nix function arguments (`{`, `}` and `_` characters)

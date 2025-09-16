@@ -48,6 +48,7 @@
     "editorGutter.addedBackground": "#017f45",
     "editorGutter.deletedBackground": "#e01b24",
     "editorGutter.modifiedBackground": "#e66100",
+    "editorHoverWidget.border": "#d9d9da",
     "editorIndentGuide.activeBackground": "#77767b",
     "editorIndentGuide.background": "#77767b50",
     "editorInfo.foreground": "#2563eb",

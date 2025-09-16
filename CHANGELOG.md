@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.25.3 - 2025-09-16
+
+- Fixed command center colors
+- Fixed blue tint in Dark+ themes (by adding more blue)
+- Fixed border and foreground colors of hover widgets
+- Fixed the multi diff editor header color
+- Fixed activity bar icon colors such that they fit the status bar colors better
+
 ## v0.25.2 - 2025-09-15
 
 - Fixed colors of status bar elements

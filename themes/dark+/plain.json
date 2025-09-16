@@ -111,6 +111,8 @@
     "minimap.selectionHighlight": "#424246",
     "minimap.selectionOccurrenceHighlight": "#424246",
     "minimap.warningHighlight": "#ffae49",
+    "multiDiffEditor.border": "#424246",
+    "multiDiffEditor.headerBackground": "#29292f",
     "notifications.background": "#18181e",
     "notifications.foreground": "#f6f5f4",
     "notificationsErrorIcon.foreground": "#f6f5f4",

@@ -2,7 +2,7 @@
   "name": "monochromator",
   "displayName": "Monochromator",
   "description": "A simple monochrome theme",
-  "version": "0.25.3",
+  "version": "0.25.4",
   "engines": {
     "vscode": "^1.0.0"
   },

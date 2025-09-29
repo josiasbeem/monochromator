@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.25.4 - 2025-09-29
+
+- Fixed syntax highlighting for BibTeX files
+
 ## v0.25.3 - 2025-09-16
 
 - Fixed command center colors

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.26.0 - 2025-10-06
+
+- Reduced blue tint in Dark+ background colors
+
 ## v0.25.4 - 2025-09-29
 
 - Fixed syntax highlighting for BibTeX files

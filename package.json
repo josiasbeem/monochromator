@@ -20,7 +20,8 @@
     "greyscale",
     "contrast",
     "clean",
-    "focus"
+    "focus",
+    "simple"
   ],
   "publisher": "beem",
   "license": "MIT",

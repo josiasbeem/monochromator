@@ -101,6 +101,7 @@
         "entity.name.tag",
         "entity.name.type",
         "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css",
         "entity.other.attribute-name.pseudo-class",
         "keyword",
         "keyword.operator.new",

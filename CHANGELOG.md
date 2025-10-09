@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.26.1 - 2025-10-09
+
+- Fixed syntax highlighting of CSS ID selectors
+
 ## v0.26.0 - 2025-10-06
 
 - Reduced blue tint in Dark+ background colors

@@ -80,8 +80,7 @@
         "storage.modifier.pointer",
         "storage.modifier.reference",
         "storage.type.function.arrow",
-        "variable.parameter.function.4.nix",
-        "variable.parameter.ts"
+        "variable.parameter.function.4.nix"
       ],
       "settings": {
         "fontStyle": "normal",
@@ -195,7 +194,8 @@
         "support.type.vendored.property-name",
         "variable.language",
         "variable.other",
-        "variable.parameter.positional.shell"
+        "variable.parameter.positional.shell",
+        "variable.parameter.ts"
       ],
       "settings": {
         "fontStyle": "normal",

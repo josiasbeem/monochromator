@@ -4,7 +4,6 @@
   "colors": {
     "activityBar.activeForeground": "#f4f4f6",
     "activityBar.background": "#29292f",
-    "activityBar.border": "#42424a",
     "activityBar.foreground": "#ffffff",
     "activityBar.inactiveForeground": "#b9b9be",
     "activityBarBadge.background": "#f4f4f6",
@@ -13,7 +12,6 @@
     "badge.foreground": "#ffffff",
     "breadcrumb.foreground": "#909096",
     "button.background": "#29292f",
-    "button.border": "#42424a",
     "button.foreground": "#f4f4f6",
     "button.hoverBackground": "#42424a",
     "checkbox.background": "#0f0f12",

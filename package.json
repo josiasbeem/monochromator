@@ -4,7 +4,7 @@
   "description": "A simple monochrome theme",
   "version": "0.26.1",
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Themes"
@@ -77,46 +77,6 @@
         "path": "./themes/dark/sulfur.json"
       },
       {
-        "label": "Monochromator Dark+",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/default.json"
-      },
-      {
-        "label": "Monochromator Dark+ Amber",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/amber.json"
-      },
-      {
-        "label": "Monochromator Dark+ Amethyst",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/amethyst.json"
-      },
-      {
-        "label": "Monochromator Dark+ Aquamarine",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/aquamarine.json"
-      },
-      {
-        "label": "Monochromator Dark+ Emerald",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/emerald.json"
-      },
-      {
-        "label": "Monochromator Dark+ Plain",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/plain.json"
-      },
-      {
-        "label": "Monochromator Dark+ Ruby",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/ruby.json"
-      },
-      {
-        "label": "Monochromator Dark+ Sulfur",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark+/sulfur.json"
-      },
-      {
         "label": "Monochromator Light",
         "uiTheme": "vs",
         "path": "./themes/light/default.json"
@@ -160,5 +120,19 @@
   },
   "vsce": {
     "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.22",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.6.2",
+    "typescript": "^5.9.3"
   }
 }

@@ -16,11 +16,11 @@
 
 ---
 
-A minimalist color theme that reduces visual distractions for better focus while coding. The extension includes three main variants: **Dark**, **Dark+** and **Light**. Each variant comes with several additional accent color options: **Ruby**, **Amber**, **Sulfur**, **Emerald**, **Aquamarine**, **Amethyst**, **Plain**.
+A minimalist color theme that reduces visual distractions for better focus while coding. The extension includes three main variants: **Dark** and **Light**. Each variant comes with several additional accent color options: **Ruby**, **Amber**, **Sulfur**, **Emerald**, **Aquamarine**, **Amethyst**, **Plain**.
 
-| Dark | Dark+ | Light |
-|:----:|:-----:|:-----:|
-| ![Screenshots](./images/screenshots-dark.webp) | ![Screenshots](./images/screenshots-dark+.webp) | ![Screenshots](./images/screenshots-light.webp) |
+| Dark | Light |
+|:----:|:-----:|
+| ![Screenshots](./images/screenshots-dark.webp) | ![Screenshots](./images/screenshots-light.webp) |
 
 *Font: Fira Code*
 
@@ -39,10 +39,10 @@ The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/b
 ### Building from source
 
 ```sh
-npm install -g @vscode/vsce
 git clone https://codeberg.org/beem/monochromator.git
 cd monochromator
-vsce package
+npm install
+npx vsce package
 code --install-extension monochromator-*.vsix
 ```
 

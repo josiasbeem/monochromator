@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editor.wordHighlightStrongBackground": "#33d17a40"
+    "editor.wordHighlightStrongBackground": "#30df8140"
   },
   "include": "./default.json",
   "name": "Monochromator Dark Emerald",
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#33d17a"
+        "foreground": "#30df81"
       }
     },
     {
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#33d17a"
+        "foreground": "#30df81"
       }
     }
   ]

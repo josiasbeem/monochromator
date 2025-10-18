@@ -1,2 +1,7 @@
-.gitignore
 .forgejo
+.gitignore
+.vscode-test
+extension.ts
+node_modules
+tsconfig.json
+*.vsix

@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.27.0 - 2025-10-18
+
+- Migrated `Dark+` themes to `Dark`
+- Various UI improvements
+- Overhaul of the light theme
+- Improved cyan and magenta colors (incl. terminal colors)
+- Improved inlay hints
+- Fixed highlighting of TypeScript braces
+
 ## v0.26.1 - 2025-10-09
 
 - Fixed syntax highlighting of CSS ID selectors

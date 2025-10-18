@@ -1,7 +1,7 @@
 # Monochromator
 
 <p align="center">
-  <img src="./images/icon.png" height=250 width=250 />
+  <img src="./assets/icon.png" height=250 width=250 />
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@ A minimalist color theme that reduces visual distractions for better focus while
 
 | Dark | Light |
 |:----:|:-----:|
-| ![Screenshots](./images/screenshots-dark.webp) | ![Screenshots](./images/screenshots-light.webp) |
+| ![Screenshot](./assets/dark.webp) | ![Screenshot](./assets/light.webp) |
 
 *Font: Fira Code*
 

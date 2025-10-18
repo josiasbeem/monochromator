@@ -106,7 +106,7 @@
     "list.errorForeground": "#e01b24",
     "list.highlightForeground": "#000000",
     "list.hoverBackground": "#cccccc",
-    "list.inactiveSelectionBackground": "#cccccc",
+    "list.inactiveSelectionBackground": "#dddddd",
     "list.warningForeground": "#e66100",
     "menu.background": "#f0f0f0",
     "menu.border": "#cccccc",

@@ -53,13 +53,11 @@ code --install-extension monochromator-*.vsix
 
 ## Contributing
 
-As there are so many programming and markup languages out there, it's practically impossible to verify how the highlighting works for each one of them. If you spot something that looks off with the syntax highlighting while using this theme, I'd really appreciate your help:
+As there are so many programming and markup languages out there, it's practically impossible to verify how the highlighting works for each one of them. If you spot something that looks off with the syntax highlighting while using this theme, I'd really appreciate your help :-)
 
-- **Open an issue** on the Codeberg repo
+You can help by [opening an issue](https://codeberg.org/beem/monochromator/issues). When you do, please include:
 
-When you do, it would be super helpful if you could include:
-
-- Which language you were using
+- Which language you were using (and extension if there's no built-in language support)
 - What looks wrong to you
 - A screenshot if you can
 - How (and why) you think it should look instead

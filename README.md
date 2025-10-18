@@ -18,9 +18,9 @@
 
 A minimalist color theme that reduces visual distractions for better focus while coding. The extension includes three main variants: **Dark** and **Light**. Each variant comes with several additional accent color options: **Ruby**, **Amber**, **Sulfur**, **Emerald**, **Aquamarine**, **Amethyst**, **Plain**.
 
-| Dark | Light |
-|:----:|:-----:|
-| ![Screenshot](./assets/dark.webp) | ![Screenshot](./assets/light.webp) |
+---
+
+![Screenshots](./assets/screenshots.webp)
 
 *Font: Fira Code*
 

@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editorBracketHighlight.foreground1": "#77767b",
-    "editorBracketHighlight.foreground2": "#77767b",
-    "editorBracketHighlight.foreground3": "#77767b",
-    "editorBracketHighlight.foreground4": "#77767b",
-    "editorBracketHighlight.foreground5": "#77767b",
-    "editorBracketHighlight.foreground6": "#77767b",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#77767b",
-    "editorBracketMatch.border": "#77767b"
+    "editorBracketHighlight.foreground1": "#7e7e7e",
+    "editorBracketHighlight.foreground2": "#7e7e7e",
+    "editorBracketHighlight.foreground3": "#7e7e7e",
+    "editorBracketHighlight.foreground4": "#7e7e7e",
+    "editorBracketHighlight.foreground5": "#7e7e7e",
+    "editorBracketHighlight.foreground6": "#7e7e7e",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#7e7e7e",
+    "editorBracketMatch.border": "#7e7e7e"
   },
   "include": "./plain.json",
   "name": "Monochromator Light",
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#77767b"
+        "foreground": "#7e7e7e"
       }
     },
     {
@@ -39,7 +39,7 @@
       ],
       "settings": {
         "fontStyle": "bold italic",
-        "foreground": "#77767b"
+        "foreground": "#7e7e7e"
       }
     },
     {
@@ -57,6 +57,8 @@
         "keyword.other.r",
         "keyword.symbol",
         "markup.heading.setext",
+        "meta.brace.round.ts",
+        "meta.brace.square.ts",
         "meta.entry.braces.bibtex",
         "meta.separator.markdown",
         "punctuation",
@@ -82,7 +84,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#77767b"
+        "foreground": "#7e7e7e"
       }
     },
     {
@@ -192,7 +194,8 @@
         "support.type.vendored.property-name",
         "variable.language",
         "variable.other",
-        "variable.parameter.positional.shell"
+        "variable.parameter.positional.shell",
+        "variable.parameter.ts"
       ],
       "settings": {
         "fontStyle": "normal",

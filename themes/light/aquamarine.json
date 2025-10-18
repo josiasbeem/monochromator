@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editor.wordHighlightStrongBackground": "#007d8c40"
+    "editor.wordHighlightStrongBackground": "#01aacf40"
   },
   "include": "./default.json",
   "name": "Monochromator Light Aquamarine",
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#007d8c"
+        "foreground": "#01aacf"
       }
     },
     {
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#007d8c"
+        "foreground": "#01aacf"
       }
     }
   ]

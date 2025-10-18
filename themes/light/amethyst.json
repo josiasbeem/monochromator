@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editor.wordHighlightStrongBackground": "#b924eb40"
+    "editor.wordHighlightStrongBackground": "#cf207e40"
   },
   "include": "./default.json",
   "name": "Monochromator Light Amethyst",
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#b924eb"
+        "foreground": "#cf207e"
       }
     },
     {
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#b924eb"
+        "foreground": "#cf207e"
       }
     }
   ]

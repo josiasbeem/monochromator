@@ -57,6 +57,8 @@
         "keyword.other.r",
         "keyword.symbol",
         "markup.heading.setext",
+        "meta.brace.round.ts",
+        "meta.brace.square.ts",
         "meta.entry.braces.bibtex",
         "meta.separator.markdown",
         "punctuation",
@@ -78,7 +80,8 @@
         "storage.modifier.pointer",
         "storage.modifier.reference",
         "storage.type.function.arrow",
-        "variable.parameter.function.4.nix"
+        "variable.parameter.function.4.nix",
+        "variable.parameter.ts"
       ],
       "settings": {
         "fontStyle": "normal",

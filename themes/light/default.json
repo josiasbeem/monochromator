@@ -123,6 +123,7 @@
         "support.class",
         "support.constant.subsections",
         "support.function.be.latex",
+        "support.function.builtin.shell",
         "support.function.emph.latex",
         "support.function.footnote.latex",
         "support.function.general.tex",

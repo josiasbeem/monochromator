@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.27.1 - 2025-10-21
+
+- Fixed syntax highlighting of built-in shell commands
+
 ## v0.27.0 - 2025-10-18
 
 - Migrated `Dark+` themes to `Dark`

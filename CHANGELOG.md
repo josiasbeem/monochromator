@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.28.0 - 2025-11-04
+
+- Various UI improvements
+    - Removed visible UI borders for cleaner appearance
+    - Improved button contrast
+    - Increased contrast between editor and UI elements for better focus on code
+    - Improved contrast of comments in light theme for better readability
+    - Improved look of keybinding labels
+    - Removed focus borders
+
 ## v0.27.1 - 2025-10-21
 
 - Fixed syntax highlighting of built-in shell commands

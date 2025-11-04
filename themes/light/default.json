@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: MIT
 {
   "colors": {
-    "editorBracketHighlight.foreground1": "#7e7e7e",
-    "editorBracketHighlight.foreground2": "#7e7e7e",
-    "editorBracketHighlight.foreground3": "#7e7e7e",
-    "editorBracketHighlight.foreground4": "#7e7e7e",
-    "editorBracketHighlight.foreground5": "#7e7e7e",
-    "editorBracketHighlight.foreground6": "#7e7e7e",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#7e7e7e",
-    "editorBracketMatch.border": "#7e7e7e"
+    "editorBracketHighlight.foreground1": "#767676",
+    "editorBracketHighlight.foreground2": "#767676",
+    "editorBracketHighlight.foreground3": "#767676",
+    "editorBracketHighlight.foreground4": "#767676",
+    "editorBracketHighlight.foreground5": "#767676",
+    "editorBracketHighlight.foreground6": "#767676",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#767676",
+    "editorBracketMatch.border": "#767676"
   },
   "include": "./plain.json",
   "name": "Monochromator Light",
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#7e7e7e"
+        "foreground": "#767676"
       }
     },
     {
@@ -39,7 +39,7 @@
       ],
       "settings": {
         "fontStyle": "bold italic",
-        "foreground": "#7e7e7e"
+        "foreground": "#767676"
       }
     },
     {
@@ -84,7 +84,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#7e7e7e"
+        "foreground": "#767676"
       }
     },
     {

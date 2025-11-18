@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.28.1 - 2025-11-18
+
+- Fixed editor gutter colors for staged code
+
 ## v0.28.0 - 2025-11-04
 
 - Various UI improvements

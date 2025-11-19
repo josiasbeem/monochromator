@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.29.0 - 2025-11-19
+
+- Made command center border color more subtle
+
 ## v0.28.1 - 2025-11-18
 
 - Fixed editor gutter colors for staged code

@@ -34,7 +34,7 @@ To ensure 100% correct behaviour, it is recommended to add the following to your
 
 ### Download
 
-The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Actions](https://codeberg.org/beem/monochromator/actions) tab or directly in VSCodium.
+The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=beem.monochromator), the [Actions](https://codeberg.org/beem/monochromator/actions) tab or directly in VSCodium or VS Code.
 
 ### Building from source
 

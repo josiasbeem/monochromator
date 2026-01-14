@@ -28,15 +28,21 @@ A minimalist color theme that reduces visual distractions for better focus while
 
 To ensure 100% correct behaviour, it is recommended to add the following to your `settings.json`:
 
-```
-"editor.bracketPairColorization.enabled": false
+```json
+{
+  // This ensures that string interpolation delimiters look right
+  "editor.bracketPairColorization.enabled": false,
+
+  // This ensures that variables do not look similar to comments
+  "editor.showUnused": false
+}
 ```
 
 ### Download
 
 The extension can be downloaded from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=beem.monochromator), the [Actions](https://codeberg.org/beem/monochromator/actions) tab or directly in VSCodium or VS Code.
 
-### Building from source
+### Building From Source
 
 ```sh
 git clone https://codeberg.org/beem/monochromator.git
@@ -53,7 +59,7 @@ code --install-extension monochromator-*.vsix
 
 ## Contributing
 
-As there are so many programming and markup languages out there, it's practically impossible to verify how the highlighting works for each one of them. If you spot something that looks off with the syntax highlighting while using this theme, I'd really appreciate your help :-)
+As there are many programming and markup languages (each with a lot of different extensions) out there, it's practically impossible to verify how the highlighting works for each one of them. If you spot something that looks off with the syntax highlighting while using this theme, I'd really appreciate your help :-)
 
 You can help by [opening an issue](https://codeberg.org/beem/monochromator/issues). When you do, please include:
 

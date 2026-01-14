@@ -49,13 +49,7 @@ git clone https://codeberg.org/beem/monochromator.git
 cd monochromator
 npm install
 npx vsce package
-code --install-extension monochromator-*.vsix
 ```
-
-⚠️ **Note:** Depending on your [Code - OSS](https://github.com/microsoft/vscode) distribution, the command `code` could also be named ...
-- `codium` (VSCodium)
-- `code-insiders` (Visual Studio Code Insiders)
-- `codium-insiders` (VSCodium Insiders).
 
 ## Contributing
 

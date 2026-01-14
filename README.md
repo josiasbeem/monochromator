@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  A simple <b>monochrome</b> theme for <b>Visual Studio Code</b>
+  Distraction-free <b>monochrome</b> coding theme for <b>Visual Studio Code</b>
 </p>
 
 ---

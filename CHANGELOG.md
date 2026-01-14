@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.30.0 - 2026-01-14
+
+- Made functions and methods italic
+- Made gray shade darker in dark theme
+- Fixed highlighting of Go package names
+- Fixed highlighting of JavaScript braces
+
 ## v0.29.0 - 2025-11-19
 
 - Made command center border color more subtle

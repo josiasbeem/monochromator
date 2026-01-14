@@ -166,16 +166,15 @@
         "constant.other.option",
         "constant.other.reference",
         "constant.other.table-name",
-        "entity.name.function",
         "entity.name.function.preprocessor",
         "entity.name.section.latex",
         "entity.name.type.class",
         "entity.name.type.entry-key.bibtex",
         "entity.name.type.enum",
+        "entity.name.type.package.go",
         "entity.name.type.struct.rust",
         "entity.name.type.trait.rust",
         "keyword.label.assembly",
-        "keyword.operator.sizeof",
         "markup.bold.textbf.latex",
         "markup.italic.emph.latex",
         "markup.italic.textit.latex",
@@ -190,7 +189,6 @@
         "support.class.latex",
         "support.class.math.block.environment.latex",
         "support.class.math.block.tex",
-        "support.function",
         "support.type.property-name",
         "support.type.vendored.property-name",
         "variable.language",
@@ -200,6 +198,18 @@
       ],
       "settings": {
         "fontStyle": "normal",
+        "foreground": "#000000"
+      }
+    },
+    {
+      "name": "Italic Text",
+      "scope": [
+        "entity.name.function",
+        "keyword.operator.sizeof",
+        "support.function"
+      ],
+      "settings": {
+        "fontStyle": "italic",
         "foreground": "#000000"
       }
     },

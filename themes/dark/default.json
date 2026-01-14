@@ -1,13 +1,13 @@
 {
   "colors": {
-    "editorBracketHighlight.foreground1": "#909096",
-    "editorBracketHighlight.foreground2": "#909096",
-    "editorBracketHighlight.foreground3": "#909096",
-    "editorBracketHighlight.foreground4": "#909096",
-    "editorBracketHighlight.foreground5": "#909096",
-    "editorBracketHighlight.foreground6": "#909096",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#909096",
-    "editorBracketMatch.border": "#909096"
+    "editorBracketHighlight.foreground1": "#808086",
+    "editorBracketHighlight.foreground2": "#808086",
+    "editorBracketHighlight.foreground3": "#808086",
+    "editorBracketHighlight.foreground4": "#808086",
+    "editorBracketHighlight.foreground5": "#808086",
+    "editorBracketHighlight.foreground6": "#808086",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#808086",
+    "editorBracketMatch.border": "#808086"
   },
   "include": "./plain.json",
   "name": "Monochromator Dark",
@@ -23,7 +23,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#909096"
+        "foreground": "#808086"
       }
     },
     {
@@ -37,7 +37,7 @@
       ],
       "settings": {
         "fontStyle": "bold italic",
-        "foreground": "#909096"
+        "foreground": "#808086"
       }
     },
     {
@@ -82,7 +82,7 @@
       ],
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#909096"
+        "foreground": "#808086"
       }
     },
     {

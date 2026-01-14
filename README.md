@@ -22,7 +22,7 @@ A minimalist color theme that reduces visual distractions for better focus while
 
 ![Screenshots](./assets/screenshots.webp)
 
-*Font: Fira Code*
+*Font: Recursive Mono*
 
 ## Installation
 

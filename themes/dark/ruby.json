@@ -17,6 +17,7 @@
         "punctuation.definition.char",
         "punctuation.definition.constant",
         "punctuation.definition.raw",
+        "punctuation.definition.reference.typst",
         "punctuation.definition.string",
         "punctuation.separator.dot.decimal",
         "string"

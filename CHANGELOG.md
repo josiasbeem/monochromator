@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.31.0 - 2026-02-26
+
+- Dimmed the white foreground value in dark theme
+- Improved support for Typst
+- Fixed editor group, panel, and overview ruler border colors
+
 ## v0.30.0 - 2026-01-14
 
 - Made functions and methods italic

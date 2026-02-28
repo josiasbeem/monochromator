@@ -1,0 +1,30 @@
+[
+  {
+    "name": "default",
+    "color": "blue"
+  },
+  {
+    "name": "amber",
+    "color": "orange"
+  },
+  {
+    "name": "amethyst",
+    "color": "magenta"
+  },
+  {
+    "name": "aquamarine",
+    "color": "cyan"
+  },
+  {
+    "name": "emerald",
+    "color": "green"
+  },
+  {
+    "name": "ruby",
+    "color": "red"
+  },
+  {
+    "name": "sulfur",
+    "color": "yellow"
+  }
+]

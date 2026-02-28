@@ -119,20 +119,6 @@
     ]
   },
   "vsce": {
-    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
-  },
-  "main": "./out/extension.js",
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./"
-  },
-  "devDependencies": {
-    "@types/node": "^20.19.22",
-    "@types/vscode": "^1.74.0",
-    "@vscode/vsce": "^3.6.2",
-    "typescript": "^5.9.3"
+    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master/editors/vscode"
   }
 }

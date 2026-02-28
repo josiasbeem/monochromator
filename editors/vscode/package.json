@@ -2,7 +2,7 @@
   "name": "monochromator",
   "displayName": "Monochromator",
   "description": "Distraction-free monochrome coding theme",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -119,6 +119,6 @@
     ]
   },
   "vsce": {
-    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master/editors/vscode"
+    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
   }
 }

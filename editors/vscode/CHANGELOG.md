@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.31.1 - 2026-02-28
+
+- Made scrollbar transparent so it no longer covers breadcrumbs ([#5](https://codeberg.org/beem/monochromator/issues/5))
+- Replaced rarely used color values with existing similar ones for consistency
+- Removed migration code from v0.27.0 that is no longer needed
+
 ## v0.31.0 - 2026-02-26
 
 - Dimmed the white foreground value in dark theme

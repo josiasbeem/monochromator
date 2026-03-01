@@ -70,4 +70,4 @@ If something looks off with the syntax highlighting, please [open an issue](http
 
 Copyright © 2025 Josias Beem
 
-This project is licensed under the **MIT License** - see the `LICENSE` file for details.
+Licensed under the **MIT License**

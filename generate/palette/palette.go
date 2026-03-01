@@ -63,9 +63,11 @@ func (c *Config) Validate() error {
 			return fmt.Errorf("missing %q palette", mode)
 		}
 	}
+
 	if len(c.Variants) == 0 {
 		return fmt.Errorf("no variants defined")
 	}
+
 	hasDefault := false
 	for i, v := range c.Variants {
 		if v.Name == "" {
@@ -78,9 +80,11 @@ func (c *Config) Validate() error {
 			return fmt.Errorf("variant %q: %w", v.Name, err)
 		}
 	}
+
 	if !hasDefault {
 		return fmt.Errorf("missing \"default\" variant")
 	}
+
 	return nil
 }
 
@@ -107,6 +111,7 @@ func Load(paletteDir string) (*Config, error) {
 	if err := cfg.Validate(); err != nil {
 		return nil, fmt.Errorf("invalid config: %w", err)
 	}
+
 	return cfg, nil
 }
 

@@ -222,27 +222,12 @@ var scopeBoldLiterals = []string{
 	"string.quoted.byte.raw",
 }
 
-func tokenRule(name string, scope any, fontStyle string, foreground string) map[string]any {
-	rule := map[string]any{
-		"scope": scope,
-		"settings": map[string]any{
-			"fontStyle":  fontStyle,
-			"foreground": foreground,
-		},
+func tokenRule(scope []string, foreground, fontStyle string) map[string]any {
+	settings := map[string]any{"fontStyle": fontStyle}
+	if foreground != "" {
+		settings["foreground"] = foreground
 	}
-	if name != "" {
-		rule["name"] = name
-	}
-	return rule
-}
-
-func tokenRuleStyleOnly(scope any, fontStyle string) map[string]any {
-	return map[string]any{
-		"scope": scope,
-		"settings": map[string]any{
-			"fontStyle": fontStyle,
-		},
-	}
+	return map[string]any{"scope": scope, "settings": settings}
 }
 
 func buildPlainColors(p palette.Palette, mode string) map[string]string {
@@ -464,13 +449,7 @@ func buildPlainTheme(mode string, p palette.Palette) map[string]any {
 		"colors": buildPlainColors(p, mode),
 		"name":   "Monochromator " + modeLabel + " Plain",
 		"tokenColors": []any{
-			map[string]any{
-				"scope": "comment",
-				"settings": map[string]any{
-					"fontStyle":  "italic",
-					"foreground": p.FGMuted,
-				},
-			},
+			tokenRule([]string{"comment"}, p.FGMuted, "italic"),
 		},
 	}
 }
@@ -491,25 +470,24 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 		"include": "./plain.json",
 		"name":    "Monochromator " + modeLabel,
 		"tokenColors": []any{
-			tokenRule("Italic Gray", scopeItalicGray, "italic", p.FGMuted),
-			tokenRule("Bold Italic Gray", scopeBoldItalicGray, "bold italic", p.FGMuted),
-			tokenRule("Gray", scopeGray, "normal", p.FGMuted),
-			tokenRule("Bold Text", scopeBoldText, "bold", p.FGContrast),
-			tokenRule("Text", scopeText, "normal", p.FG),
-			tokenRule("Italic Text", scopeItalicText, "italic", p.FG),
-			tokenRule("Literals", scopeLiterals, "normal", accent),
-			tokenRule("Bold Literals", scopeBoldLiterals, "bold", accent),
-			tokenRule("", "markup.italic", "italic", p.FG),
-			tokenRuleStyleOnly("markup.underline", "underline"),
-			tokenRuleStyleOnly("markup.strikethrough", "strikethrough"),
+			tokenRule(scopeGray, p.FGMuted, "normal"),
+			tokenRule(scopeBoldItalicGray, p.FGMuted, "bold italic"),
+			tokenRule(scopeItalicGray, p.FGMuted, "italic"),
+			tokenRule(scopeText, p.FG, "normal"),
+			tokenRule(scopeBoldText, p.FGContrast, "bold"),
+			tokenRule(scopeItalicText, p.FG, "italic"),
+			tokenRule(scopeLiterals, accent, "normal"),
+			tokenRule(scopeBoldLiterals, accent, "bold"),
+			tokenRule([]string{"markup.italic"}, p.FG, "italic"),
+			tokenRule([]string{"markup.underline"}, "", "underline"),
+			tokenRule([]string{"markup.strikethrough"}, "", "strikethrough"),
 		},
 	}
 }
 
 func buildVariantTheme(mode, variantName, accent string) map[string]any {
 	modeLabel := palette.Pick(mode, "Dark", "Light")
-	r := []rune(variantName)
-	label := strings.ToUpper(string(r[:1])) + string(r[1:])
+	label := strings.ToUpper(variantName[:1]) + variantName[1:]
 	return map[string]any{
 		"colors": map[string]string{
 			"editor.wordHighlightStrongBackground": accent + "40",
@@ -517,24 +495,22 @@ func buildVariantTheme(mode, variantName, accent string) map[string]any {
 		"include": "./default.json",
 		"name":    "Monochromator " + modeLabel + " " + label,
 		"tokenColors": []any{
-			tokenRule("Literals", scopeLiterals, "normal", accent),
-			tokenRule("Bold Literals", scopeBoldLiterals, "bold", accent),
+			tokenRule(scopeLiterals, accent, "normal"),
+			tokenRule(scopeBoldLiterals, accent, "bold"),
 		},
 	}
 }
 
 func writeTheme(filePath string, theme map[string]any) error {
-	data, err := json.MarshalIndent(theme, "", "  ")
+	data, err := json.Marshal(theme)
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(filePath, append(data, '\n'), 0o644)
+	return os.WriteFile(filePath, data, 0o644)
 }
 
 func Generate(cfg *palette.Config, outputDir string) error {
-	modes := []string{"dark", "light"}
-
-	for _, mode := range modes {
+	for _, mode := range []string{"dark", "light"} {
 		dir := filepath.Join(outputDir, mode)
 		if err := os.MkdirAll(dir, 0o755); err != nil {
 			return fmt.Errorf("creating directory %s: %w", dir, err)
@@ -551,14 +527,16 @@ func Generate(cfg *palette.Config, outputDir string) error {
 			if err != nil {
 				return fmt.Errorf("resolving accent for variant %q: %w", v.Name, err)
 			}
+
+			var theme map[string]any
 			if v.Name == "default" {
-				if err := writeTheme(filepath.Join(dir, "default.json"), buildDefaultTheme(mode, p, accent)); err != nil {
-					return fmt.Errorf("writing default.json: %w", err)
-				}
+				theme = buildDefaultTheme(mode, p, accent)
 			} else {
-				if err := writeTheme(filepath.Join(dir, v.Name+".json"), buildVariantTheme(mode, v.Name, accent)); err != nil {
-					return fmt.Errorf("writing %s.json: %w", v.Name, err)
-				}
+				theme = buildVariantTheme(mode, v.Name, accent)
+			}
+
+			if err := writeTheme(filepath.Join(dir, v.Name+".json"), theme); err != nil {
+				return fmt.Errorf("writing %s.json: %w", v.Name, err)
 			}
 		}
 	}

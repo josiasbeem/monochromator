@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -11,22 +10,24 @@ import (
 )
 
 func main() {
-	root := flag.String("root", "..", "Path to the repository root")
-	flag.Parse()
+	if err := run(); err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
+}
 
-	repoRoot := *root
-	paletteDir := filepath.Join(repoRoot, "palette")
+func run() error {
+	repoRoot := ".."
 
-	cfg, err := palette.Load(paletteDir)
+	cfg, err := palette.Load(filepath.Join(repoRoot, "palette"))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error loading palette: %v\n", err)
-		os.Exit(1)
+		return err
 	}
 
-	vsDir := filepath.Join(repoRoot, "editors", "vscode", "themes")
-	if err := vscode.Generate(cfg, vsDir); err != nil {
-		fmt.Fprintf(os.Stderr, "Error generating VS Code themes: %v\n", err)
-		os.Exit(1)
+	if err := vscode.Generate(cfg, filepath.Join(repoRoot, "editors", "vscode", "themes")); err != nil {
+		return err
 	}
-	fmt.Println("Generated VS Code themes.")
+
+	fmt.Println("Generated VS Code themes")
+	return nil
 }

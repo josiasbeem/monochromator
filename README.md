@@ -21,13 +21,6 @@
 All extensions are also available as [build artifacts](https://codeberg.org/beem/monochromator/actions).
 
 <details>
-<summary><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></summary>
-
-*Coming soon*
-
-</details>
-
-<details>
 <summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
 
 *Coming soon*

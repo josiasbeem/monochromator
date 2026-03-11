@@ -1,7 +1,9 @@
 on:
   push:
     tags:
+      - "neovim/v*"
       - "vscode/v*"
+      - "zed/v*"
 
 jobs:
   build:

@@ -10,13 +10,33 @@ import (
 	"generate/palette"
 )
 
+const (
+	Accent          = "Accent"
+	AccentBold      = "AccentBold"
+	ContrastBold    = "ContrastBold"
+	Muted           = "Muted"
+	MutedItalic     = "MutedItalic"
+	MutedBoldItalic = "MutedBoldItalic"
+	Plain           = "Plain"
+	PlainItalic     = "PlainItalic"
+	Underlined      = "Underlined"
+)
+
+func parseHex(color, component string) int64 {
+	v, err := strconv.ParseInt(component, 16, 0)
+	if err != nil {
+		panic(fmt.Sprintf("invalid hex color %q: %v", color, err))
+	}
+	return v
+}
+
 func blendColor(fg, bg string, alpha int) string {
-	fgR, _ := strconv.ParseInt(fg[1:3], 16, 0)
-	fgG, _ := strconv.ParseInt(fg[3:5], 16, 0)
-	fgB, _ := strconv.ParseInt(fg[5:7], 16, 0)
-	bgR, _ := strconv.ParseInt(bg[1:3], 16, 0)
-	bgG, _ := strconv.ParseInt(bg[3:5], 16, 0)
-	bgB, _ := strconv.ParseInt(bg[5:7], 16, 0)
+	fgR := parseHex(fg, fg[1:3])
+	fgG := parseHex(fg, fg[3:5])
+	fgB := parseHex(fg, fg[5:7])
+	bgR := parseHex(bg, bg[1:3])
+	bgG := parseHex(bg, bg[3:5])
+	bgB := parseHex(bg, bg[5:7])
 	a := float64(alpha) / 255.0
 	r := int(float64(fgR)*a + float64(bgR)*(1-a))
 	g := int(float64(fgG)*a + float64(bgG)*(1-a))
@@ -24,18 +44,14 @@ func blendColor(fg, bg string, alpha int) string {
 	return fmt.Sprintf("#%02x%02x%02x", r, g, b)
 }
 
-func luaColor(hex string) string {
-	return fmt.Sprintf("%q", hex)
-}
-
 func hlLine(name, fg, bg, style string) string {
 	parts := []string{fmt.Sprintf("vim.api.nvim_set_hl(0, %q, {", name)}
 	opts := []string{}
 	if fg != "" {
-		opts = append(opts, fmt.Sprintf("fg = %s", luaColor(fg)))
+		opts = append(opts, fmt.Sprintf("fg = %q", fg))
 	}
 	if bg != "" {
-		opts = append(opts, fmt.Sprintf("bg = %s", luaColor(bg)))
+		opts = append(opts, fmt.Sprintf("bg = %q", bg))
 	}
 	if strings.Contains(style, "bold") {
 		opts = append(opts, "bold = true")
@@ -74,6 +90,9 @@ func buildEditorHighlights(p palette.Palette) []string {
 		hlLine("LineNr", p.FGMuted, "", ""),
 		hlLine("Normal", p.FG, p.BG, ""),
 		hlLine("NormalFloat", p.FG, p.BGSecondary, ""),
+		hlLine("NvimTreeCursorLine", "", p.BGSelection, ""),
+		hlLine("NvimTreeEndOfBuffer", "", p.BGSecondary, ""),
+		hlLine("NvimTreeNormal", p.FG, p.BGSecondary, ""),
 		hlLine("Pmenu", p.FG, p.BGSecondary, ""),
 		hlLine("PmenuSel", p.FG, p.BGSelection, ""),
 		hlLine("Search", "", p.BGSelection, ""),
@@ -84,10 +103,28 @@ func buildEditorHighlights(p palette.Palette) []string {
 	}
 }
 
-func buildPlainSyntax(p palette.Palette) []string {
-	return []string{
-		hlLine("Comment", p.FGMuted, "", "italic"),
+func buildStyleTypes(p palette.Palette, accent string) []string {
+	types := []string{
+		hlLine(ContrastBold, p.FGContrast, "", "bold"),
+		hlLine(Muted, p.FGMuted, "", ""),
+		hlLine(MutedItalic, p.FGMuted, "", "italic"),
+		hlLine(MutedBoldItalic, p.FGMuted, "", "bold italic"),
+		hlLine(Plain, p.FG, "", ""),
+		hlLine(PlainItalic, p.FG, "", "italic"),
+		hlLine(Underlined, "", "", "underline"),
+	}
+	if accent != "" {
+		types = append(types,
+			hlLine(Accent, accent, "", ""),
+			hlLine(AccentBold, accent, "", "bold"),
+		)
+	}
+	return types
+}
 
+func buildPlainSyntax() []string {
+	return []string{
+		linkLine("Comment", MutedItalic),
 		linkLine("Constant", "Normal"),
 		linkLine("Delimiter", "Normal"),
 		linkLine("Function", "Normal"),
@@ -103,57 +140,69 @@ func buildPlainSyntax(p palette.Palette) []string {
 	}
 }
 
-func buildDefaultSyntax(p palette.Palette, accent string) []string {
+func buildDefaultSyntax() []string {
 	return []string{
-		hlLine("Bold", p.FGContrast, "", "bold"),
-		hlLine("Boolean", accent, "", "bold"),
-		hlLine("Character", accent, "", ""),
-		hlLine("Comment", p.FGMuted, "", "italic"),
-		hlLine("Constant", p.FG, "", ""),
-		hlLine("Delimiter", p.FGMuted, "", ""),
-		hlLine("Float", accent, "", ""),
-		hlLine("Function", p.FG, "", "italic"),
-		hlLine("Identifier", p.FG, "", ""),
-		hlLine("Italic", p.FG, "", "italic"),
-		hlLine("Keyword", p.FGContrast, "", "bold"),
-		hlLine("Number", accent, "", ""),
-		hlLine("Operator", p.FGMuted, "", ""),
-		hlLine("PreProc", p.FGContrast, "", "bold"),
-		hlLine("Special", accent, "", "bold"),
-		hlLine("SpecialChar", accent, "", "bold"),
-		hlLine("Statement", p.FGContrast, "", "bold"),
-		hlLine("String", accent, "", ""),
-		hlLine("Tag", p.FGContrast, "", "bold"),
-		hlLine("Type", p.FGContrast, "", "bold"),
-		hlLine("Underlined", "", "", "underline"),
+		// Semantic groups
+		linkLine("Bold", ContrastBold),
+		linkLine("Boolean", AccentBold),
+		linkLine("Character", Accent),
+		linkLine("Comment", MutedItalic),
+		linkLine("Constant", Plain),
+		linkLine("Delimiter", Muted),
+		linkLine("Float", Accent),
+		linkLine("Function", PlainItalic),
+		linkLine("Identifier", Plain),
+		linkLine("Italic", PlainItalic),
+		linkLine("Keyword", ContrastBold),
+		linkLine("Number", Accent),
+		linkLine("Operator", Muted),
+		linkLine("PreProc", ContrastBold),
+		linkLine("Special", AccentBold),
+		linkLine("SpecialChar", AccentBold),
+		linkLine("SpecialComment", MutedBoldItalic),
+		linkLine("Statement", ContrastBold),
+		linkLine("String", Accent),
+		linkLine("Tag", ContrastBold),
+		linkLine("Type", ContrastBold),
 
-		linkLine("@boolean", "Boolean"),
-		linkLine("@character", "Character"),
-		linkLine("@comment", "Comment"),
-		linkLine("@constant", "Constant"),
-		linkLine("@constant.builtin", "Boolean"),
-		linkLine("@constructor", "Type"),
-		linkLine("@float", "Float"),
-		linkLine("@function", "Function"),
-		linkLine("@function.builtin", "Function"),
-		linkLine("@keyword", "Keyword"),
-		linkLine("@number", "Number"),
-		linkLine("@operator", "Operator"),
-		linkLine("@punctuation", "Delimiter"),
-		linkLine("@string", "String"),
-		linkLine("@string.escape", "SpecialChar"),
-		linkLine("@tag", "Tag"),
-		linkLine("@type", "Type"),
-		linkLine("@type.builtin", "Type"),
-		linkLine("@variable", "Identifier"),
+		// Treesitter
+		linkLine("@boolean", AccentBold),
+		linkLine("@character", Accent),
+		linkLine("@character.printf", AccentBold),
+		linkLine("@character.special.java", ContrastBold),
+		linkLine("@comment", MutedItalic),
+		linkLine("@constant", Plain),
+		linkLine("@constant.builtin", AccentBold),
+		linkLine("@constructor", ContrastBold),
+		linkLine("@float", Accent),
+		linkLine("@function", PlainItalic),
+		linkLine("@function.builtin", PlainItalic),
+		linkLine("@keyword", ContrastBold),
+		linkLine("@keyword.javadoc", MutedBoldItalic),
+		linkLine("@lsp.type.namespace", Plain),
+		linkLine("@lsp.typemod.keyword.documentation", MutedBoldItalic),
+		linkLine("@module.rust", Plain),
+		linkLine("@number", Accent),
+		linkLine("@operator", Muted),
+		linkLine("@punctuation", Muted),
+		linkLine("@punctuation.special.rust", MutedItalic),
+		linkLine("@string", Accent),
+		linkLine("@string.escape", AccentBold),
+		linkLine("@tag", ContrastBold),
+		linkLine("@tag.attribute", Plain),
+		linkLine("@tag.delimiter", Muted),
+		linkLine("@type", ContrastBold),
+		linkLine("@type.builtin", ContrastBold),
+		linkLine("@variable", Plain),
+		linkLine("@variable.builtin", ContrastBold),
 	}
 }
 
 func buildThemeLua(name, mode string, editorHLs, syntaxHLs []string) string {
 	var b strings.Builder
 	b.WriteString("vim.cmd(\"highlight clear\")\n")
-	b.WriteString(fmt.Sprintf("vim.g.colors_name = %q\n", name))
-	b.WriteString(fmt.Sprintf("vim.o.background = %q\n\n", mode))
+	fmt.Fprintf(&b, "vim.g.colors_name = %q\n", name)
+	fmt.Fprintf(&b, "vim.o.background = %q\n\n", mode)
 
 	for _, line := range editorHLs {
 		b.WriteString(line + "\n")
@@ -164,10 +213,6 @@ func buildThemeLua(name, mode string, editorHLs, syntaxHLs []string) string {
 	}
 
 	return b.String()
-}
-
-func writeFile(path, content string) error {
-	return os.WriteFile(path, []byte(content), 0o644)
 }
 
 func Generate(cfg *palette.Config, outputDir string) error {
@@ -181,8 +226,8 @@ func Generate(cfg *palette.Config, outputDir string) error {
 		editorHLs := buildEditorHighlights(p)
 
 		plainName := "monochromator-" + modeLabel + "-plain"
-		plainLua := buildThemeLua(plainName, mode, editorHLs, buildPlainSyntax(p))
-		if err := writeFile(filepath.Join(outputDir, plainName+".lua"), plainLua); err != nil {
+		plainSyntax := append(buildStyleTypes(p, ""), buildPlainSyntax()...)
+		if err := os.WriteFile(filepath.Join(outputDir, plainName+".lua"), []byte(buildThemeLua(plainName, mode, editorHLs, plainSyntax)), 0o644); err != nil {
 			return fmt.Errorf("writing %s.lua: %w", plainName, err)
 		}
 
@@ -199,8 +244,8 @@ func Generate(cfg *palette.Config, outputDir string) error {
 				themeName = "monochromator-" + modeLabel + "-" + v.Name
 			}
 
-			lua := buildThemeLua(themeName, mode, editorHLs, buildDefaultSyntax(p, accent))
-			if err := writeFile(filepath.Join(outputDir, themeName+".lua"), lua); err != nil {
+			syntax := append(buildStyleTypes(p, accent), buildDefaultSyntax()...)
+			if err := os.WriteFile(filepath.Join(outputDir, themeName+".lua"), []byte(buildThemeLua(themeName, mode, editorHLs, syntax)), 0o644); err != nil {
 				return fmt.Errorf("writing %s.lua: %w", themeName, err)
 			}
 		}

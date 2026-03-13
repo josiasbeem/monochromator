@@ -5,7 +5,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"generate/neovim"
 	"generate/palette"
 	"generate/vscode"
 )
@@ -24,11 +23,6 @@ func run() error {
 	if err != nil {
 		return err
 	}
-
-	if err := neovim.Generate(cfg, filepath.Join(repoRoot, "editors", "neovim", "colors")); err != nil {
-		return err
-	}
-	fmt.Println("Generated Neovim themes")
 
 	if err := vscode.Generate(cfg, filepath.Join(repoRoot, "editors", "vscode", "themes")); err != nil {
 		return err

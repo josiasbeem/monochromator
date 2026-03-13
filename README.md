@@ -21,13 +21,6 @@
 All themes can also be found under [Actions](https://codeberg.org/beem/monochromator/actions).
 
 <details>
-<summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
-
-*Work in progress*
-
-</details>
-
-<details>
 <summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
 
 <br>

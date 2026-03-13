@@ -1,7 +1,6 @@
 on:
   push:
     tags:
-      - "neovim/v*"
       - "vscode/v*"
       - "zed/v*"
 
@@ -29,15 +28,6 @@ jobs:
         run: |
           go build -v -o generate .
           ./generate
-
-      - name: Get Neovim version
-        run: echo "NEOVIM_VERSION=$(tr -d '[:space:]' < editors/neovim/version.txt)" >> $GITHUB_ENV
-
-      - name: Upload Neovim artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: "monochromator-neovim-${{ env.NEOVIM_VERSION }}"
-          path: "editors/neovim/colors/"
 
       - name: Get VS Code version
         run: echo "VSCODE_VERSION=$(node -p "require('./editors/vscode/package.json').version")" >> $GITHUB_ENV

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strconv"
 	"strings"
 
@@ -11,15 +12,15 @@ import (
 )
 
 const (
-	Accent          = "Accent"
-	AccentBold      = "AccentBold"
-	ContrastBold    = "ContrastBold"
-	Muted           = "Muted"
-	MutedItalic     = "MutedItalic"
-	MutedBoldItalic = "MutedBoldItalic"
-	Plain           = "Plain"
-	PlainItalic     = "PlainItalic"
-	Underlined      = "Underlined"
+	accent          = "Accent"
+	accentBold      = "AccentBold"
+	contrastBold    = "ContrastBold"
+	muted           = "Muted"
+	mutedItalic     = "MutedItalic"
+	mutedBoldItalic = "MutedBoldItalic"
+	plain           = "Plain"
+	plainItalic     = "PlainItalic"
+	underlined      = "Underlined"
 )
 
 func parseHex(color, component string) int64 {
@@ -31,43 +32,31 @@ func parseHex(color, component string) int64 {
 }
 
 func blendColor(fg, bg string, alpha int) string {
-	fgR := parseHex(fg, fg[1:3])
-	fgG := parseHex(fg, fg[3:5])
-	fgB := parseHex(fg, fg[5:7])
-	bgR := parseHex(bg, bg[1:3])
-	bgG := parseHex(bg, bg[3:5])
-	bgB := parseHex(bg, bg[5:7])
 	a := float64(alpha) / 255.0
-	r := int(float64(fgR)*a + float64(bgR)*(1-a))
-	g := int(float64(fgG)*a + float64(bgG)*(1-a))
-	b := int(float64(fgB)*a + float64(bgB)*(1-a))
-	return fmt.Sprintf("#%02x%02x%02x", r, g, b)
+	var c [3]int
+	for i := range 3 {
+		off := 1 + i*2
+		f := parseHex(fg, fg[off:off+2])
+		b := parseHex(bg, bg[off:off+2])
+		c[i] = int(float64(f)*a + float64(b)*(1-a))
+	}
+	return fmt.Sprintf("#%02x%02x%02x", c[0], c[1], c[2])
 }
 
 func hlLine(name, fg, bg, style string) string {
-	parts := []string{fmt.Sprintf("vim.api.nvim_set_hl(0, %q, {", name)}
-	opts := []string{}
+	var opts []string
 	if fg != "" {
 		opts = append(opts, fmt.Sprintf("fg = %q", fg))
 	}
 	if bg != "" {
 		opts = append(opts, fmt.Sprintf("bg = %q", bg))
 	}
-	if strings.Contains(style, "bold") {
-		opts = append(opts, "bold = true")
+	for _, s := range []string{"bold", "italic", "underline", "strikethrough"} {
+		if strings.Contains(style, s) {
+			opts = append(opts, s+" = true")
+		}
 	}
-	if strings.Contains(style, "italic") {
-		opts = append(opts, "italic = true")
-	}
-	if strings.Contains(style, "underline") {
-		opts = append(opts, "underline = true")
-	}
-	if strings.Contains(style, "strikethrough") {
-		opts = append(opts, "strikethrough = true")
-	}
-	parts = append(parts, strings.Join(opts, ", "))
-	parts = append(parts, "})")
-	return strings.Join(parts, " ")
+	return fmt.Sprintf("vim.api.nvim_set_hl(0, %q, { %s })", name, strings.Join(opts, ", "))
 }
 
 func linkLine(from, to string) string {
@@ -103,20 +92,20 @@ func buildEditorHighlights(p palette.Palette) []string {
 	}
 }
 
-func buildStyleTypes(p palette.Palette, accent string) []string {
+func buildStyleTypes(p palette.Palette, accentColor string) []string {
 	types := []string{
-		hlLine(ContrastBold, p.FGContrast, "", "bold"),
-		hlLine(Muted, p.FGMuted, "", ""),
-		hlLine(MutedItalic, p.FGMuted, "", "italic"),
-		hlLine(MutedBoldItalic, p.FGMuted, "", "bold italic"),
-		hlLine(Plain, p.FG, "", ""),
-		hlLine(PlainItalic, p.FG, "", "italic"),
-		hlLine(Underlined, "", "", "underline"),
+		hlLine(contrastBold, p.FGContrast, "", "bold"),
+		hlLine(muted, p.FGMuted, "", ""),
+		hlLine(mutedItalic, p.FGMuted, "", "italic"),
+		hlLine(mutedBoldItalic, p.FGMuted, "", "bold italic"),
+		hlLine(plain, p.FG, "", ""),
+		hlLine(plainItalic, p.FG, "", "italic"),
+		hlLine(underlined, "", "", "underline"),
 	}
-	if accent != "" {
+	if accentColor != "" {
 		types = append(types,
-			hlLine(Accent, accent, "", ""),
-			hlLine(AccentBold, accent, "", "bold"),
+			hlLine(accent, accentColor, "", ""),
+			hlLine(accentBold, accentColor, "", "bold"),
 		)
 	}
 	return types
@@ -124,7 +113,7 @@ func buildStyleTypes(p palette.Palette, accent string) []string {
 
 func buildPlainSyntax() []string {
 	return []string{
-		linkLine("Comment", MutedItalic),
+		linkLine("Comment", mutedItalic),
 		linkLine("Constant", "Normal"),
 		linkLine("Delimiter", "Normal"),
 		linkLine("Function", "Normal"),
@@ -143,62 +132,62 @@ func buildPlainSyntax() []string {
 func buildDefaultSyntax() []string {
 	return []string{
 		// Semantic groups
-		linkLine("Bold", ContrastBold),
-		linkLine("Boolean", AccentBold),
-		linkLine("Character", Accent),
-		linkLine("Comment", MutedItalic),
-		linkLine("Constant", Plain),
-		linkLine("Delimiter", Muted),
-		linkLine("Float", Accent),
-		linkLine("Function", PlainItalic),
-		linkLine("Identifier", Plain),
-		linkLine("Italic", PlainItalic),
-		linkLine("Keyword", ContrastBold),
-		linkLine("Number", Accent),
-		linkLine("Operator", Muted),
-		linkLine("PreProc", ContrastBold),
-		linkLine("Special", AccentBold),
-		linkLine("SpecialChar", AccentBold),
-		linkLine("SpecialComment", MutedBoldItalic),
-		linkLine("Statement", ContrastBold),
-		linkLine("String", Accent),
-		linkLine("Tag", ContrastBold),
-		linkLine("Type", ContrastBold),
+		linkLine("Bold", contrastBold),
+		linkLine("Boolean", accentBold),
+		linkLine("Character", accent),
+		linkLine("Comment", mutedItalic),
+		linkLine("Constant", plain),
+		linkLine("Delimiter", muted),
+		linkLine("Float", accent),
+		linkLine("Function", plainItalic),
+		linkLine("Identifier", plain),
+		linkLine("Italic", plainItalic),
+		linkLine("Keyword", contrastBold),
+		linkLine("Number", accent),
+		linkLine("Operator", muted),
+		linkLine("PreProc", contrastBold),
+		linkLine("Special", accentBold),
+		linkLine("SpecialChar", accentBold),
+		linkLine("SpecialComment", mutedBoldItalic),
+		linkLine("Statement", contrastBold),
+		linkLine("String", accent),
+		linkLine("Tag", contrastBold),
+		linkLine("Type", contrastBold),
 
 		// Treesitter
-		linkLine("@boolean", AccentBold),
-		linkLine("@character", Accent),
-		linkLine("@character.printf", AccentBold),
-		linkLine("@character.special.java", ContrastBold),
-		linkLine("@comment", MutedItalic),
-		linkLine("@constant", Plain),
-		linkLine("@constant.builtin", AccentBold),
-		linkLine("@constant.builtin.rust", ContrastBold),
-		linkLine("@constructor", ContrastBold),
-		linkLine("@float", Accent),
-		linkLine("@function", PlainItalic),
-		linkLine("@function.builtin", PlainItalic),
-		linkLine("@keyword", ContrastBold),
-		linkLine("@keyword.javadoc", MutedBoldItalic),
-		linkLine("@lsp.type.namespace", Plain),
-		linkLine("@lsp.typemod.keyword.documentation", MutedBoldItalic),
-		linkLine("@markup.math", Plain),
-		linkLine("@markup.raw", Plain),
-		linkLine("@module", Plain),
-		linkLine("@number", Accent),
-		linkLine("@operator", Muted),
-		linkLine("@punctuation", Muted),
-		linkLine("@punctuation.special", MutedItalic),
-		linkLine("@string", Accent),
-		linkLine("@string.documentation.python", Muted),
-		linkLine("@string.escape", AccentBold),
-		linkLine("@tag", ContrastBold),
-		linkLine("@tag.attribute", Plain),
-		linkLine("@tag.delimiter", Muted),
-		linkLine("@type", ContrastBold),
-		linkLine("@type.builtin", ContrastBold),
-		linkLine("@variable", Plain),
-		linkLine("@variable.builtin", ContrastBold),
+		linkLine("@boolean", accentBold),
+		linkLine("@character", accent),
+		linkLine("@character.printf", accentBold),
+		linkLine("@character.special.java", contrastBold),
+		linkLine("@comment", mutedItalic),
+		linkLine("@constant", plain),
+		linkLine("@constant.builtin", accentBold),
+		linkLine("@constant.builtin.rust", contrastBold),
+		linkLine("@constructor", contrastBold),
+		linkLine("@float", accent),
+		linkLine("@function", plainItalic),
+		linkLine("@function.builtin", plainItalic),
+		linkLine("@keyword", contrastBold),
+		linkLine("@keyword.javadoc", mutedBoldItalic),
+		linkLine("@lsp.type.namespace", plain),
+		linkLine("@lsp.typemod.keyword.documentation", mutedBoldItalic),
+		linkLine("@markup.math", plain),
+		linkLine("@markup.raw", plain),
+		linkLine("@module", plain),
+		linkLine("@number", accent),
+		linkLine("@operator", muted),
+		linkLine("@punctuation", muted),
+		linkLine("@punctuation.special", mutedItalic),
+		linkLine("@string", accent),
+		linkLine("@string.documentation.python", muted),
+		linkLine("@string.escape", accentBold),
+		linkLine("@tag", contrastBold),
+		linkLine("@tag.attribute", plain),
+		linkLine("@tag.delimiter", muted),
+		linkLine("@type", contrastBold),
+		linkLine("@type.builtin", contrastBold),
+		linkLine("@variable", plain),
+		linkLine("@variable.builtin", contrastBold),
 	}
 }
 
@@ -226,30 +215,30 @@ func Generate(cfg *palette.Config, outputDir string) error {
 
 	for _, mode := range []string{"dark", "light"} {
 		p := cfg.Palettes[mode]
-		modeLabel := palette.Pick(mode, "dark", "light")
 		editorHLs := buildEditorHighlights(p)
 
-		plainName := "monochromator-" + modeLabel + "-plain"
-		plainSyntax := append(buildStyleTypes(p, ""), buildPlainSyntax()...)
-		if err := os.WriteFile(filepath.Join(outputDir, plainName+".lua"), []byte(buildThemeLua(plainName, mode, editorHLs, plainSyntax)), 0o644); err != nil {
+		writeTheme := func(name string, syntaxHLs []string) error {
+			data := buildThemeLua(name, mode, editorHLs, syntaxHLs)
+			return os.WriteFile(filepath.Join(outputDir, name+".lua"), []byte(data), 0o644)
+		}
+
+		plainName := "monochromator-" + mode + "-plain"
+		if err := writeTheme(plainName, slices.Concat(buildStyleTypes(p, ""), buildPlainSyntax())); err != nil {
 			return fmt.Errorf("writing %s.lua: %w", plainName, err)
 		}
 
 		for _, v := range cfg.Variants {
-			accent, err := p.Color(v.Color)
+			accentColor, err := p.Color(v.Color)
 			if err != nil {
 				return fmt.Errorf("resolving accent for variant %q: %w", v.Name, err)
 			}
 
-			var themeName string
-			if v.Name == "default" {
-				themeName = "monochromator-" + modeLabel
-			} else {
-				themeName = "monochromator-" + modeLabel + "-" + v.Name
+			themeName := "monochromator-" + mode
+			if v.Name != "default" {
+				themeName += "-" + v.Name
 			}
 
-			syntax := append(buildStyleTypes(p, accent), buildDefaultSyntax()...)
-			if err := os.WriteFile(filepath.Join(outputDir, themeName+".lua"), []byte(buildThemeLua(themeName, mode, editorHLs, syntax)), 0o644); err != nil {
+			if err := writeTheme(themeName, slices.Concat(buildStyleTypes(p, accentColor), buildDefaultSyntax())); err != nil {
 				return fmt.Errorf("writing %s.lua: %w", themeName, err)
 			}
 		}

@@ -18,12 +18,12 @@
 
 ## Installation
 
-All extensions are also available as [build artifacts](https://codeberg.org/beem/monochromator/actions).
+All themes can also be found under [Actions](https://codeberg.org/beem/monochromator/actions).
 
 <details>
 <summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
 
-*Coming soon*
+*Work in progress*
 
 </details>
 
@@ -51,13 +51,15 @@ To ensure 100% correct behaviour, it is recommended to add the following to your
 <details>
 <summary><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></summary>
 
-*Coming soon*
+*Work in progress*
 
 </details>
 
 ## Contributing
 
 If something looks off with the syntax highlighting, please [open an issue](https://codeberg.org/beem/monochromator/issues) with the editor and language you were using, a screenshot, and a description of how you think it should look instead.
+
+Please keep in mind that I am primarily focusing on the Visual Studio Code variant, so the quality in other editors might vary.
 
 ## License
 

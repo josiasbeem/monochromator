@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.31.2 - 2026-04-12
+
+- Fix file explorer file highlight issue ([#8](https://codeberg.org/beem/monochromator/issues/8))
+
 ## v0.31.1 - 2026-02-28
 
 - Made scrollbar transparent so it no longer covers breadcrumbs ([#5](https://codeberg.org/beem/monochromator/issues/5))

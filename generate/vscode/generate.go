@@ -339,6 +339,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"list.activeSelectionBackground":                      p.BGSelection,
 		"list.activeSelectionForeground":                      p.FG,
 		"list.errorForeground":                                p.Red,
+		"list.focusBackground":                                p.BGSelection,
 		"list.highlightForeground":                            p.FG,
 		"list.hoverBackground":                                p.BGSelection,
 		"list.inactiveSelectionBackground":                    p.BGSelection + "80",

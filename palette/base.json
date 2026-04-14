@@ -28,10 +28,10 @@
     "fg_muted": "#76767c",
     "border": "#a2a2a5",
     "red": "#e01b24",
-    "orange": "#e66100",
-    "yellow": "#927e00",
+    "orange": "#bf4e00",
+    "yellow": "#856e00",
     "green": "#017f45",
-    "cyan": "#01aacf",
+    "cyan": "#007b94",
     "blue": "#2563eb",
     "magenta": "#cf207e"
   }

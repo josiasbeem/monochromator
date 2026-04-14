@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.32.0 - 2026-04-14
+
+- Improved light theme accent colors for WCAG AA compliance
+    - Aquamarine: `#01aacf` -> `#007b94`
+    - Amber: `#e66100` -> `#bf4e00`
+    - Sulfur: `#927e00` -> `#856e00`
+
 ## v0.31.2 - 2026-04-12
 
 - Fix file explorer file highlight issue ([#8](https://codeberg.org/beem/monochromator/issues/8))

@@ -1,6 +1,6 @@
-id             = "monochromator"
+id             = "monochromator-theme"
 name           = "Monochromator"
-version        = "0.2.1"
+version        = "0.2.2"
 schema_version = 1
 authors        = ["Josias Beem <mail@beem.software>"]
 description    = "Distraction-free monochrome coding theme"

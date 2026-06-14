@@ -44,7 +44,9 @@ To ensure 100% correct behaviour, it is recommended to add the following to your
 <details>
 <summary><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></summary>
 
-*Work in progress*
+<br>
+
+Install from the [Zed extension registry](https://zed.dev/extensions/monochromator-theme), or directly in your editor via the extensions view (`zed: extensions`) by searching for **Monochromator**.
 
 </details>
 

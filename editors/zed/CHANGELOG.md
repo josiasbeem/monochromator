@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.0 - 2026-07-15
+
+- Darkened the dark theme background
+    - Background: `#0f0f12` -> `#08080a`
+- Tinted text selections with each variant's accent color
+
 ## v0.2.2 - 2026-04-30
 
 - Renamed extension ID to `monochromator-theme` to follow Zed registry conventions

@@ -40,7 +40,11 @@ func defaultSyntax(p palette.Palette, accent string) map[string]any {
 	return syntax
 }
 
-func buildStyle(mode string, p palette.Palette, syntax map[string]any) map[string]any {
+func buildStyle(mode string, p palette.Palette, syntax map[string]any, accent string) map[string]any {
+	selection := p.BGSelection
+	if accent != "" {
+		selection = accent + "4d"
+	}
 	return map[string]any{
 		"background":                    p.BG,
 		"border":                        p.BGSecondary,
@@ -95,7 +99,7 @@ func buildStyle(mode string, p palette.Palette, syntax map[string]any) map[strin
 		"modified":                                     p.Orange,
 		"panel.background":                             p.BGSecondary,
 		"players": []any{
-			map[string]any{"cursor": p.FG, "selection": p.BGSelection, "background": p.FG},
+			map[string]any{"cursor": p.FG, "selection": selection, "background": p.FG},
 			map[string]any{"cursor": p.Blue, "selection": p.Blue + "30", "background": p.Blue},
 			map[string]any{"cursor": p.Red, "selection": p.Red + "30", "background": p.Red},
 			map[string]any{"cursor": p.Green, "selection": p.Green + "30", "background": p.Green},
@@ -194,7 +198,7 @@ func Generate(cfg *palette.Config, outputDir string) error {
 			buildTheme(
 				"Monochromator "+modeLabel+" Plain",
 				mode,
-				buildStyle(mode, p, plainSyntax(p)),
+				buildStyle(mode, p, plainSyntax(p), ""),
 			),
 		)); err != nil {
 			return fmt.Errorf("writing %s-plain.json: %w", mode, err)
@@ -219,7 +223,7 @@ func Generate(cfg *palette.Config, outputDir string) error {
 				buildTheme(
 					themeName,
 					mode,
-					buildStyle(mode, p, defaultSyntax(p, accent)),
+					buildStyle(mode, p, defaultSyntax(p, accent), accent),
 				),
 			)); err != nil {
 				return fmt.Errorf("writing %s-%s.json: %w", mode, v.Name, err)

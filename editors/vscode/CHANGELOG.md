@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.33.0 - 2026-07-15
+
+- Darkened the dark theme background
+    - Background: `#0f0f12` -> `#08080a`
+    - To keep the previous value, set `"workbench.colorCustomizations": { "editor.background": "#0f0f12", "terminal.background": "#0f0f12" }` in your `settings.json`
+- Tinted text selections with each variant's accent color
+
 ## v0.32.0 - 2026-04-14
 
 - Improved light theme accent colors for WCAG AA compliance

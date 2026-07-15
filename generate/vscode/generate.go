@@ -459,6 +459,7 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 	modeLabel := palette.Pick(mode, "Dark", "Light")
 	return map[string]any{
 		"colors": map[string]string{
+			"editor.selectionBackground":                          accent + "4d",
 			"editorBracketHighlight.foreground1":                  p.FGMuted,
 			"editorBracketHighlight.foreground2":                  p.FGMuted,
 			"editorBracketHighlight.foreground3":                  p.FGMuted,
@@ -467,6 +468,7 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 			"editorBracketHighlight.foreground6":                  p.FGMuted,
 			"editorBracketHighlight.unexpectedBracket.foreground": p.FGMuted,
 			"editorBracketMatch.border":                           p.FGMuted,
+			"selection.background":                                accent + "4d",
 		},
 		"include": "./plain.json",
 		"name":    "Monochromator " + modeLabel,
@@ -491,7 +493,9 @@ func buildVariantTheme(mode, variantName, accent string) map[string]any {
 	label := strings.ToUpper(variantName[:1]) + variantName[1:]
 	return map[string]any{
 		"colors": map[string]string{
+			"editor.selectionBackground":           accent + "4d",
 			"editor.wordHighlightStrongBackground": accent + "40",
+			"selection.background":                 accent + "4d",
 		},
 		"include": "./default.json",
 		"name":    "Monochromator " + modeLabel + " " + label,

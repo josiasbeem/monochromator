@@ -2,6 +2,6 @@ id             = "monochromator-theme"
 name           = "Monochromator"
 version        = "0.3.0"
 schema_version = 1
-authors        = ["Josias Beem <mail@beem.software>"]
+authors        = ["Josias Beem <josias@beem.at>"]
 description    = "Distraction-free monochrome coding theme"
 repository     = "https://codeberg.org/beem/monochromator"

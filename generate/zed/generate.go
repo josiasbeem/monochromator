@@ -163,7 +163,7 @@ func buildThemeFamily(familyName string, theme map[string]any) map[string]any {
 	return map[string]any{
 		"$schema": "https://zed.dev/schema/themes/v0.2.0.json",
 		"name":    familyName,
-		"author":  "Josias Beem <mail@beem.software>",
+		"author":  "Josias Beem <josias@beem.at>",
 		"themes":  []any{theme},
 	}
 }

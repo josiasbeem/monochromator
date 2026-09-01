@@ -18,23 +18,23 @@
 
 ## Installation
 
-All themes can also be found under [Actions](https://codeberg.org/beem/monochromator/actions).
+You can also get all the themes from [Actions](https://codeberg.org/beem/monochromator/actions).
 
 <details>
 <summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
 
 <br>
 
-Install from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=beem.monochromator), or directly in your editor.
+Install the extension from [Open VSX](https://open-vsx.org/extension/beem/monochromator), the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=beem.monochromator), or directly in your editor.
 
-To ensure 100% correct behaviour, it is recommended to add the following to your `settings.json`:
+To make sure that the theme works correctly, add these settings to your `settings.json`:
 
 ```json
 {
-  // This ensures that string interpolation delimiters look right
+  // This makes sure that string interpolation delimiters look correct
   "editor.bracketPairColorization.enabled": false,
 
-  // This ensures that variables do not look similar to comments
+  // This makes sure that variables do not look similar to comments
   "editor.showUnused": false
 }
 ```
@@ -46,18 +46,18 @@ To ensure 100% correct behaviour, it is recommended to add the following to your
 
 <br>
 
-Install from the [Zed extension registry](https://zed.dev/extensions/monochromator-theme), or directly in your editor via the extensions view (`zed: extensions`) by searching for **Monochromator**.
+Install the theme from the [Zed extension registry](https://zed.dev/extensions/monochromator-theme). As an alternative, open the extensions view (`zed: extensions`) in your editor and search for **Monochromator**.
 
 </details>
 
-## Contributing
+## How to contribute
 
-If something looks off with the syntax highlighting, please [open an issue](https://codeberg.org/beem/monochromator/issues) with the editor and language you were using, a screenshot, and a description of how you think it should look instead.
+If the syntax highlighting is not correct, [open an issue](https://codeberg.org/beem/monochromator/issues). Include the editor, the language, a screenshot, and a description of the correct appearance.
 
-Please keep in mind that I am primarily focusing on the Visual Studio Code variant, so the quality in other editors might vary.
+My main focus is the Visual Studio Code variant. The quality in other editors can vary.
 
 ## License
 
 Copyright © 2025 Josias Beem
 
-Licensed under the **MIT License**
+This project is licensed under the **MIT License**

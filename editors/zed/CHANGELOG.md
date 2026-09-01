@@ -4,23 +4,23 @@
 
 - Darkened the dark theme background
     - Background: `#0f0f12` -> `#08080a`
-- Tinted text selections with each variant's accent color
+- Tinted the text selections with each variant's accent color
 
 ## v0.2.2 - 2026-04-30
 
-- Renamed extension ID to `monochromator-theme` to follow Zed registry conventions
+- Renamed the extension ID to `monochromator-theme` to follow the Zed registry conventions
 
 ## v0.2.1 - 2026-04-24
 
-- Added `LICENSE` symlink required by the Zed extension registry
+- Added the `LICENSE` symlink that the Zed extension registry requires
 
 ## v0.2.0 - 2026-04-24
 
-- Improved light theme accent colors for WCAG AA compliance
+- Improved the accent colors of the light themes for WCAG AA compliance
     - Aquamarine: `#01aacf` -> `#007b94`
     - Amber: `#e66100` -> `#bf4e00`
     - Sulfur: `#927e00` -> `#856e00`
 
 ## v0.1.0 - 2026-03-28
 
-- Initial release
+- First release

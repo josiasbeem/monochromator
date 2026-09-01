@@ -12,14 +12,14 @@
 
 ## Recommended Settings
 
-To ensure 100% correct behaviour, it is recommended to add the following to your `settings.json`:
+To make sure that the theme works correctly, add these settings to your `settings.json`:
 
 ```json
 {
-  // This ensures that string interpolation delimiters look right
+  // This makes sure that string interpolation delimiters look correct
   "editor.bracketPairColorization.enabled": false,
 
-  // This ensures that variables do not look similar to comments
+  // This makes sure that variables do not look similar to comments
   "editor.showUnused": false
 }
 ```
@@ -28,4 +28,4 @@ To ensure 100% correct behaviour, it is recommended to add the following to your
 
 Copyright © 2025 Josias Beem
 
-Licensed under the **MIT License**
+This project is licensed under the **MIT License**

@@ -1,3 +1,5 @@
+// Package palette loads and validates the shared color palette from
+// the palette/ directory.
 package palette
 
 import (
@@ -7,6 +9,7 @@ import (
 	"path/filepath"
 )
 
+// Palette is the full color set for one mode (dark or light).
 type Palette struct {
 	BG          string `json:"bg"`
 	BGSecondary string `json:"bg_secondary"`
@@ -26,11 +29,17 @@ type Palette struct {
 	Magenta     string `json:"magenta"`
 }
 
+// Variant is one accent-color variant of the theme.
 type Variant struct {
-	Name  string `json:"name"`
+	// Name is the lowercase variant name. The name "default" is special:
+	// it produces the base theme without a name suffix.
+	Name string `json:"name"`
+	// Color is the name of a Palette accent color, for example "cyan".
 	Color string `json:"color"`
 }
 
+// Color returns the hex value of the named accent color. Valid names
+// are red, orange, yellow, green, cyan, blue, and magenta.
 func (p Palette) Color(name string) (string, error) {
 	switch name {
 	case "red":
@@ -52,11 +61,15 @@ func (p Palette) Color(name string) (string, error) {
 	}
 }
 
+// Config is the parsed content of the palette directory.
 type Config struct {
+	// Palettes maps a mode ("dark" or "light") to its color set.
 	Palettes map[string]Palette
 	Variants []Variant
 }
 
+// Validate makes sure that both mode palettes exist, that a "default"
+// variant exists, and that each variant has a name and a known color.
 func (c *Config) Validate() error {
 	for _, mode := range []string{"dark", "light"} {
 		if _, ok := c.Palettes[mode]; !ok {
@@ -88,6 +101,8 @@ func (c *Config) Validate() error {
 	return nil
 }
 
+// Load reads base.json and variants.json from paletteDir and
+// validates the combined config.
 func Load(paletteDir string) (*Config, error) {
 	baseData, err := os.ReadFile(filepath.Join(paletteDir, "base.json"))
 	if err != nil {
@@ -115,6 +130,8 @@ func Load(paletteDir string) (*Config, error) {
 	return cfg, nil
 }
 
+// Pick returns dark if mode is "dark". For all other modes, it
+// returns light.
 func Pick(mode, dark, light string) string {
 	if mode == "dark" {
 		return dark

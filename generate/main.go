@@ -18,6 +18,7 @@ func main() {
 }
 
 func run() error {
+	// All paths assume that the generator runs inside the generate/ directory.
 	repoRoot := ".."
 
 	cfg, err := palette.Load(filepath.Join(repoRoot, "palette"))

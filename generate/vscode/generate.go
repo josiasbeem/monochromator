@@ -1,3 +1,4 @@
+// Package vscode generates the VS Code theme files from the palette.
 package vscode
 
 import (
@@ -10,6 +11,9 @@ import (
 	"generate/palette"
 )
 
+// The scope* lists group TextMate scopes by style. The list name gives
+// the font style and the color group: Gray = FGMuted, Text = FG or
+// FGContrast, Literals = the accent color. Keep the lists sorted.
 var scopeGray = []string{
 	"constant.character.escape.content.typst",
 	"constant.other.symbol.typst",
@@ -229,6 +233,9 @@ func tokenRule(scope []string, foreground, fontStyle string) map[string]any {
 	}
 	return map[string]any{"scope": scope, "settings": settings}
 }
+
+// Color values with eight hex digits carry an alpha channel: the last
+// two digits set the opacity ("80" is about 50%).
 
 func buildPlainColors(p palette.Palette, mode string) map[string]string {
 	return map[string]string{
@@ -490,6 +497,9 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 	}
 }
 
+// A variant theme only overrides the accent rules. It gets all other
+// rules from default.json through the "include" chain
+// (variant -> default -> plain).
 func buildVariantTheme(mode, variantName, accent string) map[string]any {
 	modeLabel := palette.Pick(mode, "Dark", "Light")
 	label := strings.ToUpper(variantName[:1]) + variantName[1:]
@@ -516,6 +526,9 @@ func writeTheme(filePath string, theme map[string]any) error {
 	return os.WriteFile(filePath, data, 0o644)
 }
 
+// Generate writes the VS Code theme files for both modes into
+// outputDir: one plain theme, the default theme, and one theme for
+// each variant.
 func Generate(cfg *palette.Config, outputDir string) error {
 	for _, mode := range []string{"dark", "light"} {
 		dir := filepath.Join(outputDir, mode)

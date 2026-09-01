@@ -1,3 +1,4 @@
+// Package zed generates the Zed theme files from the palette.
 package zed
 
 import (
@@ -39,6 +40,9 @@ func defaultSyntax(p palette.Palette, accent string) map[string]any {
 	})
 	return syntax
 }
+
+// Color values with eight hex digits carry an alpha channel: the last
+// two digits set the opacity ("4d" is about 30%).
 
 func buildStyle(mode string, p palette.Palette, syntax map[string]any, accent string) map[string]any {
 	selection := p.BGSelection
@@ -184,6 +188,8 @@ func writeJSON(path string, v any) error {
 	return os.WriteFile(path, data, 0o644)
 }
 
+// Generate writes the Zed theme files for both modes into outputDir:
+// one plain theme and one theme family file for each variant.
 func Generate(cfg *palette.Config, outputDir string) error {
 	if err := os.MkdirAll(outputDir, 0o755); err != nil {
 		return fmt.Errorf("creating directory %s: %w", outputDir, err)

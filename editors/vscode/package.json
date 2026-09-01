@@ -2,7 +2,7 @@
   "name": "monochromator",
   "displayName": "Monochromator",
   "description": "Distraction-free monochrome coding theme",
-  "version": "0.33.0",
+  "version": "0.33.1",
   "engines": {
     "vscode": "^1.74.0"
   },

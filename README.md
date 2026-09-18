@@ -50,6 +50,31 @@ Install the theme from the [Zed extension registry](https://zed.dev/extensions/m
 
 </details>
 
+## Font
+
+The screenshots use [Monochromator Mono](https://codeberg.org/beem/monochromator-mono), the matching code font. The font is a fork of Recursive with the code ligatures on by default. The theme works with every font. This font is optional.
+
+Install the font with the font manager of your system. Then set it in your editor.
+
+VS Code (`settings.json`):
+
+```json
+{
+  "editor.fontFamily": "Monochromator Mono",
+
+  // This makes sure that the code ligatures stay on
+  "editor.fontLigatures": true
+}
+```
+
+Zed (`settings.json`):
+
+```json
+{
+  "buffer_font_family": "Monochromator Mono"
+}
+```
+
 ## How to contribute
 
 If the syntax highlighting is not correct, [open an issue](https://codeberg.org/beem/monochromator/issues). Include the editor, the language, a screenshot, and a description of the correct appearance.
@@ -60,4 +85,4 @@ My main focus is the Visual Studio Code variant. The quality in other editors ca
 
 Copyright © 2025 Josias Beem
 
-This project is licensed under the **MIT License**
+This project uses the **MIT License**

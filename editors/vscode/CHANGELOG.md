@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.34.0 - 2026-09-18
+
+- Made bold exclusive to structural keywords so that the keywords show the code structure again
+    - Types are now underlined instead of bold
+    - Escape sequences and format placeholders are now underlined instead of bold
+    - Language constants such as `true`, `false`, `nil`, and `null` are no longer bold
+    - `this`, `self`, `super`, decorators, annotations, and attributes are now gray
+- Made functions and methods brighter than variables to keep the overview in long call chains
+- Dimmed the editor foreground
+    - Dark: `#e7e7e7` -> `#ccccce`
+    - Light: `#000000` -> `#303034`
+- Unified the UI foreground with the editor foreground
+- Fixed `delete` and the named casts in C++, which were gray while `new` was bold
+- Fixed the function calls in Python, which were not italic
+- Fixed the base classes and interfaces after `extends` and `implements`, which did not have the type style
+- Fixed the digit separators and exponent signs in number literals, which were gray
+
 ## v0.33.1 - 2026-09-01
 
 - Fixed the unreadable extension action buttons in the light themes

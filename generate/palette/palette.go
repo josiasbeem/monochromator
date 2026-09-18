@@ -17,7 +17,6 @@ type Palette struct {
 	BGElevated  string `json:"bg_elevated"`
 	FG          string `json:"fg"`
 	FGContrast  string `json:"fg_contrast"`
-	FGSecondary string `json:"fg_secondary"`
 	FGMuted     string `json:"fg_muted"`
 	Border      string `json:"border"`
 	Red         string `json:"red"`

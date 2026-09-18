@@ -91,7 +91,7 @@ func buildStyle(mode string, p palette.Palette, syntax map[string]any, accent st
 		"error":                                        p.Red,
 		"hidden":                                       p.FGMuted,
 		"hint":                                         p.FGMuted,
-		"icon":                                         p.FGSecondary,
+		"icon":                                         p.FG,
 		"icon.accent":                                  p.FG,
 		"icon.disabled":                                p.FGMuted,
 		"icon.muted":                                   p.FGMuted,

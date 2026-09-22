@@ -52,11 +52,17 @@ Install the theme from the [Zed extension registry](https://zed.dev/extensions/m
 
 ## Font
 
-The screenshots use [Monochromator Mono](https://codeberg.org/beem/monochromator-mono), the matching code font. The font is a fork of Recursive with the code ligatures on by default. The theme works with every font. This font is optional.
+[Monochromator Mono](https://codeberg.org/beem/monochromator-mono) is the matching code font, and the screenshots use it. You do not need it, because the theme works with every font. But a monochrome theme shows the structure of the code with font styles, not with colors. For this reason, this font makes the difference between the font styles much larger than in most code fonts:
 
-Install the font with the font manager of your system. Then set it in your editor.
+- Its bold cuts are much heavier than the bold cuts of most code fonts.
+- Its italic cuts look much more different from the upright text than in most code fonts.
 
-VS Code (`settings.json`):
+<details>
+<summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
+
+<br>
+
+Add these settings to your `settings.json`:
 
 ```json
 {
@@ -67,13 +73,22 @@ VS Code (`settings.json`):
 }
 ```
 
-Zed (`settings.json`):
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></summary>
+
+<br>
+
+Add this setting to your `settings.json`:
 
 ```json
 {
   "buffer_font_family": "Monochromator Mono"
 }
 ```
+
+</details>
 
 ## How to contribute
 

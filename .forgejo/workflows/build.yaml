@@ -3,6 +3,7 @@ on:
     tags:
       - "vscode/v*"
       - "zed/v*"
+      - "helix/v*"
 
 jobs:
   build:
@@ -59,3 +60,12 @@ jobs:
         with:
           name: "monochromator-zed-${{ env.ZED_VERSION }}"
           path: "editors/zed/"
+
+      - name: Get Helix version
+        run: echo "HELIX_VERSION=$(cat editors/helix/version.txt)" >> $GITHUB_ENV
+
+      - name: Upload Helix artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: "monochromator-helix-${{ env.HELIX_VERSION }}"
+          path: "editors/helix/"

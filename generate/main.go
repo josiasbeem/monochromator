@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"generate/helix"
 	"generate/palette"
 	"generate/vscode"
 	"generate/zed"
@@ -35,6 +36,11 @@ func run() error {
 		return err
 	}
 	fmt.Println("Generated Zed themes")
+
+	if err := helix.Generate(cfg, filepath.Join(repoRoot, "editors", "helix", "themes")); err != nil {
+		return err
+	}
+	fmt.Println("Generated Helix themes")
 
 	return nil
 }

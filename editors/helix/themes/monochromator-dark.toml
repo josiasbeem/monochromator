@@ -1,0 +1,91 @@
+"attribute" = { fg = "fg_muted" }
+"comment" = { fg = "fg_muted", modifiers = ["italic"] }
+"comment.unused" = { fg = "fg" }
+"constant" = { fg = "fg" }
+"constant.builtin" = { fg = "accent" }
+"constant.character" = { fg = "accent" }
+"constant.character.escape" = { fg = "accent", underline = { style = "line" } }
+"constant.numeric" = { fg = "accent" }
+"constructor" = { fg = "fg_contrast", modifiers = ["italic"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "fg_muted", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"diff.delta" = { fg = "orange" }
+"diff.delta.moved" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.plus" = { fg = "green" }
+"error" = { fg = "red" }
+"function" = { fg = "fg_contrast", modifiers = ["italic"] }
+"hint" = { fg = "fg_muted" }
+"info" = { fg = "blue" }
+"keyword" = { fg = "fg_contrast", modifiers = ["bold"] }
+"keyword.operator" = { fg = "fg_muted" }
+"keyword.storage.modifier.ref" = { fg = "fg_muted" }
+"label" = { fg = "fg_contrast", modifiers = ["bold"] }
+"markup.bold" = { fg = "fg_contrast", modifiers = ["bold"] }
+"markup.heading" = { fg = "fg_contrast", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "fg_muted" }
+"markup.italic" = { fg = "fg", modifiers = ["italic"] }
+"markup.link.url" = { underline = { style = "line" } }
+"markup.list" = { fg = "fg_muted" }
+"markup.quote" = { fg = "fg_muted", modifiers = ["italic"] }
+"markup.raw" = { fg = "accent" }
+"markup.raw.block" = { fg = "fg" }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"namespace" = { fg = "fg" }
+"operator" = { fg = "fg_muted" }
+"punctuation" = { fg = "fg_muted" }
+"string" = { fg = "accent" }
+"string.special.symbol" = { fg = "fg" }
+"tag" = { fg = "fg_contrast", modifiers = ["bold"] }
+"type" = { fg = "fg_contrast", underline = { style = "line" } }
+"ui.background" = { fg = "border", bg = "bg" }
+"ui.bufferline" = { fg = "fg_muted", bg = "bg_secondary" }
+"ui.bufferline.active" = { fg = "fg", bg = "bg" }
+"ui.bufferline.background" = { bg = "bg_secondary" }
+"ui.cursor" = { fg = "bg", bg = "fg_muted" }
+"ui.cursor.match" = { bg = "bg_selection" }
+"ui.cursor.primary" = { fg = "bg", bg = "fg" }
+"ui.cursorline.primary" = { bg = "bg_secondary" }
+"ui.help" = { fg = "fg", bg = "bg_secondary" }
+"ui.highlight" = { bg = "bg_secondary" }
+"ui.linenr" = { fg = "fg_muted" }
+"ui.linenr.selected" = { fg = "fg" }
+"ui.menu" = { fg = "fg", bg = "bg_secondary" }
+"ui.menu.scroll" = { fg = "bg_selection", bg = "bg_secondary" }
+"ui.menu.selected" = { fg = "fg", bg = "bg_selection" }
+"ui.popup" = { fg = "border", bg = "bg_secondary" }
+"ui.popup.info" = { fg = "fg", bg = "bg_secondary" }
+"ui.selection" = { bg = "selection" }
+"ui.statusline" = { fg = "fg", bg = "bg_secondary" }
+"ui.statusline.inactive" = { fg = "fg_muted", bg = "bg_secondary" }
+"ui.text" = { fg = "fg" }
+"ui.text.focus" = { fg = "fg", bg = "bg_selection" }
+"ui.text.inactive" = { fg = "fg_muted" }
+"ui.virtual" = { fg = "fg_faint" }
+"ui.virtual.inlay-hint" = { fg = "fg_muted", bg = "inlay_hint" }
+"ui.virtual.jump-label" = { fg = "bg", bg = "accent", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "bg_secondary" }
+"ui.window" = { fg = "border" }
+"variable" = { fg = "fg" }
+"variable.builtin" = { fg = "fg_muted" }
+"warning" = { fg = "orange" }
+
+[palette]
+accent = "#02a9ff"
+bg = "#08080a"
+bg_secondary = "#202024"
+bg_selection = "#393941"
+blue = "#02a9ff"
+border = "#505058"
+fg = "#ccccce"
+fg_contrast = "#ffffff"
+fg_faint = "#2e2e31"
+fg_muted = "#808086"
+green = "#30df81"
+inlay_hint = "#202024"
+orange = "#ffae49"
+red = "#fe303a"
+selection = "#063954"

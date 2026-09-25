@@ -50,6 +50,28 @@ Install the theme from the [Zed extension registry](https://zed.dev/extensions/m
 
 </details>
 
+<details>
+<summary><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></summary>
+
+<br>
+
+Copy the theme files from [`editors/helix/themes`](./editors/helix/themes) into the `themes` directory of your Helix configuration:
+
+- Linux and macOS: `~/.config/helix/themes`
+- Windows: `%AppData%\helix\themes`
+
+Then set the theme in your `config.toml`. Helix uses the file name as the theme name, for example `monochromator-light` or `monochromator-dark-amber`.
+
+```toml
+theme = "monochromator-dark"
+
+[editor]
+# This makes sure that Helix uses the theme if it does not detect the true color support of your terminal
+true-color = true
+```
+
+</details>
+
 ## Font
 
 [Monochromator Mono](https://codeberg.org/beem/monochromator-mono) is the matching code font, and the screenshots use it. You do not need it, because the theme works with every font. But a monochrome theme shows the structure of the code with font styles, not with colors. For this reason, this font makes the difference between the font styles much larger than in most code fonts:
@@ -87,6 +109,15 @@ Add this setting to your `settings.json`:
   "buffer_font_family": "Monochromator Mono"
 }
 ```
+
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></summary>
+
+<br>
+
+Helix uses the font of your terminal. Set **Monochromator Mono** as the font in the settings of your terminal.
 
 </details>
 

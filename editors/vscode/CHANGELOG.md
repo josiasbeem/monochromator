@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.35.0 - 2026-10-02
+
+- Replaced more default colors with palette colors, for example in the symbol icons, the peek view, and the debugger
+- Made the hover in lists and tabs different from the selection
+- Marked the current find match and the resize edges
+- Fixed the unreadable warning and error items in the status bar of the dark themes
+
 ## v0.34.0 - 2026-09-18
 
 - Made bold exclusive to structural keywords so that the keywords show the code structure again

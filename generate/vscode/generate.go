@@ -325,6 +325,10 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"commandCenter.background":                            p.BG,
 		"commandCenter.border":                                p.Border + "80",
 		"commandCenter.foreground":                            p.FG,
+		"debugTokenExpression.boolean":                        p.FG,
+		"debugTokenExpression.name":                           p.FG,
+		"debugTokenExpression.number":                         p.FG,
+		"debugTokenExpression.string":                         p.FG,
 		"diffEditor.insertedLineBackground":                   p.Green + "26",
 		"diffEditor.insertedTextBackground":                   p.Green + "4d",
 		"diffEditor.removedLineBackground":                    p.Red + "26",
@@ -592,6 +596,12 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 	modeLabel := palette.Pick(mode, "Dark", "Light")
 	return map[string]any{
 		"colors": map[string]string{
+			// Debug values get the literal color, like the code in the
+			// editor. The plain theme has no accent, so there they keep
+			// the text color.
+			"debugTokenExpression.boolean":                        accent,
+			"debugTokenExpression.number":                         accent,
+			"debugTokenExpression.string":                         accent,
 			"editor.selectionBackground":                          accent + "4d",
 			"editorBracketHighlight.foreground1":                  p.FGMuted,
 			"editorBracketHighlight.foreground2":                  p.FGMuted,
@@ -630,6 +640,9 @@ func buildVariantTheme(mode, variantName, accent string) map[string]any {
 	label := strings.ToUpper(variantName[:1]) + variantName[1:]
 	return map[string]any{
 		"colors": map[string]string{
+			"debugTokenExpression.boolean":         accent,
+			"debugTokenExpression.number":          accent,
+			"debugTokenExpression.string":          accent,
 			"editor.selectionBackground":           accent + "4d",
 			"editor.wordHighlightStrongBackground": accent + "40",
 			"selection.background":                 accent + "4d",

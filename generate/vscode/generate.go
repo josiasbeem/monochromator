@@ -521,7 +521,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"symbolIcon.variableForeground":                       p.FGMuted,
 		"tab.activeForeground":                                p.FG,
 		"tab.border":                                          "#00000000",
-		"tab.hoverBackground":                                 p.BG,
+		"tab.hoverBackground":                                 p.BG + "80",
 		"tab.inactiveBackground":                              p.BGSecondary,
 		"terminal.ansiBlack":                                  palette.Pick(mode, p.BG, p.FG),
 		"terminal.ansiBlue":                                   p.Blue,

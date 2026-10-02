@@ -475,6 +475,8 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"scrollbarSlider.hoverBackground":                     palette.Pick(mode, p.BGElevated+"70", p.FGMuted+"50"),
 		"scrollbarSlider.activeBackground":                    palette.Pick(mode, p.BGElevated+"90", p.FGMuted+"70"),
 		"selection.background":                                p.BGSelection,
+		"settings.headerForeground":                           p.FGContrast,
+		"settings.modifiedItemIndicator":                      p.FGMuted,
 		"sideBar.background":                                  p.BGSecondary,
 		"sideBar.border":                                      p.BGSecondary,
 		"sideBar.foreground":                                  p.FG,

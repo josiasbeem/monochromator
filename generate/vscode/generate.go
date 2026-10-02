@@ -459,6 +459,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"quickInput.foreground":                               p.FG,
 		"quickInputList.focusBackground":                      p.BGSelection,
 		"quickInputList.focusForeground":                      p.FG,
+		"sash.hoverBorder":                                    p.Border,
 		"scmGraph.historyItemHoverAdditionsForeground":        p.Green,
 		"scmGraph.historyItemHoverDeletionsForeground":        p.Red,
 		"scmGraph.historyItemHoverLabelForeground":            palette.Pick(mode, "#000000", "#ffffff"),

@@ -417,6 +417,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"keybindingLabel.foreground":                          p.FG,
 		"list.activeSelectionBackground":                      p.BGSelection,
 		"list.activeSelectionForeground":                      p.FG,
+		"list.dropBackground":                                 p.BGSelection + "80",
 		"list.errorForeground":                                p.Red,
 		"list.focusBackground":                                p.BGSelection,
 		"list.highlightForeground":                            p.FG,

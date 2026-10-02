@@ -408,6 +408,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"editorSuggestWidget.selectionBackground":             p.BGSelection,
 		"editorWarning.foreground":                            p.Orange,
 		"editorWidget.background":                             p.BGSecondary,
+		"errorForeground":                                     p.Red,
 		"extensionButton.background":                          p.BGElevated,
 		"extensionButton.foreground":                          palette.Pick(mode, p.FG, "#ffffff"),
 		"focusBorder":                                         "#00000000",

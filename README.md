@@ -72,6 +72,60 @@ true-color = true
 
 </details>
 
+<details>
+<summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
+
+<br>
+
+Install the color schemes with a plugin manager. The color schemes are in a subdirectory of the repository, so you must add this directory to the runtime path.
+
+With [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+  url = "https://codeberg.org/beem/monochromator",
+  lazy = false,
+  priority = 1000,
+  config = function(plugin)
+    vim.opt.rtp:append(plugin.dir .. "/editors/neovim")
+    vim.cmd.colorscheme("monochromator-dark")
+  end,
+}
+```
+
+With `vim.pack`, the built-in plugin manager of Neovim 0.12 and later:
+
+```lua
+vim.pack.add({ "https://codeberg.org/beem/monochromator" }, {
+  load = function(plugin)
+    vim.opt.rtp:append(plugin.path .. "/editors/neovim")
+  end,
+})
+vim.cmd.colorscheme("monochromator-dark")
+```
+
+As an alternative, copy the color scheme files from [`editors/neovim/colors`](./editors/neovim/colors) into the `colors` directory of your Neovim configuration:
+
+- Linux and macOS: `~/.config/nvim/colors`
+- Windows: `%LocalAppData%\nvim\colors`
+
+Then set the color scheme in your `init.lua`:
+
+```lua
+vim.cmd.colorscheme("monochromator-dark")
+```
+
+Neovim uses the file name as the color scheme name, for example `monochromator-light` or `monochromator-dark-amber`. For all installation methods, add this setting to your `init.lua`:
+
+```lua
+-- This makes sure that Neovim uses the theme if it does not detect the true color support of your terminal
+vim.o.termguicolors = true
+```
+
+The color schemes give the best result with the tree-sitter parsers from [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+
+</details>
+
 ## Font
 
 [Monochromator Mono](https://codeberg.org/beem/monochromator-mono) is the matching code font, and the screenshots use it. You do not need it, because the theme works with every font. But a monochrome theme shows the structure of the code with font styles, not with colors. For this reason, this font makes the difference between the font styles much larger than in most code fonts:
@@ -118,6 +172,15 @@ Add this setting to your `settings.json`:
 <br>
 
 Helix uses the font of your terminal. Set **Monochromator Mono** as the font in the settings of your terminal.
+
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
+
+<br>
+
+Neovim uses the font of your terminal. Set **Monochromator Mono** as the font in the settings of your terminal.
 
 </details>
 

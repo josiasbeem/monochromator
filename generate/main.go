@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 
 	"generate/helix"
+	"generate/neovim"
 	"generate/palette"
 	"generate/vscode"
 	"generate/zed"
@@ -41,6 +42,11 @@ func run() error {
 		return err
 	}
 	fmt.Println("Generated Helix themes")
+
+	if err := neovim.Generate(cfg, filepath.Join(repoRoot, "editors", "neovim", "colors")); err != nil {
+		return err
+	}
+	fmt.Println("Generated Neovim color schemes")
 
 	return nil
 }

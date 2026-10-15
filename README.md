@@ -77,9 +77,39 @@ true-color = true
 
 <br>
 
-Install the color schemes with a plugin manager. The color schemes are in a subdirectory of the repository, so you must add this directory to the runtime path.
+**You must install the tree-sitter parsers for your languages.**
 
-With [lazy.nvim](https://github.com/folke/lazy.nvim):
+Neovim includes parsers for only a small number of languages, for example Lua and Markdown. For all other languages, Neovim uses its old syntax highlighting. This highlighting does not show functions, types, and punctuation. For this reason, the color schemes cannot show the structure of your code.
+
+The parsers come from [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter). nvim-treesitter needs the `tree-sitter` command and a C compiler.
+
+This example `init.lua` uses `vim.pack`, the built-in plugin manager of Neovim 0.12 and later. It installs the color schemes, nvim-treesitter, and the parsers:
+
+```lua
+-- The color schemes are in a subdirectory of the repository
+vim.pack.add({ "https://codeberg.org/beem/monochromator" }, {
+  load = function(plugin)
+    vim.opt.rtp:append(plugin.path .. "/editors/neovim")
+  end,
+})
+
+-- This makes sure that Neovim uses the theme if it does not detect the true color support of your terminal
+vim.o.termguicolors = true
+vim.cmd.colorscheme("monochromator-dark")
+
+vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
+-- Put the languages that you use into the list
+require("nvim-treesitter").install({ "lua", "go", "python", "rust" })
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})
+```
+
+Neovim uses the file name as the color scheme name, for example `monochromator-light` or `monochromator-dark-amber`.
+
+With [lazy.nvim](https://github.com/folke/lazy.nvim), install nvim-treesitter as its README tells you. Then use this plugin specification for the color schemes:
 
 ```lua
 {
@@ -88,20 +118,10 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
   priority = 1000,
   config = function(plugin)
     vim.opt.rtp:append(plugin.dir .. "/editors/neovim")
+    vim.o.termguicolors = true
     vim.cmd.colorscheme("monochromator-dark")
   end,
 }
-```
-
-With `vim.pack`, the built-in plugin manager of Neovim 0.12 and later:
-
-```lua
-vim.pack.add({ "https://codeberg.org/beem/monochromator" }, {
-  load = function(plugin)
-    vim.opt.rtp:append(plugin.path .. "/editors/neovim")
-  end,
-})
-vim.cmd.colorscheme("monochromator-dark")
 ```
 
 As an alternative, copy the color scheme files from [`editors/neovim/colors`](./editors/neovim/colors) into the `colors` directory of your Neovim configuration:
@@ -109,20 +129,7 @@ As an alternative, copy the color scheme files from [`editors/neovim/colors`](./
 - Linux and macOS: `~/.config/nvim/colors`
 - Windows: `%LocalAppData%\nvim\colors`
 
-Then set the color scheme in your `init.lua`:
-
-```lua
-vim.cmd.colorscheme("monochromator-dark")
-```
-
-Neovim uses the file name as the color scheme name, for example `monochromator-light` or `monochromator-dark-amber`. For all installation methods, add this setting to your `init.lua`:
-
-```lua
--- This makes sure that Neovim uses the theme if it does not detect the true color support of your terminal
-vim.o.termguicolors = true
-```
-
-The color schemes give the best result with the tree-sitter parsers from [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+Then add the `termguicolors` line and the `colorscheme` line of the example to your `init.lua`.
 
 </details>
 

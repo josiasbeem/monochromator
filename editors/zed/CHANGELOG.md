@@ -1,47 +1,73 @@
 # Changelog
 
-## v0.4.0 - 2026-09-22
+This file shows all important changes to the Monochromator extension for Zed.
 
-- Made bold exclusive to structural keywords so that the keywords show the code structure again
+The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.4.0] - 2026-09-22
+
+### Changed
+
+- Only structural keywords are bold now, so they show the code structure again
     - Types, boolean values, escape sequences, and special strings are no longer bold
     - Constructors are now italic like the functions
     - Python class names in the class definition now have the text color
     - `this`, `self`, decorators, annotations, attributes, and HTML attribute names are now gray
-- Made functions and methods brighter than variables to keep the overview in long call chains
-- Dimmed the editor foreground and the UI text
+- Functions and methods are now brighter than variables, which makes long call chains easier to read
+- Dimmer editor foreground and UI text
     - Dark: `#e7e7e7` -> `#ccccce`
     - Light: `#000000` -> `#303034`
-- Unified the icon color with the editor foreground
-- Fixed the built-in constants such as `nil`, `None`, and `null`, which did not have the accent color
-- Fixed the keyword operators such as `is`, `not`, and `or`, which were bold
-- Fixed the Rust lifetimes, which had the text color
-- Fixed the JSON keys and the YAML keys, which had the accent color
-- Fixed the Markdown headings, the HTML tags, and the CSS selectors, which were not bold
-- Fixed the CSS units, which were bold
-- Fixed the JSDoc tags, which were not gray
-- Fixed the Ruby symbols, which had the accent color
+- The icon color now matches the editor foreground
 
-## v0.3.0 - 2026-07-15
+### Fixed
 
-- Darkened the dark theme background
+- Built-in constants such as `nil`, `None`, and `null` did not have the accent color
+- Keyword operators such as `is`, `not`, and `or` were bold
+- Rust lifetimes had the text color
+- JSON keys and YAML keys had the accent color
+- Markdown headings, HTML tags, and CSS selectors were not bold
+- CSS units were bold
+- JSDoc tags were not gray
+- Ruby symbols had the accent color
+
+## [0.3.0] - 2026-07-15
+
+### Changed
+
+- Darker background in the dark theme
     - Background: `#0f0f12` -> `#08080a`
-- Tinted the text selections with each variant's accent color
+- Text selections are now tinted with each variant's accent color
 
-## v0.2.2 - 2026-04-30
+## [0.2.2] - 2026-04-30
+
+### Changed
 
 - Renamed the extension ID to `monochromator-theme` to follow the Zed registry conventions
 
-## v0.2.1 - 2026-04-24
+## [0.2.1] - 2026-04-24
 
-- Added the `LICENSE` symlink that the Zed extension registry requires
+### Added
 
-## v0.2.0 - 2026-04-24
+- `LICENSE` symlink that the Zed extension registry requires
 
-- Improved the accent colors of the light themes for WCAG AA compliance
+## [0.2.0] - 2026-04-24
+
+### Changed
+
+- Light theme accent colors now meet WCAG AA
     - Aquamarine: `#01aacf` -> `#007b94`
     - Amber: `#e66100` -> `#bf4e00`
     - Sulfur: `#927e00` -> `#856e00`
 
-## v0.1.0 - 2026-03-28
+## [0.1.0] - 2026-03-28
+
+### Added
 
 - First release
+
+[0.4.0]: https://codeberg.org/beem/monochromator/compare/zed/v0.3.0...zed/v0.4.0
+[0.3.0]: https://codeberg.org/beem/monochromator/compare/zed/v0.2.2...zed/v0.3.0
+[0.2.2]: https://codeberg.org/beem/monochromator/compare/zed/v0.2.1...zed/v0.2.2
+[0.2.1]: https://codeberg.org/beem/monochromator/compare/zed/v0.2.0...zed/v0.2.1
+[0.2.0]: https://codeberg.org/beem/monochromator/compare/zed/v0.1.0...zed/v0.2.0
+[0.1.0]: https://codeberg.org/beem/monochromator/src/tag/zed/v0.1.0

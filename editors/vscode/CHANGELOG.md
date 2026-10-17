@@ -1,286 +1,430 @@
 # Changelog
 
-## v0.35.0 - 2026-10-02
+This file shows all important changes to the Monochromator extension for VS Code.
+
+The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.35.0] - 2026-10-02
+
+### Changed
 
 - Replaced more default colors with palette colors, for example in the symbol icons, the peek view, and the debugger
-- Made the hover in lists and tabs different from the selection
-- Marked the current find match and the resize edges
-- Fixed the unreadable warning and error items in the status bar of the dark themes
+- The hover in lists and tabs now differs from the selection
+- The current find match and the resize edges are now highlighted
 
-## v0.34.0 - 2026-09-18
+### Fixed
 
-- Made bold exclusive to structural keywords so that the keywords show the code structure again
+- Unreadable status bar warnings and errors in the dark themes
+
+## [0.34.0] - 2026-09-18
+
+### Changed
+
+- Only structural keywords are bold now, so they show the code structure again
     - Types are now underlined instead of bold
     - Escape sequences and format placeholders are now underlined instead of bold
     - Language constants such as `true`, `false`, `nil`, and `null` are no longer bold
     - `this`, `self`, `super`, decorators, annotations, and attributes are now gray
-- Made functions and methods brighter than variables to keep the overview in long call chains
-- Dimmed the editor foreground
+- Functions and methods are now brighter than variables, which makes long call chains easier to read
+- Dimmer editor foreground
     - Dark: `#e7e7e7` -> `#ccccce`
     - Light: `#000000` -> `#303034`
-- Unified the UI foreground with the editor foreground
-- Fixed `delete` and the named casts in C++, which were gray while `new` was bold
-- Fixed the function calls in Python, which were not italic
-- Fixed the base classes and interfaces after `extends` and `implements`, which did not have the type style
-- Fixed the digit separators and exponent signs in number literals, which were gray
+- The UI foreground now matches the editor foreground
 
-## v0.33.1 - 2026-09-01
+### Fixed
 
-- Fixed the unreadable extension action buttons in the light themes
+- `delete` and the named casts in C++ were gray while `new` was bold
+- Function calls in Python were not italic
+- Base classes and interfaces after `extends` and `implements` did not have the type style
+- Digit separators and exponent signs in number literals were gray
 
-## v0.33.0 - 2026-07-15
+## [0.33.1] - 2026-09-01
 
-- Darkened the dark theme background
+### Fixed
+
+- Unreadable extension action buttons in the light themes
+
+## [0.33.0] - 2026-07-15
+
+### Changed
+
+- Darker background in the dark theme
     - Background: `#0f0f12` -> `#08080a`
     - To keep the previous value, set `"workbench.colorCustomizations": { "editor.background": "#0f0f12", "terminal.background": "#0f0f12" }` in your `settings.json`
-- Tinted the text selections with each variant's accent color
+- Text selections are now tinted with each variant's accent color
 
-## v0.32.0 - 2026-04-14
+## [0.32.0] - 2026-04-14
 
-- Improved the accent colors of the light themes for WCAG AA compliance
+### Changed
+
+- Light theme accent colors now meet WCAG AA
     - Aquamarine: `#01aacf` -> `#007b94`
     - Amber: `#e66100` -> `#bf4e00`
     - Sulfur: `#927e00` -> `#856e00`
 
-## v0.31.2 - 2026-04-12
+## [0.31.2] - 2026-04-12
 
-- Fixed the file highlight issue in the file explorer ([#8](https://codeberg.org/beem/monochromator/issues/8))
+### Fixed
 
-## v0.31.1 - 2026-02-28
+- File highlight issue in the file explorer ([#8](https://codeberg.org/beem/monochromator/issues/8))
 
-- Made the scrollbar transparent so that it no longer covers the breadcrumbs ([#5](https://codeberg.org/beem/monochromator/issues/5))
-- Replaced the rarely used color values with similar existing values for consistency
-- Removed the unnecessary migration code from v0.27.0
+## [0.31.1] - 2026-02-28
 
-## v0.31.0 - 2026-02-26
+### Changed
 
-- Dimmed the white foreground value in the dark theme
-- Improved support for Typst
-- Fixed the border colors of the editor group, the panel, and the overview ruler
+- The scrollbar is now transparent, so it no longer covers the breadcrumbs ([#5](https://codeberg.org/beem/monochromator/issues/5))
+- Replaced rarely used color values with similar existing ones for consistency
 
-## v0.30.0 - 2026-01-14
+### Removed
 
-- Made functions and methods italic
-- Made the gray shade darker in the dark theme
-- Fixed the highlighting of Go package names
-- Fixed the highlighting of JavaScript braces
+- Unnecessary migration code from v0.27.0
 
-## v0.29.0 - 2025-11-19
+## [0.31.0] - 2026-02-26
 
-- Made the border color of the command center more subtle
+### Changed
 
-## v0.28.1 - 2025-11-18
+- Dimmer white foreground in the dark theme
+- Improved Typst support
 
-- Fixed the editor gutter colors for staged code
+### Fixed
 
-## v0.28.0 - 2025-11-04
+- Border colors of the editor group, the panel, and the overview ruler
+
+## [0.30.0] - 2026-01-14
+
+### Changed
+
+- Functions and methods are now italic
+- Darker gray in the dark theme
+
+### Fixed
+
+- Highlighting of Go package names
+- Highlighting of JavaScript braces
+
+## [0.29.0] - 2025-11-19
+
+### Changed
+
+- Subtler command center border
+
+## [0.28.1] - 2025-11-18
+
+### Fixed
+
+- Editor gutter colors for staged code
+
+## [0.28.0] - 2025-11-04
+
+### Changed
 
 - Various UI improvements:
-    - Removed the visible UI borders for a cleaner appearance
-    - Improved the button contrast
-    - Increased the contrast between the editor and the UI elements for better focus on the code
-    - Improved the contrast of comments in the light theme for better readability
-    - Improved the look of the keybinding labels
-    - Removed the focus borders
+    - No more visible UI borders, for a cleaner look
+    - Improved button contrast
+    - More contrast between the editor and the UI, for better focus on the code
+    - Higher contrast for comments in the light theme
+    - Improved keybinding labels
+    - No more focus borders
 
-## v0.27.1 - 2025-10-21
+## [0.27.1] - 2025-10-21
 
-- Fixed the syntax highlighting of built-in shell commands
+### Fixed
 
-## v0.27.0 - 2025-10-18
+- Highlighting of built-in shell commands
 
-- Migrated the `Dark+` themes to `Dark`
+## [0.27.0] - 2025-10-18
+
+### Changed
+
+- Renamed the `Dark+` themes to `Dark`
 - Various UI improvements
-- Redesigned the light theme
-- Improved the cyan and magenta colors (also the terminal colors)
-- Improved the inlay hints
-- Fixed the highlighting of TypeScript braces
+- Redesigned light theme
+- Improved cyan and magenta, also in the terminal
+- Improved inlay hints
 
-## v0.26.1 - 2025-10-09
+### Fixed
 
-- Fixed the syntax highlighting of CSS ID selectors
+- Highlighting of TypeScript braces
 
-## v0.26.0 - 2025-10-06
+## [0.26.1] - 2025-10-09
 
-- Reduced the blue tint in the Dark+ background colors
+### Fixed
 
-## v0.25.4 - 2025-09-29
+- Highlighting of CSS ID selectors
 
-- Fixed the syntax highlighting for BibTeX files
+## [0.26.0] - 2025-10-06
 
-## v0.25.3 - 2025-09-16
+### Changed
 
-- Fixed the command center colors
-- Fixed the blue tint in the Dark+ themes (added more blue)
-- Fixed the border and foreground colors of the hover widgets
-- Fixed the header color of the multi diff editor
-- Fixed the icon colors of the activity bar so that they fit the status bar colors better
+- Less blue tint in the Dark+ backgrounds
 
-## v0.25.2 - 2025-09-15
+## [0.25.4] - 2025-09-29
 
-- Fixed the colors of the status bar elements
+### Fixed
 
-## v0.25.1 - 2025-08-20
+- Highlighting of BibTeX files
 
-- Improved the syntax highlighting for Nix function arguments (the `{`, `}`, and `_` characters)
+## [0.25.3] - 2025-09-16
 
-## v0.25.0 - 2025-08-11
+### Fixed
 
-- Added a new theme variant with a cyan accent color: `Aquamarine`
-- Integrated the colors of the git diff editor into the themes
-- Changed the orange terminal color to yellow
-- Changed the cyan terminal color to fit the new `Aquamarine` variant
-- Fixed the purple terminal color in the light themes
+- Command center colors
+- Too weak blue tint in the Dark+ themes
+- Border and foreground colors of hover widgets
+- Header color of the multi diff editor
+- Activity bar icon colors that did not fit the status bar well
 
-## v0.24.0 - 2025-08-10
+## [0.25.2] - 2025-09-15
 
-- Added the `Dark+` theme variants (the `Dark` theme with improved contrast)
-- Updated the terminal color scheme for better theme integration
+### Fixed
 
-## v0.23.3 - 2025-07-22
+- Status bar colors
 
-- Fixed the string storage type in Go
+## [0.25.1] - 2025-08-20
 
-## v0.23.2 - 2025-07-22
+### Changed
 
-- Fixed the highlighting of the assignment operator
+- Improved highlighting of Nix function arguments (the `{`, `}`, and `_` characters)
 
-## v0.23.1 - 2025-07-20
+## [0.25.0] - 2025-08-11
 
-- Fixed the syntax highlighting for char literals (single quotes) in Rust
-- Fixed the highlighting of the assignment operator in Rust code
+### Added
 
-## v0.23.0 - 2025-07-18
+- `Aquamarine` theme variant with a cyan accent color
 
-- Added a new variant with a yellow accent color:
+### Changed
+
+- Git diff editor colors are now part of the themes
+- The orange terminal color is now yellow
+- The cyan terminal color now fits the new `Aquamarine` variant
+
+### Fixed
+
+- Purple terminal color in the light themes
+
+## [0.24.0] - 2025-08-10
+
+### Added
+
+- `Dark+` theme variants (the `Dark` theme with improved contrast)
+
+### Changed
+
+- Terminal colors now fit the themes better
+
+## [0.23.3] - 2025-07-22
+
+### Fixed
+
+- String storage type in Go
+
+## [0.23.2] - 2025-07-22
+
+### Fixed
+
+- Highlighting of the assignment operator
+
+## [0.23.1] - 2025-07-20
+
+### Fixed
+
+- Highlighting of char literals (single quotes) in Rust
+- Highlighting of the assignment operator in Rust
+
+## [0.23.0] - 2025-07-18
+
+### Added
+
+- Sulfur variant with a yellow accent color:
     - `Monochromator Dark Sulfur`
     - `Monochromator Light Sulfur`
-- Added the background colors for status bar errors and warnings to the theme
+- Background colors for status bar errors and warnings
 
-## v0.22.0 - 2025-07-15
+## [0.22.0] - 2025-07-15
 
-- Improved the color readability:
-    - Changed the purple in the dark themes (`#c61aff` -> `#ee40ff`)
-    - Changed the green in the light themes (`#26a269` -> `#017f45`)
-- Fixed the "Plain" theme variants: corrected the values that `v0.18.0` did not change
+### Changed
 
-## v0.21.0 - 2025-07-04
+- More readable colors:
+    - Purple in the dark themes: `#c61aff` -> `#ee40ff`
+    - Green in the light themes: `#26a269` -> `#017f45`
 
-- Added x86_64, ARM, RISC-V, and MIPS support for these OpenVSX extensions:
+### Fixed
+
+- "Plain" variants missed the changes from `v0.18.0`
+
+## [0.21.0] - 2025-07-04
+
+### Added
+
+- x86_64, ARM, RISC-V, and MIPS support for these OpenVSX extensions:
     - x86_64: `13xforever.language-x86-64-assembly`, `basdp.language-gas-x86`
     - ARM: `dan-c-underwood.arm`
     - RISC-V: `sunshaoce.RISC-V`
     - MIPS: `kdarkhan.mips`
 
-## v0.20.1 - 2025-06-16
+## [0.20.1] - 2025-06-16
 
-- Fixed the backtick symbol in Markdown for the accent color variants
+### Fixed
 
-## v0.20.0 - 2025-06-13
+- Markdown backticks in the accent color variants
 
-- Improved the Markdown and LaTeX highlighting
-- Improved the JavaScript string interpolation
+## [0.20.0] - 2025-06-13
 
-## v0.19.0 - 2025-06-12
+### Changed
 
-- Added a new variant with a purple accent color:
+- Improved Markdown and LaTeX highlighting
+- Improved highlighting of JavaScript string interpolation
+
+## [0.19.0] - 2025-06-12
+
+### Added
+
+- Amethyst variant with a purple accent color:
     - `Monochromator Dark Amethyst`
     - `Monochromator Light Amethyst`
 
-## v0.18.0 - 2025-06-11
+## [0.18.0] - 2025-06-11
 
-- Made the shade of blue more visible
-- Improved the string highlighting
-- Fixed C++ pointers
-- Fixed `self` and entity names in Rust
-- Fixed enums and function arrows in Java
-- Fixed constants in Haskell, Perl, Ruby, PHP, and other languages
-- Fixed support functions in Lua, Julia, and other languages
-- Fixed strings and symbols in F#
-- Fixed null and booleans in Zig
-- Decreased the minimum VS Code engine version
+### Changed
 
-## v0.17.2 - 2025-06-05
+- More visible blue
+- Improved string highlighting
+- Lower minimum VS Code engine version
 
-- Fixed Doxygen comments for languages other than C++
+### Fixed
 
-## v0.17.1 - 2025-06-03
+- C++ pointers
+- `self` and entity names in Rust
+- Enums and function arrows in Java
+- Constants in Haskell, Perl, Ruby, PHP, and other languages
+- Support functions in Lua, Julia, and other languages
+- Strings and symbols in F#
+- Null and booleans in Zig
 
-- Fixed the Code Actions menu
+## [0.17.2] - 2025-06-05
 
-## v0.17.0 - 2025-05-25
+### Fixed
 
-- Added `Monochromator Dark Plain` and `Monochromator Light Plain`
-- Fixed the syntax highlighting for backslashes that precede LaTeX keywords
-- Redesigned the extension icon
+- Doxygen comments for languages other than C++
 
-## v0.16.0 - 2025-05-24
+## [0.17.1] - 2025-06-03
 
-- Limited the bold format to keywords only (functions are no longer bold)
+### Fixed
+
+- Code Actions menu
+
+## [0.17.0] - 2025-05-25
+
+### Added
+
+- `Monochromator Dark Plain` and `Monochromator Light Plain`
+
+### Changed
+
+- Redesigned extension icon
+
+### Fixed
+
+- Highlighting of backslashes before LaTeX keywords
+
+## [0.16.0] - 2025-05-24
+
+### Changed
+
+- Only keywords are bold now (functions are no longer bold)
 - String quotation marks now match the color of literal text
-- Reverted the preprocessor directive style to the pre-`0.15.0` appearance
-- Improved the appearance of YAML files
+- Preprocessor directives look like before `0.15.0` again
+- YAML files look better
 - Documentation keywords are now italic
-- Fixed the highlighting of hex codes in HTML
 
-## v0.15.2 - 2025-05-19
+### Fixed
 
-- Fixed the highlighting of SQL database names and table names
+- Highlighting of hex codes in HTML
 
-## v0.15.1 - 2025-05-17
+## [0.15.2] - 2025-05-19
 
-- Fixed the highlighting of `storage.modifier.sql`
+### Fixed
 
-## v0.15.0 - 2025-05-10
+- Highlighting of SQL database and table names
 
-- Fixed the LaTeX math mode
-- Fixed more constants
+## [0.15.1] - 2025-05-17
+
+### Fixed
+
+- Highlighting of `storage.modifier.sql`
+
+## [0.15.0] - 2025-05-10
+
+### Changed
+
 - Various quality improvements:
-    - Made documentation keywords bold and gray (for example, `@Override` in Java, and shebangs)
-    - Made preprocessor directives bold and gray
-    - Improved the highlighting of escaped characters
-    - Made HTML and CSS tags bold
+    - Documentation keywords are now bold and gray (for example `@Override` in Java and shebangs)
+    - Preprocessor directives are now bold and gray
+    - Improved highlighting of escaped characters
+    - HTML and CSS tags are now bold
 
-## v0.14.1 - 2025-05-08
+### Fixed
 
-- Fixed the highlighting of units (such as "px" in CSS)
-- Fixed the highlighting of variables in shell scripts and JavaScript
-- Fixed the highlighting of some punctuation characters in Java and R
-- Fixed the regex highlighting
+- LaTeX math mode
+- Highlighting of more constants
 
-## v0.14.0 - 2025-05-04
+## [0.14.1] - 2025-05-08
 
-- Added these themes:
+### Fixed
+
+- Highlighting of units (such as "px" in CSS)
+- Highlighting of variables in shell scripts and JavaScript
+- Highlighting of some punctuation in Java and R
+- Regex highlighting
+
+## [0.14.0] - 2025-05-04
+
+### Added
+
+- Amber, Emerald, and Ruby variants:
     - `Monochromator Dark Amber`
     - `Monochromator Dark Emerald`
     - `Monochromator Dark Ruby`
     - `Monochromator Light Amber`
     - `Monochromator Light Emerald`
     - `Monochromator Light Ruby`
-- Highlighted timestamps as literals
-- Reduced the contrast of `editor.wordHighlightStrongBackground`
 
-## v0.13.3 - 2025-05-04
+### Changed
 
-- Fixed the highlighting of preprocessor names and hexadecimal numbers
+- Timestamps now look like literals
+- Less contrast for `editor.wordHighlightStrongBackground`
 
-## v0.13.2 - 2025-04-22
+## [0.13.3] - 2025-05-04
 
-- Fixed the highlighting in Python, TypeScript, LaTeX, YAML, and TOML
+### Fixed
 
-## v0.13.1 - 2025-04-21
+- Highlighting of preprocessor names and hexadecimal numbers
 
-- Fixed the selection highlighting
-- Fixed inconsistencies
-- Removed redundant code
+## [0.13.2] - 2025-04-22
 
-## v0.13.0 - 2025-04-18
+### Fixed
 
-- Fixed the highlight color of selections in the minimap
-- Changed `scrollbarSlider.background` to match `editorGroupHeader.tabsBackground`
-- Changed `textCodeBlock.background` to match `textBlockQuote.background`
-- Changed the icon design
-- Changed the colors to match https://gitlab.gnome.org/GNOME/libadwaita/-/merge_requests/1317
+- Highlighting in Python, TypeScript, LaTeX, YAML, and TOML
+
+## [0.13.1] - 2025-04-21
+
+### Removed
+
+- Redundant code
+
+### Fixed
+
+- Selection highlighting
+- Various inconsistencies
+
+## [0.13.0] - 2025-04-18
+
+### Changed
+
+- `scrollbarSlider.background` now matches `editorGroupHeader.tabsBackground`
+- `textCodeBlock.background` now matches `textBlockQuote.background`
+- New icon design
+- Colors now match https://gitlab.gnome.org/GNOME/libadwaita/-/merge_requests/1317
     - `#1e1e1e` -> `#1d1d20`
     - `#242424` -> `#222226`
     - `#303030` -> `#2e2e32`
@@ -289,60 +433,104 @@
     - `#ebebeb` -> `#ebebed`
     - `#f5f5f5` -> `#f2f2f4`
 
-## v0.12.0 - 2025-04-16
+### Fixed
 
-- Darkened the shade of blue in `Monochromator Dark`
-- Reduced the use of bold text
-- Integrated selections into the theme
-- Fixed the highlighting of constants (this was wrong in Rust, for example)
-- Improved the Markdown preview
-- Fixed the lightbulb color to show the correct shade of gray
-- Changed the icon design
-- Added badges to `README.md`
-- Removed redundant code
+- Selection highlight color in the minimap
 
-## v0.11.1 - 2025-04-10
+## [0.12.0] - 2025-04-16
 
-- Fixed the color of the tabs
-- Fixed the screenshots
+### Added
 
-## v0.11.0 - 2025-04-10
+- Badges in `README.md`
 
-- Redesigned the general UI
-- Added a color for `gitDecoration.addedResourceForeground`
+### Changed
 
-## v0.10.3 - 2025-03-24
+- Darker blue in `Monochromator Dark`
+- Less bold text
+- Selections are now part of the theme
+- Improved Markdown preview
+- New icon design
 
-- Fixed the dropdown background color
-- Decreased the contrast of inlay hints
+### Removed
 
-## v0.10.2 - 2025-03-23
+- Redundant code
 
-- Fixed the colors of:
+### Fixed
+
+- Highlighting of constants, for example in Rust
+- Lightbulb icon showed the wrong shade of gray
+
+## [0.11.1] - 2025-04-10
+
+### Fixed
+
+- Tab color
+- Screenshots
+
+## [0.11.0] - 2025-04-10
+
+### Added
+
+- Color for `gitDecoration.addedResourceForeground`
+
+### Changed
+
+- Redesigned UI
+
+## [0.10.3] - 2025-03-24
+
+### Changed
+
+- Less contrast for inlay hints
+
+### Fixed
+
+- Dropdown background color
+
+## [0.10.2] - 2025-03-23
+
+### Fixed
+
+- Colors of:
     - Scrollbar slider
     - Panel title
     - Fold background
 
-## v0.10.1 - 2025-03-21
+## [0.10.1] - 2025-03-21
+
+### Changed
 
 - Replaced `icon.png` with `icon128.png` and `icon1024.png`
-- Merged the screenshots
-- Improved the look of `README.md`
-- Fixed the changelog format
+- Screenshots are now in one file
+- Improved `README.md`
 
-## v0.10.0 - 2025-03-21
+### Fixed
 
-- Added bold text only for `constant.language`
-- Fixed the menu selection color in the light theme
-- Increased the overall contrast
-- Improved the look of:
+- Changelog format
+
+## [0.10.0] - 2025-03-21
+
+### Added
+
+- Bold for `constant.language` only
+
+### Changed
+
+- Higher overall contrast
+- Improved look of:
     - Activity bar
     - Command palette
     - Keybindings
 
-## v0.9.0 - 2025-03-21
+### Fixed
 
-- Integrated more components into the theme:
+- Menu selection color in the light theme
+
+## [0.9.0] - 2025-03-21
+
+### Changed
+
+- Theme colors for more components:
     - Checkboxes
     - Breadcrumbs
     - Git decoration for ignored files
@@ -351,49 +539,79 @@
     - Menu (it opens when you right-click)
     - Widgets
     - Notifications
-- Simplified the changelog format
-- Set semantic highlighting to true
-- Fixed a missing hashtag in a hex code
-- Removed the bold text from constants
-- Reverted the changes of `v0.8.4`
+- Simpler changelog format
+- Semantic highlighting is now enabled
+- Reverted the `v0.8.4` changes
 
-## v0.8.4 - 2025-03-17
+### Removed
 
-- Fixed the color of the inactive background
+- Bold for constants
+
+### Fixed
+
+- Missing hashtag in a hex code
+
+## [0.8.4] - 2025-03-17
+
+### Fixed
+
+- Inactive title bar background color
     - `titleBar.inactiveBackground` from `#ebebeb` to `#f0f0f0` in the light theme
     - `titleBar.inactiveBackground` from `#303030` to `#2a2a2a` in the dark theme
 
-## v0.8.3 - 2025-03-07
+## [0.8.3] - 2025-03-07
 
-- Added a download section to `README.md`
-- Added a bugs section to `package.json`
+### Added
+
+- Download section in `README.md`
+- Bugs section in `package.json`
+
+### Changed
+
 - Renamed `logo.png` to `icon.png`
-- Changed the structure of the screenshots (created a screenshot directory)
-- Changed the structure of `README.md`
-- Fixed the format of `CHANGELOG.md`
+- Screenshots are now in their own directory
+- Restructured `README.md`
 
-## v0.8.2 - 2025-03-06
+### Fixed
 
-- Changed the info color to match the theme
+- Format of `CHANGELOG.md`
 
-## v0.8.1 - 2025-03-02
+## [0.8.2] - 2025-03-06
 
-- Fixed the screenshots in `README.md`: changed the git repository
+### Changed
 
-## v0.8.0 - 2025-03-02
+- The info color now matches the theme
 
-- Added `CHANGELOG.md`
-- Added more information, a "License" section, and screenshots to `README.md`
-- Added theme colors to support Markdown better (in the editor)
-- Changed the font in the logo from "Fira Code" to "IBM Plex Mono"
-- Made the color of the progress bars more subtle
-- Improved the readability: changed the color of URLs to blue
-- Changed `textBlockQuote` for better readability (in the Markdown preview)
-- Fixed the color of `focusBorder` in the dark theme
+## [0.8.1] - 2025-03-02
 
-## v0.7.0 - 2025-02-28
+### Fixed
 
-- Added theme colors to:
+- Broken screenshots in `README.md`
+
+## [0.8.0] - 2025-03-02
+
+### Added
+
+- `CHANGELOG.md`
+- More information, a "License" section, and screenshots in `README.md`
+- Theme colors for Markdown in the editor
+
+### Changed
+
+- The logo font is now "IBM Plex Mono" instead of "Fira Code"
+- Subtler progress bars
+- URLs are now blue for better readability
+- More readable `textBlockQuote` in the Markdown preview
+
+### Fixed
+
+- `focusBorder` color in the dark theme
+
+## [0.7.0] - 2025-02-28
+
+### Added
+
+- Theme colors for:
     - Source control page
     - Code lens
     - Indent guide
@@ -403,45 +621,141 @@
     - Git decoration
     - Input background
     - Markdown preview
-- Changed the color of literals to blue for the dark and light themes
 
-## v0.6.0 - 2025-02-27
+### Changed
 
-- Changed the color of the borders
-- Changed the colors of errors and warnings in the minimap
+- Literals are now blue in the dark and light themes
 
-## v0.5.0 - 2025-02-24
+## [0.6.0] - 2025-02-27
 
-- Added theme colors to:
+### Changed
+
+- New border color
+- New minimap colors for errors and warnings
+
+## [0.5.0] - 2025-02-24
+
+### Added
+
+- Theme colors for:
     - Icons
     - Progress bar
     - Badges
     - URLs
-- Changed the git colors to make them more vibrant
-- Changed some colors to fit the theme better
 
-## v0.4.0 - 2025-02-21
+### Changed
 
-- Changed the logo to fit the new theme changes
-- Changed the git decorations to make them more readable
-- Changed the color of the light theme to magenta
+- More vibrant git colors
+- Some colors now fit the theme better
 
-## v0.3.0 - 2025-02-15
+## [0.4.0] - 2025-02-21
 
-- Added one color for literals
-- Added terminal colors
-- Changed the logo to fit the new theme changes
-- Removed the high contrast variants
+### Changed
 
-## v0.2.0 - 2025-02-08
+- The logo now matches the theme
+- More readable git decorations
+- The light theme color is now magenta
 
-- Added high contrast variants
-- Improved the theme colors
-- Fixed the font in the logo
+## [0.3.0] - 2025-02-15
 
-## v0.1.0 - 2025-02-08
+### Added
 
-- Added `LICENSE`
-- Added `README.md`
-- Added Monochromator Dark
-- Added Monochromator Light
+- A color for literals
+- Terminal colors
+
+### Changed
+
+- The logo now matches the theme
+
+### Removed
+
+- High contrast variants
+
+## [0.2.0] - 2025-02-08
+
+### Added
+
+- High contrast variants
+
+### Changed
+
+- Improved theme colors
+
+### Fixed
+
+- Logo font
+
+## [0.1.0] - 2025-02-08
+
+### Added
+
+- `LICENSE`
+- `README.md`
+- Monochromator Dark
+- Monochromator Light
+
+[0.35.0]: https://codeberg.org/beem/monochromator/compare/vscode/v0.34.0...vscode/v0.35.0
+[0.34.0]: https://codeberg.org/beem/monochromator/compare/vscode/v0.33.1...vscode/v0.34.0
+[0.33.1]: https://codeberg.org/beem/monochromator/compare/vscode/v0.33.0...vscode/v0.33.1
+[0.33.0]: https://codeberg.org/beem/monochromator/compare/vscode/v0.32.0...vscode/v0.33.0
+[0.32.0]: https://codeberg.org/beem/monochromator/compare/vscode/v0.31.2...vscode/v0.32.0
+[0.31.2]: https://codeberg.org/beem/monochromator/compare/vscode/v0.31.1...vscode/v0.31.2
+[0.31.1]: https://codeberg.org/beem/monochromator/compare/v0.31.0...vscode/v0.31.1
+[0.31.0]: https://codeberg.org/beem/monochromator/compare/v0.30.0...v0.31.0
+[0.30.0]: https://codeberg.org/beem/monochromator/compare/v0.29.0...v0.30.0
+[0.29.0]: https://codeberg.org/beem/monochromator/compare/v0.28.1...v0.29.0
+[0.28.1]: https://codeberg.org/beem/monochromator/compare/v0.28.0...v0.28.1
+[0.28.0]: https://codeberg.org/beem/monochromator/compare/v0.27.1...v0.28.0
+[0.27.1]: https://codeberg.org/beem/monochromator/compare/v0.27.0...v0.27.1
+[0.27.0]: https://codeberg.org/beem/monochromator/compare/v0.26.1...v0.27.0
+[0.26.1]: https://codeberg.org/beem/monochromator/compare/v0.26.0...v0.26.1
+[0.26.0]: https://codeberg.org/beem/monochromator/compare/v0.25.4...v0.26.0
+[0.25.4]: https://codeberg.org/beem/monochromator/compare/v0.25.3...v0.25.4
+[0.25.3]: https://codeberg.org/beem/monochromator/compare/v0.25.2...v0.25.3
+[0.25.2]: https://codeberg.org/beem/monochromator/compare/v0.25.1...v0.25.2
+[0.25.1]: https://codeberg.org/beem/monochromator/compare/v0.25.0...v0.25.1
+[0.25.0]: https://codeberg.org/beem/monochromator/compare/v0.24.0...v0.25.0
+[0.24.0]: https://codeberg.org/beem/monochromator/compare/v0.23.3...v0.24.0
+[0.23.3]: https://codeberg.org/beem/monochromator/compare/v0.23.2...v0.23.3
+[0.23.2]: https://codeberg.org/beem/monochromator/compare/v0.23.1...v0.23.2
+[0.23.1]: https://codeberg.org/beem/monochromator/compare/v0.23.0...v0.23.1
+[0.23.0]: https://codeberg.org/beem/monochromator/compare/v0.22.0...v0.23.0
+[0.22.0]: https://codeberg.org/beem/monochromator/compare/v0.21.0...v0.22.0
+[0.21.0]: https://codeberg.org/beem/monochromator/compare/v0.20.1...v0.21.0
+[0.20.1]: https://codeberg.org/beem/monochromator/compare/v0.20.0...v0.20.1
+[0.20.0]: https://codeberg.org/beem/monochromator/compare/v0.19.0...v0.20.0
+[0.19.0]: https://codeberg.org/beem/monochromator/compare/v0.18.0...v0.19.0
+[0.18.0]: https://codeberg.org/beem/monochromator/compare/v0.17.2...v0.18.0
+[0.17.2]: https://codeberg.org/beem/monochromator/compare/v0.17.1...v0.17.2
+[0.17.1]: https://codeberg.org/beem/monochromator/compare/v0.17.0...v0.17.1
+[0.17.0]: https://codeberg.org/beem/monochromator/compare/v0.16.0...v0.17.0
+[0.16.0]: https://codeberg.org/beem/monochromator/compare/v0.15.2...v0.16.0
+[0.15.2]: https://codeberg.org/beem/monochromator/compare/v0.15.1...v0.15.2
+[0.15.1]: https://codeberg.org/beem/monochromator/compare/v0.15.0...v0.15.1
+[0.15.0]: https://codeberg.org/beem/monochromator/compare/v0.14.1...v0.15.0
+[0.14.1]: https://codeberg.org/beem/monochromator/compare/v0.14.0...v0.14.1
+[0.14.0]: https://codeberg.org/beem/monochromator/compare/v0.13.3...v0.14.0
+[0.13.3]: https://codeberg.org/beem/monochromator/compare/v0.13.2...v0.13.3
+[0.13.2]: https://codeberg.org/beem/monochromator/compare/v0.13.1...v0.13.2
+[0.13.1]: https://codeberg.org/beem/monochromator/compare/v0.13.0...v0.13.1
+[0.13.0]: https://codeberg.org/beem/monochromator/compare/v0.12.0...v0.13.0
+[0.12.0]: https://codeberg.org/beem/monochromator/compare/v0.11.1...v0.12.0
+[0.11.1]: https://codeberg.org/beem/monochromator/compare/v0.11.0...v0.11.1
+[0.11.0]: https://codeberg.org/beem/monochromator/compare/v0.10.3...v0.11.0
+[0.10.3]: https://codeberg.org/beem/monochromator/compare/v0.10.2...v0.10.3
+[0.10.2]: https://codeberg.org/beem/monochromator/compare/v0.10.1...v0.10.2
+[0.10.1]: https://codeberg.org/beem/monochromator/compare/v0.10.0...v0.10.1
+[0.10.0]: https://codeberg.org/beem/monochromator/compare/v0.9.0...v0.10.0
+[0.9.0]: https://codeberg.org/beem/monochromator/compare/v0.8.4...v0.9.0
+[0.8.4]: https://codeberg.org/beem/monochromator/compare/v0.8.3...v0.8.4
+[0.8.3]: https://codeberg.org/beem/monochromator/compare/v0.8.2...v0.8.3
+[0.8.2]: https://codeberg.org/beem/monochromator/compare/v0.8.1...v0.8.2
+[0.8.1]: https://codeberg.org/beem/monochromator/compare/v0.8.0...v0.8.1
+[0.8.0]: https://codeberg.org/beem/monochromator/compare/v0.7.0...v0.8.0
+[0.7.0]: https://codeberg.org/beem/monochromator/compare/v0.6.0...v0.7.0
+[0.6.0]: https://codeberg.org/beem/monochromator/compare/v0.5.0...v0.6.0
+[0.5.0]: https://codeberg.org/beem/monochromator/compare/v0.4.0...v0.5.0
+[0.4.0]: https://codeberg.org/beem/monochromator/compare/v0.3.0...v0.4.0
+[0.3.0]: https://codeberg.org/beem/monochromator/compare/v0.2.0...v0.3.0
+[0.2.0]: https://codeberg.org/beem/monochromator/compare/v0.1.0...v0.2.0
+[0.1.0]: https://codeberg.org/beem/monochromator/src/tag/v0.1.0

@@ -199,6 +199,7 @@ var scopeBoldText = []string{
 	"keyword.operator.noexcept",
 	"keyword.operator.relation.in.julia",
 	"keyword.operator.shape.css",
+	"keyword.operator.type-casting.swift",
 	"keyword.operator.type.asserts",
 	"keyword.operator.type.php",
 	"keyword.operator.word.mnemonic",

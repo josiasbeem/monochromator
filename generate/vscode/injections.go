@@ -103,6 +103,38 @@ var injections = []injection{
 			{Match: `\.(?=[A-Za-z_])`, Name: metaPunctuation},
 		},
 	},
+	// A class as qualifier (Objects.requireNonNull) has the scope of a variable.
+	// Copy of #objects for capitalized names with a lowercase letter; a
+	// mixed-case member (Map.Entry) is a nested type that other rules own.
+	{
+		file:     "java.json",
+		injectTo: []string{"source.java"},
+		selector: "L:source.java - (comment | string | meta.import.java)",
+		patterns: []rule{
+			{Match: `(?<![\w$])(?<!\bnew\s)[A-Z][A-Z0-9_$]*[a-z][\w$]*(?=\s*\.\s*(?:[a-z_$][\w$]*|[A-Z][A-Z0-9_$]*)\b)`, Name: metaType + " variable.other.object.java"},
+		},
+	},
+	// Only the whole import path has a scope.
+	{
+		file:     "java-import.json",
+		injectTo: []string{"source.java"},
+		selector: "storage.modifier.import.java - comment",
+		patterns: []rule{
+			{Match: `\b[A-Z][A-Z0-9_$]*[a-z][\w$]*\b`, Name: metaType},
+		},
+	},
+	// The escape rule \. covers only \u of \u2014.
+	{
+		file:     "java-string.json",
+		injectTo: []string{"source.java"},
+		selector: "L:(string.quoted.double.java | string.quoted.single.java | string.quoted.triple.java)",
+		patterns: []rule{
+			{Match: `(\\u)([0-9a-fA-F]{4})`, Captures: map[string]rule{
+				"1": {Name: "constant.character.escape.java"},
+				"2": {Name: metaPlaceholder},
+			}},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

@@ -138,6 +138,27 @@
         "injectTo": [
           "source.c"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.java",
+        "path": "./syntaxes/java.json",
+        "injectTo": [
+          "source.java"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.java-import",
+        "path": "./syntaxes/java-import.json",
+        "injectTo": [
+          "source.java"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.java-string",
+        "path": "./syntaxes/java-string.json",
+        "injectTo": [
+          "source.java"
+        ]
       }
     ]
   },

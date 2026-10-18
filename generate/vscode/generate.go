@@ -333,6 +333,7 @@ var scopeUnderlineText = []string{
 	"keyword.type.void",
 	metaType,
 	metaType + " variable.language.self",
+	metaType + " variable.other.object.java",
 	"storage.type",
 	"storage.type.template.argument",
 	"support.class",

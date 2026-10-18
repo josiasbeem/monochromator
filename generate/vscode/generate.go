@@ -350,6 +350,8 @@ var scopeUnderlineLiterals = []string{
 	"storage.type.string.python",
 	"string.quoted.byte.raw",
 	"string.quoted.double.perl punctuation.definition.variable.perl",
+	"string.quoted.double.php punctuation.definition.variable.php",
+	"string.unquoted.heredoc.php punctuation.definition.variable.php",
 }
 
 func tokenRule(scope []string, foreground, fontStyle string) map[string]any {

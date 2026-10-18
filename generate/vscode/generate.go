@@ -705,6 +705,12 @@ func buildDefaultTheme(mode string, p palette.Palette, accent string) map[string
 			tokenRule(scopeUnderlineText, p.FGContrast, "underline"),
 			tokenRule(scopeLiterals, accent, "normal"),
 			tokenRule(scopeUnderlineLiterals, accent, "underline"),
+			// Diff lines show their meaning with green and red, like the
+			// diff colors of the editor. The selectors end in ".diff",
+			// because the log and git-commit grammars also use
+			// markup.inserted and markup.deleted.
+			tokenRule([]string{"markup.inserted.diff", "punctuation.definition.inserted.diff"}, p.Green, "normal"),
+			tokenRule([]string{"markup.deleted.diff", "punctuation.definition.deleted.diff"}, p.Red, "normal"),
 			tokenRule([]string{"markup.italic"}, p.FG, "italic"),
 			tokenRule([]string{"markup.underline"}, "", "underline"),
 			tokenRule([]string{"markup.strikethrough"}, "", "strikethrough"),

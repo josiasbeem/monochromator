@@ -24,6 +24,7 @@ var scopeGray = []string{
 	"keyword.control.anchor.regexp",
 	"keyword.control.equation.align.latex",
 	"keyword.control.equation.newline.latex",
+	"keyword.control.flow.block-scalar.folded.yaml",
 	"keyword.control.flow.block-scalar.literal.yaml",
 	"keyword.control.newline.tex",
 	"keyword.control.table.cell.latex",

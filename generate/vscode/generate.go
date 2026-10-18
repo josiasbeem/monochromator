@@ -103,6 +103,8 @@ var scopeItalicGray = []string{
 	"comment.block.javadoc entity.name.type.class",
 	"entity.name.type.instance.jsdoc",
 	"markup.quote",
+	"punctuation.definition.bracket.curly.begin.jsdoc",
+	"punctuation.definition.bracket.curly.end.jsdoc",
 	"punctuation.definition.comment",
 	"variable.other.jsdoc",
 }

@@ -288,6 +288,7 @@ var scopeBoldText = []string{
 	"support.function.textit.latex",
 	"support.function.texttt.latex",
 	"support.function.verb.latex",
+	"support.type.property-name.array.toml",
 	"support.type.property-name.table.toml",
 }
 

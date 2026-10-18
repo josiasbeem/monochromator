@@ -116,6 +116,10 @@ var scopeItalicGray = []string{
 	"punctuation.definition.bracket.curly.begin.jsdoc",
 	"punctuation.definition.bracket.curly.end.jsdoc",
 	"punctuation.definition.comment",
+	"string.quoted.docstring",
+	"string.quoted.docstring constant.character.escape",
+	"string.quoted.docstring punctuation.definition.string",
+	"string.quoted.docstring storage.type.string.python",
 	"variable.other.jsdoc",
 }
 

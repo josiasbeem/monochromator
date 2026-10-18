@@ -163,6 +163,16 @@ var injections = []injection{
 			{Match: `[{}]`, Name: metaPunctuation},
 		},
 	},
+	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
+	// flag rule.
+	{
+		file:     "shell.json",
+		injectTo: []string{"source.shell"},
+		selector: "L:meta.scope.logical-expression.shell - (string | meta.scope.subshell | meta.parameter-expansion | meta.arithmetic | comment)",
+		patterns: []rule{
+			{Match: `(?<!\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[a-hknoprstuwxzOGLSN])\b`, Name: metaFlag + " keyword.operator.logical.shell"},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

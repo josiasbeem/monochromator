@@ -182,6 +182,13 @@
         "injectTo": [
           "source.cpp"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.shell",
+        "path": "./syntaxes/shell.json",
+        "injectTo": [
+          "source.shell"
+        ]
       }
     ]
   },

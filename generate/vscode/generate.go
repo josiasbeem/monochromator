@@ -158,6 +158,7 @@ var scopeText = []string{
 	"markup.italic.textit.latex",
 	"meta.embedded.expression.dart variable.parameter",
 	"meta.embedded.line.ruby",
+	metaFlag + " keyword.operator.logical.shell",
 	"meta.interpolation.rust",
 	"meta.template.expression",
 	"punctuation.definition.variable",

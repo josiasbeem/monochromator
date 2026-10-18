@@ -201,6 +201,7 @@ var scopeBoldText = []string{
 	"keyword.operator.type.asserts",
 	"keyword.operator.type.php",
 	"keyword.operator.word.mnemonic",
+	"keyword.operator.word.r",
 	"keyword.operator.wordlike keyword.operator",
 	"markup.bold",
 	"markup.heading.typst",

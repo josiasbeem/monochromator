@@ -132,6 +132,7 @@ var scopeText = []string{
 	"markup.italic.emph.latex",
 	"markup.italic.textit.latex",
 	"meta.interpolation.rust",
+	"meta.template.expression",
 	"punctuation.definition.variable",
 	"storage.modifier.import",
 	"storage.modifier.package",

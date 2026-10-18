@@ -141,6 +141,7 @@ var scopeText = []string{
 	"string.other.link.description.markdown",
 	"string.other.link.title.markdown",
 	"string.quoted.double.nix meta.embedded",
+	"string.quoted.double.powershell support.variable",
 	"string.unquoted.argument.shell",
 	"string.unquoted.plain.out.yaml",
 	"support.class.latex",

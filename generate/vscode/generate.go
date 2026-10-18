@@ -21,6 +21,7 @@ var scopeGray = []string{
 	"entity.name.function.hash.typst",
 	"entity.name.operator.cpp",
 	"keyword.accessor.dollar.r",
+	"keyword.control.anchor.regexp",
 	"keyword.control.equation.align.latex",
 	"keyword.control.equation.newline.latex",
 	"keyword.control.flow.block-scalar.literal.yaml",

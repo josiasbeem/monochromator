@@ -355,6 +355,8 @@ var scopeLiterals = []string{
 	"keyword.other.unit",
 	"markup.inline.raw",
 	"meta.key-assignment.bibtex",
+	metaLiteral + " support.type.builtin.ts",
+	metaLiteral + " support.type.builtin.tsx",
 	"punctuation.definition.char",
 	"punctuation.definition.constant",
 	"punctuation.definition.raw",

@@ -187,14 +187,15 @@ var injections = []injection{
 			}},
 		},
 	},
-	// this shares support.type.builtin.ts with object, which stays a type
-	// through support.type. Copy of type-builtin-literals, only in the type
-	// regions that use it. After | and & the grammar opens a region without
-	// scope that ends before the next type; an L: rule at that position would
-	// win against the end and leave the region open. The first pattern copies
-	// that region with a marker, and inside the marker this injection is off.
-	// One selector with alternatives: each comma part is an injection of its
-	// own with a search of its own.
+	// null, undefined, true, false and this share support.type.builtin.ts
+	// with object, which stays a type through support.type. Copy of
+	// type-builtin-literals, only in the type regions that use it. After | and
+	// & the grammar opens a region without scope that ends before the next
+	// type; an L: rule at that position would win against the end and leave
+	// the region open. The first pattern copies that region with a marker,
+	// and inside the marker this injection is off. One selector with
+	// alternatives: each comma part is an injection of its own with a search
+	// of its own.
 	{
 		file:     "typescript.json",
 		injectTo: []string{"source.ts"},
@@ -203,8 +204,9 @@ var injections = []injection{
 			{Begin: `[&|](?!\s*\{)`, End: `(?=\S)`, ContentName: metaTypeOperator, BeginCaptures: map[string]rule{
 				"0": {Name: "keyword.operator.type.ts"},
 			}},
-			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(this)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
+			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(?:(this)|(null|undefined|true|false))(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
 				"1": {Name: metaSelf + " support.type.builtin.ts"},
+				"2": {Name: metaLiteral + " support.type.builtin.ts"},
 			}},
 		},
 	},
@@ -217,8 +219,9 @@ var injections = []injection{
 			{Begin: `[&|](?!\s*\{)`, End: `(?=\S)`, ContentName: metaTypeOperator, BeginCaptures: map[string]rule{
 				"0": {Name: "keyword.operator.type.tsx"},
 			}},
-			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(this)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
+			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(?:(this)|(null|undefined|true|false))(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
 				"1": {Name: metaSelf + " support.type.builtin.tsx"},
+				"2": {Name: metaLiteral + " support.type.builtin.tsx"},
 			}},
 		},
 	},

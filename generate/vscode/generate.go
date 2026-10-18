@@ -119,7 +119,6 @@ var scopeText = []string{
 	"entity.name.function.preprocessor",
 	"entity.name.section.latex",
 	"entity.name.type.entry-key.bibtex",
-	"entity.name.type.enum",
 	"entity.name.type.package.go",
 	"entity.name.type.struct.rust",
 	"entity.name.type.trait.rust",

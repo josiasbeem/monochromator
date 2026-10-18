@@ -269,7 +269,6 @@ var scopeBoldText = []string{
 	"support.function.verb.latex",
 	"support.type.property-name.table.toml",
 	"variable.other.readwrite.hash.typst",
-	"variable.other.readwrite.typst",
 }
 
 var scopeItalicText = []string{

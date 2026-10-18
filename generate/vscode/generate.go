@@ -340,6 +340,8 @@ var scopeUnderlineLiterals = []string{
 	"punctuation.definition.interpolation",
 	"punctuation.definition.template-expression",
 	"punctuation.definition.variable.shell",
+	"punctuation.section.embedded.begin.ruby",
+	"punctuation.section.embedded.end.ruby",
 	"storage.type.string.python",
 	"string.quoted.byte.raw",
 }

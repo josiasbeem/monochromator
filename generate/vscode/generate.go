@@ -191,6 +191,7 @@ var scopeBoldText = []string{
 	"keyword.operator.logical.lua",
 	"keyword.operator.logical.not.media.css",
 	"keyword.operator.logical.only.media.css",
+	"keyword.operator.logical.perl",
 	"keyword.operator.new",
 	"keyword.operator.noexcept",
 	"keyword.operator.relation.in.julia",

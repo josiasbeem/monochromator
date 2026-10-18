@@ -342,8 +342,10 @@ var scopeUnderlineLiterals = []string{
 	"punctuation.definition.variable.shell",
 	"punctuation.section.embedded.begin.nix",
 	"punctuation.section.embedded.begin.ruby",
+	"punctuation.section.embedded.begin.swift",
 	"punctuation.section.embedded.end.nix",
 	"punctuation.section.embedded.end.ruby",
+	"punctuation.section.embedded.end.swift",
 	"storage.type.string.python",
 	"string.quoted.byte.raw",
 }

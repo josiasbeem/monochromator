@@ -156,7 +156,6 @@ var scopeText = []string{
 }
 
 var scopeBoldText = []string{
-	"constant.character.escape.markdown",
 	"constant.character.escape.tex",
 	"constant.character.math.tex",
 	"constant.other.general.math.tex",

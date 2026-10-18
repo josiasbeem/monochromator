@@ -169,6 +169,7 @@ var scopeBoldText = []string{
 	"keyword.operator.new",
 	"keyword.operator.noexcept",
 	"keyword.operator.word.mnemonic",
+	"keyword.operator.wordlike keyword.operator",
 	"markup.bold",
 	"markup.heading.typst",
 	"punctuation.definition.attribute",

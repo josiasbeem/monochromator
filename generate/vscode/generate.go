@@ -324,6 +324,7 @@ var scopeLiterals = []string{
 	"punctuation.definition.string",
 	"punctuation.separator.constant.numeric",
 	"punctuation.separator.dot.decimal",
+	"storage.type.string.python",
 	"string",
 }
 
@@ -346,7 +347,6 @@ var scopeUnderlineLiterals = []string{
 	"punctuation.section.embedded.end.swift",
 	"punctuation.section.embedded.groovy",
 	"storage.type.format.python",
-	"storage.type.string.python",
 	"string.quoted.double.perl punctuation.definition.variable.perl",
 	"string.quoted.double.php punctuation.definition.variable.php",
 	"string.quoted.double.powershell punctuation.definition.variable.powershell",

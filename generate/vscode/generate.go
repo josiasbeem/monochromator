@@ -353,6 +353,8 @@ var scopeUnderlineLiterals = []string{
 	"string.quoted.double.php punctuation.definition.variable.php",
 	"string.quoted.double.powershell punctuation.definition.variable.powershell",
 	"string.quoted.double.powershell punctuation.section.embedded.substatement",
+	"string.quoted.double.shell punctuation.definition.evaluation.backticks",
+	"string.quoted.double.shell punctuation.definition.subshell",
 	"string.unquoted.heredoc.php punctuation.definition.variable.php",
 }
 

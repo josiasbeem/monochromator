@@ -48,6 +48,7 @@ var scopeGray = []string{
 	"meta.brace.square.ts",
 	"meta.brace.square.tsx",
 	"meta.brace.square.typst",
+	"meta.bracket.julia",
 	"meta.entry.braces.bibtex",
 	metaPunctuation,
 	metaPunctuation + " entity.name.type.lifetime",

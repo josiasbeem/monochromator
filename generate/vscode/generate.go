@@ -304,6 +304,7 @@ var scopeUnderlineText = []string{
 	"keyword.type.double",
 	"keyword.type.float",
 	"keyword.type.int",
+	"keyword.type.integer.zig",
 	"keyword.type.long",
 	"keyword.type.object",
 	"keyword.type.string",

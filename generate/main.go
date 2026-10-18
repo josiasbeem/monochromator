@@ -33,6 +33,11 @@ func run() error {
 	}
 	fmt.Println("Generated VS Code themes")
 
+	if err := vscode.GenerateInjections(filepath.Join(repoRoot, "editors", "vscode", "syntaxes")); err != nil {
+		return err
+	}
+	fmt.Println("Generated VS Code injection grammars")
+
 	if err := zed.Generate(cfg, filepath.Join(repoRoot, "editors", "zed", "themes")); err != nil {
 		return err
 	}

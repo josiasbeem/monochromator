@@ -116,6 +116,22 @@
         "uiTheme": "vs",
         "path": "./themes/light/sulfur.json"
       }
+    ],
+    "grammars": [
+      {
+        "scopeName": "monochromator.injection.rust",
+        "path": "./syntaxes/rust.json",
+        "injectTo": [
+          "source.rust"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.rust-string",
+        "path": "./syntaxes/rust-string.json",
+        "injectTo": [
+          "source.rust"
+        ]
+      }
     ]
   },
   "vsce": {

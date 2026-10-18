@@ -349,6 +349,7 @@ var scopeUnderlineLiterals = []string{
 	"punctuation.section.embedded.groovy",
 	"storage.type.string.python",
 	"string.quoted.byte.raw",
+	"string.quoted.double.perl punctuation.definition.variable.perl",
 }
 
 func tokenRule(scope []string, foreground, fontStyle string) map[string]any {

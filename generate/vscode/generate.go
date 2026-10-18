@@ -97,6 +97,7 @@ var scopeBoldItalicGray = []string{
 
 var scopeItalicGray = []string{
 	"comment",
+	"comment support.type.lua",
 	"comment.block.documentation.cs punctuation.definition.string",
 	"comment.block.documentation.cs string",
 	"comment.block.javadoc entity.name.type.class",

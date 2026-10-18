@@ -162,6 +162,7 @@ var scopeBoldText = []string{
 	"entity.other.attribute-name.pseudo-class",
 	"keyword",
 	"keyword.operator.cast",
+	"keyword.operator.dart",
 	"keyword.operator.delete",
 	"keyword.operator.expression.as",
 	"keyword.operator.expression.await",

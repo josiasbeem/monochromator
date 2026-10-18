@@ -154,6 +154,15 @@ var injections = []injection{
 			{Match: `(?<=\s)[=<>](?=\s)`, Name: metaPunctuation},
 		},
 	},
+	// The braces of an initializer have no scope.
+	{
+		file:     "cpp.json",
+		injectTo: []string{"source.cpp"},
+		selector: "source.cpp - (comment | string)",
+		patterns: []rule{
+			{Match: `[{}]`, Name: metaPunctuation},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

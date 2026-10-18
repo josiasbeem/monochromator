@@ -175,6 +175,13 @@
           "text.tex.latex",
           "text.tex"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.cpp",
+        "path": "./syntaxes/cpp.json",
+        "injectTo": [
+          "source.cpp"
+        ]
       }
     ]
   },

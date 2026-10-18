@@ -70,6 +70,7 @@ var scopeGray = []string{
 	"punctuation.definition.variable.perl",
 	"punctuation.definition.variable.php",
 	"punctuation.definition.variable.powershell",
+	"source.zig",
 	"storage.modifier.array",
 	"storage.modifier.pointer",
 	"storage.modifier.reference",
@@ -124,7 +125,9 @@ var scopeText = []string{
 	"constant.other.option",
 	"constant.other.reference",
 	"constant.other.table-name",
+	"entity.name.error.zig",
 	"entity.name.function.preprocessor",
+	"entity.name.label.zig",
 	"entity.name.section.latex",
 	"entity.name.tag.yaml",
 	"entity.name.type.entry-key.bibtex",
@@ -161,6 +164,8 @@ var scopeText = []string{
 	"variable.other",
 	"variable.parameter.positional.shell",
 	"variable.parameter.ts",
+	"variable.string.zig",
+	"variable.zig",
 }
 
 var scopeBoldText = []string{

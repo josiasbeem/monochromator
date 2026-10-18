@@ -33,6 +33,8 @@ var scopeGray = []string{
 	"keyword.control.ternary",
 	"keyword.definition.arrow",
 	"keyword.operator",
+	"keyword.other.array.begin.powershell",
+	"keyword.other.hashtable.begin.powershell",
 	"keyword.other.r",
 	"keyword.symbol",
 	"markup.content.brace.typst",

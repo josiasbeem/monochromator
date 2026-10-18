@@ -126,6 +126,7 @@ var scopeText = []string{
 	"keyword.operator.comparison.powershell",
 	"keyword.operator.logical.powershell",
 	"keyword.operator.unary.powershell",
+	"keyword.other.definition.ini",
 	"markup.bold.textbf.latex",
 	"markup.italic.emph.latex",
 	"markup.italic.textit.latex",

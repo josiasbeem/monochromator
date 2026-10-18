@@ -231,7 +231,10 @@ var scopeItalicText = []string{
 	"entity.name.function",
 	"entity.name.type.option.rust",
 	"entity.name.type.result.rust",
+	"keyword.operator.alignas",
+	"keyword.operator.alignof",
 	"keyword.operator.sizeof",
+	"keyword.operator.typeid",
 	"meta.function-call.generic.python",
 	"support.function",
 }

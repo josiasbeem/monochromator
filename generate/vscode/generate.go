@@ -189,6 +189,7 @@ var scopeBoldText = []string{
 	"entity.other.attribute-name.class.css",
 	"entity.other.attribute-name.id.css",
 	"entity.other.attribute-name.pseudo-class",
+	"entity.other.attribute-name.pseudo-element",
 	"keyword",
 	"keyword.operator.as.groovy",
 	"keyword.operator.as.php",

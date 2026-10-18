@@ -86,6 +86,7 @@ var scopeGray = []string{
 	"variable.language.special.self",
 	"variable.language.super",
 	"variable.language.this",
+	"variable.other.readwrite.hash.typst",
 	"variable.parameter.function.4.nix",
 	"variable.parameter.function.language.special.self",
 }
@@ -283,7 +284,6 @@ var scopeBoldText = []string{
 	"support.function.texttt.latex",
 	"support.function.verb.latex",
 	"support.type.property-name.table.toml",
-	"variable.other.readwrite.hash.typst",
 }
 
 var scopeItalicText = []string{

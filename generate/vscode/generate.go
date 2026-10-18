@@ -131,6 +131,7 @@ var scopeText = []string{
 	"markup.bold.textbf.latex",
 	"markup.italic.emph.latex",
 	"markup.italic.textit.latex",
+	"meta.embedded.expression.dart variable.parameter",
 	"meta.embedded.line.ruby",
 	"meta.interpolation.rust",
 	"meta.template.expression",

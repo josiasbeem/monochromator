@@ -233,6 +233,7 @@ var scopeItalicText = []string{
 	"entity.name.type.result.rust",
 	"keyword.operator.alignas",
 	"keyword.operator.alignof",
+	"keyword.operator.expression.import",
 	"keyword.operator.expression.nameof.cs",
 	"keyword.operator.expression.sizeof.cs",
 	"keyword.operator.expression.typeof.cs",

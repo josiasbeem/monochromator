@@ -51,6 +51,8 @@ var scopeGray = []string{
 	"meta.entry.braces.bibtex",
 	metaPunctuation,
 	metaPunctuation + " entity.name.type.lifetime",
+	metaSelf + " support.type.builtin.ts",
+	metaSelf + " support.type.builtin.tsx",
 	"meta.separator.markdown",
 	"punctuation",
 	"punctuation.definition.annotation",

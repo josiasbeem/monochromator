@@ -196,6 +196,20 @@
         "injectTo": [
           "source.zig"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.typescript",
+        "path": "./syntaxes/typescript.json",
+        "injectTo": [
+          "source.ts"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.typescriptreact",
+        "path": "./syntaxes/typescriptreact.json",
+        "injectTo": [
+          "source.tsx"
+        ]
       }
     ]
   },

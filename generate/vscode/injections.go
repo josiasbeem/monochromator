@@ -187,6 +187,41 @@ var injections = []injection{
 			}},
 		},
 	},
+	// this shares support.type.builtin.ts with object, which stays a type
+	// through support.type. Copy of type-builtin-literals, only in the type
+	// regions that use it. After | and & the grammar opens a region without
+	// scope that ends before the next type; an L: rule at that position would
+	// win against the end and leave the region open. The first pattern copies
+	// that region with a marker, and inside the marker this injection is off.
+	// One selector with alternatives: each comma part is an injection of its
+	// own with a search of its own.
+	{
+		file:     "typescript.json",
+		injectTo: []string{"source.ts"},
+		selector: "L:(meta.type.parameters.ts | meta.type.annotation.ts | meta.type.declaration.ts | meta.return.type.ts | meta.type.function.return.ts | meta.type.paren.cover.ts | meta.type.tuple.ts) - (string | comment | " + metaTypeOperator + ")",
+		patterns: []rule{
+			{Begin: `[&|](?!\s*\{)`, End: `(?=\S)`, ContentName: metaTypeOperator, BeginCaptures: map[string]rule{
+				"0": {Name: "keyword.operator.type.ts"},
+			}},
+			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(this)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
+				"1": {Name: metaSelf + " support.type.builtin.ts"},
+			}},
+		},
+	},
+	// The same for TSX.
+	{
+		file:     "typescriptreact.json",
+		injectTo: []string{"source.tsx"},
+		selector: "L:(meta.type.parameters.tsx | meta.type.annotation.tsx | meta.type.declaration.tsx | meta.return.type.tsx | meta.type.function.return.tsx | meta.type.paren.cover.tsx | meta.type.tuple.tsx) - (string | comment | " + metaTypeOperator + ")",
+		patterns: []rule{
+			{Begin: `[&|](?!\s*\{)`, End: `(?=\S)`, ContentName: metaTypeOperator, BeginCaptures: map[string]rule{
+				"0": {Name: "keyword.operator.type.tsx"},
+			}},
+			{Match: `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))(this)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(?!\s*\??:)(?!\s*\()`, Captures: map[string]rule{
+				"1": {Name: metaSelf + " support.type.builtin.tsx"},
+			}},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

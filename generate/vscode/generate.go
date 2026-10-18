@@ -173,6 +173,7 @@ var scopeBoldText = []string{
 	"keyword.operator.gradient.css",
 	"keyword.operator.in.groovy",
 	"keyword.operator.instanceof.groovy",
+	"keyword.operator.instanceof.java",
 	"keyword.operator.logical.and.media.css",
 	"keyword.operator.logical.feature.and.css",
 	"keyword.operator.logical.feature.not.css",

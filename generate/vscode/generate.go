@@ -139,6 +139,7 @@ var scopeText = []string{
 	"storage.modifier.package",
 	"string.other.link.description.markdown",
 	"string.other.link.title.markdown",
+	"string.quoted.double.nix meta.embedded",
 	"string.unquoted.argument.shell",
 	"string.unquoted.plain.out.yaml",
 	"support.class.latex",

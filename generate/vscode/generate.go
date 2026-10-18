@@ -90,6 +90,7 @@ var scopeBoldItalicGray = []string{
 	"keyword.other.documentation",
 	"meta.shebang.shell",
 	"punctuation.definition.block.tag.jsdoc",
+	"storage.type.annotation.lua",
 	"storage.type.class.doxygen",
 	"storage.type.class.jsdoc",
 }

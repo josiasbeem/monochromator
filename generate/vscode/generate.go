@@ -387,6 +387,14 @@ var scopeUnderlineLiterals = []string{
 	"string.quoted.double.powershell punctuation.section.embedded.substatement",
 	"string.quoted.double.shell punctuation.definition.evaluation.backticks",
 	"string.quoted.double.shell punctuation.definition.subshell",
+	"string.quoted.double.shell punctuation.definition.variable.shell variable.language.special.shell",
+	"string.quoted.double.shell punctuation.definition.variable.shell variable.other.normal.shell",
+	"string.quoted.double.shell punctuation.definition.variable.shell variable.parameter.positional.all.shell",
+	"string.quoted.double.shell punctuation.definition.variable.shell variable.parameter.positional.shell",
+	"string.unquoted.heredoc punctuation.definition.variable.shell variable.language.special.shell",
+	"string.unquoted.heredoc punctuation.definition.variable.shell variable.other.normal.shell",
+	"string.unquoted.heredoc punctuation.definition.variable.shell variable.parameter.positional.all.shell",
+	"string.unquoted.heredoc punctuation.definition.variable.shell variable.parameter.positional.shell",
 	"string.unquoted.heredoc.php punctuation.definition.variable.php",
 }
 

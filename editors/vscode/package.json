@@ -189,6 +189,13 @@
         "injectTo": [
           "source.shell"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.zig",
+        "path": "./syntaxes/zig.json",
+        "injectTo": [
+          "source.zig"
+        ]
       }
     ]
   },

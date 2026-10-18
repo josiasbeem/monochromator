@@ -173,6 +173,20 @@ var injections = []injection{
 			{Match: `(?<!\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[a-hknoprstuwxzOGLSN])\b`, Name: metaFlag + " keyword.operator.logical.shell"},
 		},
 	},
+	// error shares keyword.type.zig with type, void and bool. Copy of the error
+	// rule; a quoted name @"error" has no keywords.
+	{
+		file:     "zig.json",
+		injectTo: []string{"source.zig"},
+		selector: "L:source.zig - (comment | string | variable.string)",
+		patterns: []rule{
+			{Match: `\b(error)(?:(\.)(\w+))?\b`, Captures: map[string]rule{
+				"1": {Name: metaKeyword + " keyword.type.zig"},
+				"2": {Name: "punctuation.accessor.zig"},
+				"3": {Name: "entity.name.error.zig"},
+			}},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

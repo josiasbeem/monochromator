@@ -120,7 +120,6 @@ var scopeText = []string{
 	"entity.name.section.latex",
 	"entity.name.type.entry-key.bibtex",
 	"entity.name.type.package.go",
-	"entity.name.type.struct.rust",
 	"entity.name.type.trait.rust",
 	"keyword.label.assembly",
 	"keyword.operator.bitwise.powershell",

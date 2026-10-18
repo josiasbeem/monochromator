@@ -96,6 +96,8 @@ var scopeBoldItalicGray = []string{
 
 var scopeItalicGray = []string{
 	"comment",
+	"comment.block.documentation.cs punctuation.definition.string",
+	"comment.block.documentation.cs string",
 	"comment.block.javadoc entity.name.type.class",
 	"entity.name.type.instance.jsdoc",
 	"markup.quote",

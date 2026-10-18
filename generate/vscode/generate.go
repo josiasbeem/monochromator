@@ -118,7 +118,6 @@ var scopeText = []string{
 	"constant.other.table-name",
 	"entity.name.function.preprocessor",
 	"entity.name.section.latex",
-	"entity.name.type.class",
 	"entity.name.type.entry-key.bibtex",
 	"entity.name.type.enum",
 	"entity.name.type.package.go",

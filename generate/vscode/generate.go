@@ -249,6 +249,7 @@ var scopeBoldText = []string{
 	"storage.type.const",
 	"storage.type.def",
 	"storage.type.enum",
+	"storage.type.event.cs",
 	"storage.type.function",
 	"storage.type.interface",
 	"storage.type.js",

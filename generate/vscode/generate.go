@@ -299,6 +299,7 @@ var scopeUnderlineText = []string{
 	"keyword.other.type.php",
 	"keyword.type.bool",
 	"keyword.type.byte",
+	"keyword.type.c.zig",
 	"keyword.type.char",
 	"keyword.type.decimal",
 	"keyword.type.double",

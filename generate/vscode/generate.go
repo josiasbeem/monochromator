@@ -375,6 +375,7 @@ var scopeUnderlineLiterals = []string{
 	"keyword.constant",
 	"keyword.format.specifier",
 	metaPlaceholder,
+	metaPlaceholder + " constant.other.character-class.regexp",
 	"punctuation.definition.group.begin.bibtex",
 	"punctuation.definition.group.end.bibtex",
 	"punctuation.definition.interpolation",

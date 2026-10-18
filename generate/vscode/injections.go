@@ -225,6 +225,16 @@ var injections = []injection{
 			}},
 		},
 	},
+	// The dot shares constant.other.character-class.regexp with \s \d \w.
+	// Copy of regex-character-class without the dot.
+	{
+		file:     "regexp.json",
+		injectTo: []string{"source.ts", "source.tsx", "source.js", "source.js.jsx"},
+		selector: "L:(string.regexp.ts | string.regexp.tsx | string.regexp.js) - comment",
+		patterns: []rule{
+			{Match: `\\[wWsSdDtrnvf]`, Name: metaPlaceholder + " constant.other.character-class.regexp"},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

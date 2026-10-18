@@ -210,6 +210,16 @@
         "injectTo": [
           "source.tsx"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.regexp",
+        "path": "./syntaxes/regexp.json",
+        "injectTo": [
+          "source.ts",
+          "source.tsx",
+          "source.js",
+          "source.js.jsx"
+        ]
       }
     ]
   },

@@ -1,0 +1,45 @@
+{
+	"scopeName": "monochromator.injection.rust",
+	"injectionSelector": "L:source.rust - (comment | string)",
+	"patterns": [
+		{
+			"match": "\\bSelf\\b",
+			"name": "meta.type.monochromator variable.language.self.rust"
+		},
+		{
+			"match": "(')(_)(?!')\\b",
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.lifetime.rust"
+				},
+				"2": {
+					"name": "meta.punctuation.monochromator entity.name.type.lifetime.rust"
+				}
+			}
+		},
+		{
+			"begin": "(?<![A-Za-z0-9_])(b?r)(#*)(\")",
+			"end": "(\")(\\2)",
+			"name": "meta.rawstring.monochromator string.quoted.double.rust",
+			"beginCaptures": {
+				"1": {
+					"name": "string.quoted.byte.raw.rust"
+				},
+				"2": {
+					"name": "punctuation.definition.string.raw.rust"
+				},
+				"3": {
+					"name": "punctuation.definition.string.rust"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.string.rust"
+				},
+				"2": {
+					"name": "punctuation.definition.string.raw.rust"
+				}
+			}
+		}
+	]
+}

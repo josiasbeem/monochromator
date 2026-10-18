@@ -1,0 +1,21 @@
+{
+	"scopeName": "monochromator.injection.rust-string",
+	"injectionSelector": "L:string.quoted.double.rust - meta.rawstring.monochromator",
+	"patterns": [
+		{
+			"match": "(?<!\\{)({)\\w*(:[^\"{}\\s]*)?(})",
+			"name": "meta.interpolation.rust",
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.interpolation.rust"
+				},
+				"2": {
+					"name": "meta.placeholder.monochromator"
+				},
+				"3": {
+					"name": "punctuation.definition.interpolation.rust"
+				}
+			}
+		}
+	]
+}

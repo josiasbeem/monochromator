@@ -135,6 +135,25 @@ var injections = []injection{
 			}},
 		},
 	},
+	// Braces after commands like \title have no scope.
+	{
+		file:     "latex.json",
+		injectTo: []string{"text.tex.latex", "text.tex"},
+		selector: "text.tex - (comment | markup.raw | meta.embedded | source | string)",
+		patterns: []rule{
+			{Match: `[{}]`, Name: metaPunctuation},
+		},
+	},
+	// = < > in math have no scope. The spaces keep the rule out of files with
+	// an unpaired $, where the grammar reads prose and XML as math.
+	{
+		file:     "latex-math.json",
+		injectTo: []string{"text.tex.latex", "text.tex"},
+		selector: "meta.math.block - (comment | markup.raw | meta.embedded | source | string)",
+		patterns: []rule{
+			{Match: `(?<=\s)[=<>](?=\s)`, Name: metaPunctuation},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

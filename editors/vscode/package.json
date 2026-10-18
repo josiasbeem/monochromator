@@ -159,6 +159,22 @@
         "injectTo": [
           "source.java"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.latex",
+        "path": "./syntaxes/latex.json",
+        "injectTo": [
+          "text.tex.latex",
+          "text.tex"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.latex-math",
+        "path": "./syntaxes/latex-math.json",
+        "injectTo": [
+          "text.tex.latex",
+          "text.tex"
+        ]
       }
     ]
   },

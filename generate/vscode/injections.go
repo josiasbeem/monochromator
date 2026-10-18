@@ -91,6 +91,18 @@ var injections = []injection{
 			}},
 		},
 	},
+	// The C grammar gives the name after struct, union and enum, the library
+	// types without _t and the dot of a designator no scope.
+	{
+		file:     "c.json",
+		injectTo: []string{"source.c"},
+		selector: "source.c - (comment | string)",
+		patterns: []rule{
+			{Match: `(?<=\bstruct\s|\bunion\s|\benum\s)[A-Za-z_]\w*`, Name: metaType},
+			{Match: `\b(?:FILE|va_list|jmp_buf)\b`, Name: metaType},
+			{Match: `\.(?=[A-Za-z_])`, Name: metaPunctuation},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

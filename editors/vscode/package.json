@@ -131,6 +131,13 @@
         "injectTo": [
           "source.rust"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.c",
+        "path": "./syntaxes/c.json",
+        "injectTo": [
+          "source.c"
+        ]
       }
     ]
   },

@@ -168,6 +168,7 @@ var scopeText = []string{
 	"punctuation.definition.variable",
 	"storage.modifier.import",
 	"storage.modifier.package",
+	"string variable.interpolation.julia",
 	"string.other.link.description.markdown",
 	"string.other.link.title.markdown",
 	"string.quoted.double.nix meta.embedded",
@@ -406,6 +407,7 @@ var scopeUnderlineLiterals = []string{
 	"string.unquoted.heredoc punctuation.definition.variable.shell variable.parameter.positional.all.shell",
 	"string.unquoted.heredoc punctuation.definition.variable.shell variable.parameter.positional.shell",
 	"string.unquoted.heredoc.php punctuation.definition.variable.php",
+	"variable.interpolation.julia " + metaPlaceholder + " meta.bracket.julia",
 }
 
 func tokenRule(scope []string, foreground, fontStyle string) map[string]any {

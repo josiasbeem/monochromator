@@ -253,6 +253,28 @@ var injections = []injection{
 			{Match: `[.,]`, Name: metaPunctuation},
 		},
 	},
+	// The $ of $name and $( ) has no scope of its own. Copies of the two
+	// interpolation rules; the first one copies the name pattern of the Julia
+	// grammar. Only the strings that interpolate: raw"", r"", '' and var""
+	// do not.
+	{
+		file:     "julia.json",
+		injectTo: []string{"source.julia"},
+		selector: "L:(string.quoted.double.julia | string.quoted.triple.double.julia | string.docstring.julia | string.interpolated.backtick.julia) - (comment | variable.interpolation.julia)",
+		patterns: []rule{
+			{Match: `(\$)(?:[[:alpha:]_\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}⅀-⅄∿⊾⊿⊤⊥∂∅-∇∎∏∐∑∞∟∫-∳⋀-⋃◸-◿♯⟘⟙⟀⟁⦰-⦴⨀-⨆⨉-⨖⨛⨜𝛁𝛛𝛻𝜕𝜵𝝏𝝯𝞉𝞩𝟃ⁱ-⁾₁-₎∠-∢⦛-⦯℘℮゛-゜𝟎-𝟡]|[^\P{So}←-⇿]|[^\p{^Sc}$])(?:[[:word:]_!\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}⅀-⅄∿⊾⊿⊤⊥∂∅-∇∎∏∐∑∞∟∫-∳⋀-⋃◸-◿♯⟘⟙⟀⟁⦰-⦴⨀-⨆⨉-⨖⨛⨜𝛁𝛛𝛻𝜕𝜵𝝏𝝯𝞉𝞩𝟃ⁱ-⁾₁-₎∠-∢⦛-⦯℘℮゛-゜𝟎-𝟡]|[^\P{Mn}-¡]|[^\P{Mc}-¡]|[^\P{Nd}-¡]|[^\P{Pc}-¡]|[^\P{Sk}-¡]|[^\P{Me}-¡]|[^\P{No}-¡]|[′-‷⁗]|[^\P{So}←-⇿]|[^\p{^Sc}$])*`, Name: "variable.interpolation.julia", Captures: map[string]rule{
+				"1": {Name: metaPlaceholder},
+			}},
+			{Begin: `(\$)(\()`, End: `\)`, Name: "variable.interpolation.julia", BeginCaptures: map[string]rule{
+				"1": {Name: metaPlaceholder},
+				"2": {Name: metaPlaceholder + " meta.bracket.julia"},
+			}, EndCaptures: map[string]rule{
+				"0": {Name: metaPlaceholder + " meta.bracket.julia"},
+			}, Patterns: []rule{
+				{Include: "source.julia#self_no_for_block"},
+			}},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

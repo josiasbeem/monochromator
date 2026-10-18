@@ -234,6 +234,13 @@
         "injectTo": [
           "source.swift"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.julia",
+        "path": "./syntaxes/julia.json",
+        "injectTo": [
+          "source.julia"
+        ]
       }
     ]
   },

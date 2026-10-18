@@ -235,6 +235,24 @@ var injections = []injection{
 			{Match: `\\[wWsSdDtrnvf]`, Name: metaPlaceholder + " constant.other.character-class.regexp"},
 		},
 	},
+	// The Swift grammar gives dot and comma no scope.
+	{
+		file:     "swift.json",
+		injectTo: []string{"source.swift"},
+		selector: "source.swift - (comment | string)",
+		patterns: []rule{
+			{Match: `[.,]`, Name: metaPunctuation},
+		},
+	},
+	// The same inside \( ), where the content looks like outside the string.
+	{
+		file:     "swift-interpolation.json",
+		injectTo: []string{"source.swift"},
+		selector: "meta.embedded.line.swift - (comment | meta.embedded.line.swift string)",
+		patterns: []rule{
+			{Match: `[.,]`, Name: metaPunctuation},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

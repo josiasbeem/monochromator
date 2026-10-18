@@ -220,6 +220,20 @@
           "source.js",
           "source.js.jsx"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.swift",
+        "path": "./syntaxes/swift.json",
+        "injectTo": [
+          "source.swift"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.swift-interpolation",
+        "path": "./syntaxes/swift-interpolation.json",
+        "injectTo": [
+          "source.swift"
+        ]
       }
     ]
   },

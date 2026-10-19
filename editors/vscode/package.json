@@ -241,6 +241,13 @@
         "injectTo": [
           "source.julia"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.dart",
+        "path": "./syntaxes/dart.json",
+        "injectTo": [
+          "source.dart"
+        ]
       }
     ]
   },

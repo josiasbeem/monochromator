@@ -168,6 +168,7 @@ var scopeText = []string{
 	"punctuation.definition.variable",
 	"storage.modifier.import",
 	"storage.modifier.package",
+	"string meta.embedded.expression.dart",
 	"string variable.interpolation.julia",
 	"string.other.link.description.markdown",
 	"string.other.link.title.markdown",

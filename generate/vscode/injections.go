@@ -275,6 +275,36 @@ var injections = []injection{
 			}},
 		},
 	},
+	// The delimiters share meta.embedded.expression.dart with the content.
+	// Copies of the two string-interp rules; operators and brackets in ${ }
+	// have no scope there. The call rule takes the ( of a call into its match
+	// without a scope; a copy of it gives the ( the scope of punctuation. A
+	// string in ${ } is again a string with interpolation, so the selector
+	// excludes ${ } only outside such a string.
+	{
+		file:     "dart.json",
+		injectTo: []string{"source.dart"},
+		selector: "L:string.interpolated - (comment | meta.embedded.expression.dart - (meta.embedded.expression.dart string.interpolated))",
+		patterns: []rule{
+			{Match: `(\$)([a-zA-Z0-9_]+)`, Name: "meta.embedded.expression.dart", Captures: map[string]rule{
+				"1": {Name: metaPlaceholder},
+				"2": {Name: "variable.parameter.dart"},
+			}},
+			{Begin: `\$\{`, End: `\}`, Name: "meta.embedded.expression.dart", BeginCaptures: map[string]rule{
+				"0": {Name: metaPlaceholder},
+			}, EndCaptures: map[string]rule{
+				"0": {Name: metaPlaceholder},
+			}, Patterns: []rule{
+				{Match: `([_$]*[a-z][a-zA-Z0-9_$]*)(<(?:[a-zA-Z0-9_$<>?]|,\s*|\s+extends\s+)+>)?([!?]?\()`, Captures: map[string]rule{
+					"1": {Name: "entity.name.function.dart"},
+					"2": {Patterns: []rule{{Include: "source.dart#type-args"}}},
+					"3": {Name: metaPunctuation},
+				}},
+				{Include: "source.dart#expression"},
+				{Match: `[-+*/%~!?:<>=&|^.,()\[\]]`, Name: metaPunctuation},
+			}},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

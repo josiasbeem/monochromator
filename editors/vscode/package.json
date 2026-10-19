@@ -248,6 +248,20 @@
         "injectTo": [
           "source.dart"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.groovy",
+        "path": "./syntaxes/groovy.json",
+        "injectTo": [
+          "source.groovy"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.groovy-interpolation",
+        "path": "./syntaxes/groovy-interpolation.json",
+        "injectTo": [
+          "source.groovy"
+        ]
       }
     ]
   },

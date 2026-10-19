@@ -305,6 +305,32 @@ var injections = []injection{
 			}},
 		},
 	},
+	// The rule for $name takes $ and the first letter. Copy of that rule. A dot
+	// is part of $name only before a name: in "$major.$minor" it is text of
+	// the string. Strings in """ """ have a scope of their own.
+	{
+		file:     "groovy.json",
+		injectTo: []string{"source.groovy"},
+		selector: "L:(string.quoted.double.groovy | string.quoted.double.multiline.groovy) - (comment | variable.other.interpolated.groovy | source.groovy.embedded)",
+		patterns: []rule{
+			{Begin: `(\$)\w`, End: `(?=\W)`, Name: "variable.other.interpolated.groovy", ApplyEndPatternLast: true, BeginCaptures: map[string]rule{
+				"1": {Name: metaPlaceholder},
+			}, Patterns: []rule{
+				{Match: `\w`, Name: "variable.other.interpolated.groovy"},
+				{Match: `\.(?=[A-Za-z_])`, Name: "keyword.other.dereference.groovy"},
+			}},
+		},
+	},
+	// The Groovy grammar gives the content of ${ } no scopes.
+	{
+		file:     "groovy-interpolation.json",
+		injectTo: []string{"source.groovy"},
+		selector: "source.groovy.embedded.source - comment",
+		patterns: []rule{
+			{Match: `\b\d[\d_]*(?:\.\d+)?[a-zA-Z]?\b`, Name: metaLiteral},
+			{Match: `[-+*/%=!<>&|?:.,()\[\]]`, Name: metaPunctuation},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

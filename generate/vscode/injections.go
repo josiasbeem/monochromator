@@ -14,6 +14,7 @@ import (
 // lists in generate.go give them the style of their rule in the spec.
 const (
 	metaType         = "meta.type.monochromator"         // rule 3: types
+	metaConstructor  = "meta.constructor.monochromator"  // rule 4: functions and constructors
 	metaKeyword      = "meta.keyword.monochromator"      // rule 2: keywords
 	metaLiteral      = "meta.literal.monochromator"      // rule 5: literals
 	metaPlaceholder  = "meta.placeholder.monochromator"  // rule 6: escapes, placeholders, interpolation
@@ -22,6 +23,7 @@ const (
 	metaFlag         = "meta.flag.monochromator"         // rule 1: shell flags
 	metaRawString    = "meta.rawstring.monochromator"    // marker without a style
 	metaTypeOperator = "meta.typeoperator.monochromator" // marker without a style
+	metaEnumBody     = "meta.enumbody.monochromator"     // marker without a style
 )
 
 // An injection adds patterns to the grammar that VS Code uses for a language;
@@ -34,6 +36,8 @@ type injection struct {
 	injectTo []string
 	selector string
 	patterns []rule
+	// The rules that a pattern includes with #name.
+	repository map[string]rule
 }
 
 // A rule is one TextMate pattern with the keys that the injections use.
@@ -88,6 +92,42 @@ var injections = []injection{
 				"1": {Name: "punctuation.definition.interpolation.rust"},
 				"2": {Name: metaPlaceholder},
 				"3": {Name: "punctuation.definition.interpolation.rust"},
+			}},
+		},
+	},
+	// Own enum variants look like constructors; the Rust grammar gives them
+	// the scope of a type. A use: a name after X:: or Self:: in a value or a
+	// pattern, not in a type position and not after a super:: path. A
+	// declaration: a name at the start of an entry in the body of enum Name.
+	// The copy of that { is a region with a marker, and #braces keeps the
+	// inner { } of a struct variant inside it. Some, None, Ok and Err have
+	// rules of their own.
+	{
+		file:     "rust-variants.json",
+		injectTo: []string{"source.rust"},
+		selector: "L:source.rust - (comment | string | meta.function.definition | meta.attribute | meta.use)",
+		patterns: []rule{
+			{Match: `(?<=(?:^|[^A-Za-z0-9_])(?:[A-Z][A-Za-z0-9_]+|Self)::)(?=(?!(?:Some|None|Ok|Err)\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\b\s*(?:=>|\||\)|,|;|\}|\]|\.|\{|==|!=|if\b|$))(?<!\bsuper::(?:[A-Za-z_]\w*::)*)(?<!(?:->|<|\bas|\bimpl|\bfor|\bdyn|&|\btype\s+\w+\s*=)\s*(?:&\s*|mut\s+)*(?:[A-Za-z_]\w*::)+)(?!(?:Some|None|Ok|Err)\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\b`, Name: metaConstructor + " entity.name.type.rust"},
+			{Begin: `(?<=\benum\s+_?[A-Z][A-Za-z0-9_]*\s*(?:<[^{};]*>)?\s*(?:where\b[^{};]*)?)\{`, End: `\}`, ContentName: metaEnumBody, BeginCaptures: map[string]rule{
+				"0": {Name: "punctuation.brackets.curly.rust"},
+			}, EndCaptures: map[string]rule{
+				"0": {Name: "punctuation.brackets.curly.rust"},
+			}, Patterns: []rule{
+				{Include: "#braces"},
+				{Match: `(?:(?<=[{,\]])|^)\s*((?!(?:Some|None|Ok|Err)\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\b)(?!\s*\()`, Captures: map[string]rule{
+					"1": {Name: metaConstructor + " entity.name.type.rust"},
+				}},
+				{Include: "source.rust"},
+			}},
+		},
+		repository: map[string]rule{
+			"braces": {Begin: `\{`, End: `\}`, BeginCaptures: map[string]rule{
+				"0": {Name: "punctuation.brackets.curly.rust"},
+			}, EndCaptures: map[string]rule{
+				"0": {Name: "punctuation.brackets.curly.rust"},
+			}, Patterns: []rule{
+				{Include: "#braces"},
+				{Include: "source.rust"},
 			}},
 		},
 	},
@@ -338,9 +378,10 @@ func (in injection) scopeName() string {
 }
 
 type grammarFile struct {
-	ScopeName         string `json:"scopeName"`
-	InjectionSelector string `json:"injectionSelector"`
-	Patterns          []rule `json:"patterns"`
+	ScopeName         string          `json:"scopeName"`
+	InjectionSelector string          `json:"injectionSelector"`
+	Patterns          []rule          `json:"patterns"`
+	Repository        map[string]rule `json:"repository,omitempty"`
 }
 
 func writeGrammar(filePath string, in injection) error {
@@ -350,7 +391,7 @@ func writeGrammar(filePath string, in injection) error {
 	// as \u003c and so on.
 	encoder.SetEscapeHTML(false)
 	encoder.SetIndent("", "\t")
-	err := encoder.Encode(grammarFile{ScopeName: in.scopeName(), InjectionSelector: in.selector, Patterns: in.patterns})
+	err := encoder.Encode(grammarFile{ScopeName: in.scopeName(), InjectionSelector: in.selector, Patterns: in.patterns, Repository: in.repository})
 	if err != nil {
 		return err
 	}

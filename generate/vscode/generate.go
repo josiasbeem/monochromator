@@ -321,6 +321,7 @@ var scopeItalicText = []string{
 	"keyword.operator.expression.typeof.cs",
 	"keyword.operator.sizeof",
 	"keyword.operator.typeid",
+	metaConstructor + " entity.name.type",
 	"meta.function-call.generic.python",
 	"support.function",
 }

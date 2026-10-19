@@ -133,6 +133,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.rust-variants",
+        "path": "./syntaxes/rust-variants.json",
+        "injectTo": [
+          "source.rust"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.c",
         "path": "./syntaxes/c.json",
         "injectTo": [

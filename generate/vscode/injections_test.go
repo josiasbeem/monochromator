@@ -118,11 +118,11 @@ func TestInjectionGrammars(t *testing.T) {
 			}
 
 			// A scope without a theme rule would leave the token as it is;
-			// the two markers only keep another injection out.
+			// the markers have no style on purpose.
 			found := map[string]bool{}
 			monochromatorScopes(grammar, found)
 			for scope := range found {
-				if scope != metaRawString && scope != metaTypeOperator && !styled[scope] {
+				if scope != metaRawString && scope != metaTypeOperator && scope != metaEnumBody && !styled[scope] {
 					t.Errorf("%s has no rule in the theme", scope)
 				}
 			}

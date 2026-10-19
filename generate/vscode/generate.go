@@ -90,6 +90,7 @@ var scopeGray = []string{
 	"storage.type.annotation.java",
 	"storage.type.function.arrow",
 	"storage.type.php",
+	"string.quoted.double.powershell meta.embedded.substatement.powershell punctuation.definition.variable.powershell",
 	"variable.language.java",
 	"variable.language.self",
 	"variable.language.special.self",

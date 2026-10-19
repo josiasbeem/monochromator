@@ -1,0 +1,27 @@
+{
+	"scopeName": "monochromator.injection.typescript",
+	"injectionSelector": "L:(meta.type.parameters.ts | meta.type.annotation.ts | meta.type.declaration.ts | meta.return.type.ts | meta.type.function.return.ts | meta.type.paren.cover.ts | meta.type.tuple.ts) - (string | comment | meta.typeoperator.monochromator)",
+	"patterns": [
+		{
+			"begin": "[&|](?!\\s*\\{)",
+			"end": "(?=\\S)",
+			"contentName": "meta.typeoperator.monochromator",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.operator.type.ts"
+				}
+			}
+		},
+		{
+			"match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(this)|(null|undefined|true|false))(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))(?!\\s*\\??:)(?!\\s*\\()",
+			"captures": {
+				"1": {
+					"name": "meta.self.monochromator support.type.builtin.ts"
+				},
+				"2": {
+					"name": "meta.literal.monochromator support.type.builtin.ts"
+				}
+			}
+		}
+	]
+}

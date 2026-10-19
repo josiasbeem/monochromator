@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.regexp",
+	"injectionSelector": "L:(string.regexp.ts | string.regexp.tsx | string.regexp.js) - comment",
+	"patterns": [
+		{
+			"match": "\\\\[wWsSdDtrnvf]",
+			"name": "meta.placeholder.monochromator constant.other.character-class.regexp"
+		}
+	]
+}

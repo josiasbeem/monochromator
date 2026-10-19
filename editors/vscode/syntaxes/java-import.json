@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.java-import",
+	"injectionSelector": "storage.modifier.import.java - comment",
+	"patterns": [
+		{
+			"match": "\\b[A-Z][A-Z0-9_$]*[a-z][\\w$]*\\b",
+			"name": "meta.type.monochromator"
+		}
+	]
+}

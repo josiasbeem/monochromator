@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.cpp",
+	"injectionSelector": "source.cpp - (comment | string)",
+	"patterns": [
+		{
+			"match": "[{}]",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

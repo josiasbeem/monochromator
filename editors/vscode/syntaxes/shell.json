@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.shell",
+	"injectionSelector": "L:meta.scope.logical-expression.shell - (string | meta.scope.subshell | meta.parameter-expansion | meta.arithmetic | comment)",
+	"patterns": [
+		{
+			"match": "(?<!\\S)-(nt|ot|ef|eq|ne|l[te]|g[te]|[a-hknoprstuwxzOGLSN])\\b",
+			"name": "meta.flag.monochromator keyword.operator.logical.shell"
+		}
+	]
+}

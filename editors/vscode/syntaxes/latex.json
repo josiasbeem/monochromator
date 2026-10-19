@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.latex",
+	"injectionSelector": "text.tex - (comment | markup.raw | meta.embedded | source | string)",
+	"patterns": [
+		{
+			"match": "[{}]",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

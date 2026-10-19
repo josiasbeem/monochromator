@@ -1,0 +1,18 @@
+{
+	"scopeName": "monochromator.injection.c",
+	"injectionSelector": "source.c - (comment | string)",
+	"patterns": [
+		{
+			"match": "(?<=\\bstruct\\s|\\bunion\\s|\\benum\\s)[A-Za-z_]\\w*",
+			"name": "meta.type.monochromator"
+		},
+		{
+			"match": "\\b(?:FILE|va_list|jmp_buf)\\b",
+			"name": "meta.type.monochromator"
+		},
+		{
+			"match": "\\.(?=[A-Za-z_])",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

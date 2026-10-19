@@ -1,0 +1,17 @@
+{
+	"scopeName": "monochromator.injection.java-string",
+	"injectionSelector": "L:(string.quoted.double.java | string.quoted.single.java | string.quoted.triple.java)",
+	"patterns": [
+		{
+			"match": "(\\\\u)([0-9a-fA-F]{4})",
+			"captures": {
+				"1": {
+					"name": "constant.character.escape.java"
+				},
+				"2": {
+					"name": "meta.placeholder.monochromator"
+				}
+			}
+		}
+	]
+}

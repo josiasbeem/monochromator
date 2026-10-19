@@ -1,0 +1,60 @@
+{
+	"scopeName": "monochromator.injection.dart",
+	"injectionSelector": "L:string.interpolated - (comment | meta.embedded.expression.dart - (meta.embedded.expression.dart string.interpolated))",
+	"patterns": [
+		{
+			"match": "(\\$)([a-zA-Z0-9_]+)",
+			"name": "meta.embedded.expression.dart",
+			"captures": {
+				"1": {
+					"name": "meta.placeholder.monochromator"
+				},
+				"2": {
+					"name": "variable.parameter.dart"
+				}
+			}
+		},
+		{
+			"begin": "\\$\\{",
+			"end": "\\}",
+			"name": "meta.embedded.expression.dart",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.placeholder.monochromator"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "meta.placeholder.monochromator"
+				}
+			},
+			"patterns": [
+				{
+					"match": "([_$]*[a-z][a-zA-Z0-9_$]*)(<(?:[a-zA-Z0-9_$<>?]|,\\s*|\\s+extends\\s+)+>)?([!?]?\\()",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.dart"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "source.dart#type-args"
+								}
+							]
+						},
+						"3": {
+							"name": "meta.punctuation.monochromator"
+						}
+					}
+				},
+				{
+					"include": "source.dart#expression"
+				},
+				{
+					"match": "[-+*/%~!?:<>=&|^.,()\\[\\]]",
+					"name": "meta.punctuation.monochromator"
+				}
+			]
+		}
+	]
+}

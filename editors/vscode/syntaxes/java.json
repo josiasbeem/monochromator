@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.java",
+	"injectionSelector": "L:source.java - (comment | string | meta.import.java)",
+	"patterns": [
+		{
+			"match": "(?<![\\w$])(?<!\\bnew\\s)[A-Z][A-Z0-9_$]*[a-z][\\w$]*(?=\\s*\\.\\s*(?:[a-z_$][\\w$]*|[A-Z][A-Z0-9_$]*)\\b)",
+			"name": "meta.type.monochromator variable.other.object.java"
+		}
+	]
+}

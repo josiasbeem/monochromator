@@ -1,0 +1,27 @@
+{
+	"scopeName": "monochromator.injection.groovy",
+	"injectionSelector": "L:(string.quoted.double.groovy | string.quoted.double.multiline.groovy) - (comment | variable.other.interpolated.groovy | source.groovy.embedded)",
+	"patterns": [
+		{
+			"begin": "(\\$)\\w",
+			"end": "(?=\\W)",
+			"name": "variable.other.interpolated.groovy",
+			"applyEndPatternLast": true,
+			"beginCaptures": {
+				"1": {
+					"name": "meta.placeholder.monochromator"
+				}
+			},
+			"patterns": [
+				{
+					"match": "\\w",
+					"name": "variable.other.interpolated.groovy"
+				},
+				{
+					"match": "\\.(?=[A-Za-z_])",
+					"name": "keyword.other.dereference.groovy"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.latex-math",
+	"injectionSelector": "meta.math.block - (comment | markup.raw | meta.embedded | source | string)",
+	"patterns": [
+		{
+			"match": "(?<=\\s)[=<>](?=\\s)",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

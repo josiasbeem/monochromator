@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.groovy-interpolation",
+	"injectionSelector": "source.groovy.embedded.source - comment",
+	"patterns": [
+		{
+			"match": "\\b\\d[\\d_]*(?:\\.\\d+)?[a-zA-Z]?\\b",
+			"name": "meta.literal.monochromator"
+		},
+		{
+			"match": "[-+*/%=!<>&|?:.,()\\[\\]]",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

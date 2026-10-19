@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.swift-interpolation",
+	"injectionSelector": "meta.embedded.line.swift - (comment | meta.embedded.line.swift string)",
+	"patterns": [
+		{
+			"match": "[.,]",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

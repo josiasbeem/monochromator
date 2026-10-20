@@ -1,0 +1,65 @@
+{
+	"scopeName": "monochromator.injection.rust-variants",
+	"injectionSelector": "L:source.rust - (comment | string | meta.function.definition | meta.attribute | meta.use)",
+	"patterns": [
+		{
+			"match": "(?<=(?:^|[^A-Za-z0-9_])(?:[A-Z][A-Za-z0-9_]+|Self)::)(?=(?!(?:Some|None|Ok|Err)\\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\\b\\s*(?:=>|\\||\\)|,|;|\\}|\\]|\\.|\\{|==|!=|if\\b|$))(?<!\\bsuper::(?:[A-Za-z_]\\w*::)*)(?<!(?:->|<|\\bas|\\bimpl|\\bfor|\\bdyn|&|\\btype\\s+\\w+\\s*=)\\s*(?:&\\s*|mut\\s+)*(?:[A-Za-z_]\\w*::)+)(?!(?:Some|None|Ok|Err)\\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\\b",
+			"name": "meta.constructor.monochromator entity.name.type.rust"
+		},
+		{
+			"begin": "(?<=\\benum\\s+_?[A-Z][A-Za-z0-9_]*\\s*(?:<[^{};]*>)?\\s*(?:where\\b[^{};]*)?)\\{",
+			"end": "\\}",
+			"contentName": "meta.enumbody.monochromator",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.brackets.curly.rust"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.brackets.curly.rust"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#braces"
+				},
+				{
+					"match": "(?:(?<=[{,\\]])|^)\\s*((?!(?:Some|None|Ok|Err)\\b)[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\\b)(?!\\s*\\()",
+					"captures": {
+						"1": {
+							"name": "meta.constructor.monochromator entity.name.type.rust"
+						}
+					}
+				},
+				{
+					"include": "source.rust"
+				}
+			]
+		}
+	],
+	"repository": {
+		"braces": {
+			"begin": "\\{",
+			"end": "\\}",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.brackets.curly.rust"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.brackets.curly.rust"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#braces"
+				},
+				{
+					"include": "source.rust"
+				}
+			]
+		}
+	}
+}

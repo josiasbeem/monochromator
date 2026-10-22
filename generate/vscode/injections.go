@@ -20,6 +20,7 @@ const (
 	metaPlaceholder  = "meta.placeholder.monochromator"  // rule 6: escapes, placeholders, interpolation
 	metaPunctuation  = "meta.punctuation.monochromator"  // rule 7: operators, punctuation
 	metaSelf         = "meta.self.monochromator"         // rule 7: self and this
+	metaName         = "meta.name.monochromator"         // rule 1: names
 	metaFlag         = "meta.flag.monochromator"         // rule 1: shell flags
 	metaRawString    = "meta.rawstring.monochromator"    // marker without a style
 	metaTypeOperator = "meta.typeoperator.monochromator" // marker without a style
@@ -369,6 +370,25 @@ var injections = []injection{
 		patterns: []rule{
 			{Match: `\b\d[\d_]*(?:\.\d+)?[a-zA-Z]?\b`, Name: metaLiteral},
 			{Match: `[-+*/%=!<>&|?:.,()\[\]]`, Name: metaPunctuation},
+		},
+	},
+	// self is dim only before a dot, as the object of an attribute; alone it
+	// looks like a variable, and cls before a dot is dim too. Copies of
+	// special-variables with a lookahead. f-strings stay out, because their
+	// text and their fields share one scope, and so do parameter lists of
+	// functions and lambdas, where a theme rule gives self the color of a
+	// parameter.
+	{
+		file:     "python.json",
+		injectTo: []string{"source.python"},
+		selector: "L:source.python - (comment | string | meta.fstring | meta.function.parameters | meta.function.lambda.parameters)",
+		patterns: []rule{
+			{Match: `\b(?<!\.)(self)\b(?!\s*\.)`, Captures: map[string]rule{
+				"1": {Name: metaName + " variable.language.special.self.python"},
+			}},
+			{Match: `\b(?<!\.)(cls)\b(?=\s*\.)`, Captures: map[string]rule{
+				"1": {Name: metaSelf + " variable.language.special.cls.python"},
+			}},
 		},
 	},
 }

@@ -269,6 +269,13 @@
         "injectTo": [
           "source.groovy"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.python",
+        "path": "./syntaxes/python.json",
+        "injectTo": [
+          "source.python"
+        ]
       }
     ]
   }

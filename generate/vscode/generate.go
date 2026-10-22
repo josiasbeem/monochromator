@@ -358,6 +358,7 @@ var scopeLiterals = []string{
 	"constant.character",
 	"constant.language",
 	"constant.numeric",
+	"constant.numeric storage.type",
 	"constant.other",
 	"keyword.operator.exponent",
 	"keyword.operator.minus.exponent",

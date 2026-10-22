@@ -109,6 +109,7 @@ var scopeBoldItalicGray = []string{
 	"storage.type.annotation.lua",
 	"storage.type.class.doxygen",
 	"storage.type.class.jsdoc",
+	"string.quoted.docstring keyword.control.flow.python",
 }
 
 var scopeItalicGray = []string{

@@ -56,6 +56,34 @@ type rule struct {
 	Patterns            []rule          `json:"patterns,omitempty"`
 }
 
+// The this injections of TypeScript and JavaScript share these. this before a
+// dot (also ?. and !.) stays dim, as the object of a member. this and super
+// before a parenthesis are the names of calls (new this(), super()) and get the
+// style of a function. In all other positions, this looks like a variable. The
+// rules are copies of this-literal and super-literal with a lookahead. Types
+// stay out: there this is the type of the object and keeps its dim style
+// (typescript.json). The expressions of a template string are code, its text is
+// not. Text in JSX is not code.
+//
+// An L: injection wins against an empty match of the grammar at the same
+// position. The grammar starts and ends some regions with an empty match, and
+// the injection must not move these borders. For this reason the first
+// injection does not touch these places:
+//   - this before a parenthesis: meta.function-call starts at the name. The
+//     second injection marks the name only inside meta.function-call.
+//   - this before a colon: the grammar marks an object key there. A this in a
+//     ternary (c ? this : x) also stays dim.
+//   - this directly after the => of an arrow function without a block: the
+//     body starts where meta.arrow ends.
+//   - parameters: there the grammar also gives this variable.parameter. The
+//     theme shows this with variable.parameter as text.
+const (
+	scriptThisExclude = " - (comment | (string - meta.template.expression) | meta.type.annotation | meta.return.type | meta.type.parameters | meta.type.declaration | meta.type.function.return | meta.type.paren.cover | meta.type.tuple | meta.parameters | (meta.arrow - (meta.arrow meta.block)) | (meta.jsx.children - meta.embedded.expression) | (meta.embedded.expression meta.jsx.children))"
+	scriptThisAlone   = `(?<!=>)(?<!=>\s)(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))this\b(?!\$)(?!\s*(?:[?!]?\.|\(|:))`
+	scriptThisCall    = `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))this\b(?!\$)(?=\s*\()`
+	scriptSuperCall   = `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))super\b(?!\$)(?=\s*\()`
+)
+
 var injections = []injection{
 	// Self and self share variable.language.self.rust, the anonymous lifetime
 	// '_ shares the scope of 'a. Copies of lvariables and lifetimes. Raw strings
@@ -275,6 +303,36 @@ var injections = []injection{
 				"1": {Name: metaSelf + " support.type.builtin.tsx"},
 				"2": {Name: metaLiteral + " support.type.builtin.tsx"},
 			}},
+		},
+	},
+	{
+		file:     "typescript-this.json",
+		injectTo: []string{"source.ts"},
+		selector: "L:source.ts" + scriptThisExclude,
+		patterns: []rule{{Match: scriptThisAlone, Name: metaName + " variable.language.this.ts"}},
+	},
+	{
+		file:     "typescript-this-call.json",
+		injectTo: []string{"source.ts"},
+		selector: "L:meta.function-call.ts",
+		patterns: []rule{
+			{Match: scriptThisCall, Name: metaConstructor + " variable.language.this.ts"},
+			{Match: scriptSuperCall, Name: metaConstructor + " variable.language.super.ts"},
+		},
+	},
+	{
+		file:     "typescriptreact-this.json",
+		injectTo: []string{"source.tsx"},
+		selector: "L:source.tsx" + scriptThisExclude,
+		patterns: []rule{{Match: scriptThisAlone, Name: metaName + " variable.language.this.tsx"}},
+	},
+	{
+		file:     "typescriptreact-this-call.json",
+		injectTo: []string{"source.tsx"},
+		selector: "L:meta.function-call.tsx",
+		patterns: []rule{
+			{Match: scriptThisCall, Name: metaConstructor + " variable.language.this.tsx"},
+			{Match: scriptSuperCall, Name: metaConstructor + " variable.language.super.tsx"},
 		},
 	},
 	// The dot shares constant.other.character-class.regexp with \s \d \w.

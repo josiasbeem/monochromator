@@ -226,6 +226,34 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.typescript-this",
+        "path": "./syntaxes/typescript-this.json",
+        "injectTo": [
+          "source.ts"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.typescript-this-call",
+        "path": "./syntaxes/typescript-this-call.json",
+        "injectTo": [
+          "source.ts"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.typescriptreact-this",
+        "path": "./syntaxes/typescriptreact-this.json",
+        "injectTo": [
+          "source.tsx"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.typescriptreact-this-call",
+        "path": "./syntaxes/typescriptreact-this-call.json",
+        "injectTo": [
+          "source.tsx"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.regexp",
         "path": "./syntaxes/regexp.json",
         "injectTo": [

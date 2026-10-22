@@ -5,9 +5,9 @@
 <h1 align="center">Monochromator</h1>
 
 <p align="center">
-  <a href="https://codeberg.org/beem/monochromator/issues"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeberg.org%2Fapi%2Fv1%2Frepos%2Fbeem%2Fmonochromator&query=%24.open_issues_count&style=flat-square&label=Issues&color=%23e7e7e7&labelColor=%23393941&logo=codeberg&logoColor=%23e7e7e7" alt="Issues" /></a>
+  <a href="https://github.com/josiasbeem/monochromator/issues"><img src="https://img.shields.io/github/issues-raw/josiasbeem/monochromator?style=flat-square&label=Issues&color=%23e7e7e7&labelColor=%23393941&logo=github&logoColor=%23e7e7e7" alt="Issues" /></a>
   <a href="https://open-vsx.org/extension/beem/monochromator"><img src="https://img.shields.io/open-vsx/dt/beem/monochromator?style=flat-square&label=Downloads&color=%23e7e7e7&labelColor=%23393941&logo=vscodium&logoColor=%23e7e7e7" alt="Downloads" /></a>
-  <a href="https://codeberg.org/beem/monochromator/raw/branch/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-%23e7e7e7?style=flat-square&labelColor=%23393941&logo=opensourceinitiative&logoColor=%23e7e7e7" alt="License" /></a>
+  <a href="https://raw.githubusercontent.com/josiasbeem/monochromator/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-%23e7e7e7?style=flat-square&labelColor=%23393941&logo=opensourceinitiative&logoColor=%23e7e7e7" alt="License" /></a>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 ## Installation
 
-You can also get all the themes from [Actions](https://codeberg.org/beem/monochromator/actions).
+You can also get all the themes from [Actions](https://github.com/josiasbeem/monochromator/actions).
 
 <details>
 <summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
@@ -87,7 +87,7 @@ This example `init.lua` uses `vim.pack`, the built-in plugin manager of Neovim 0
 
 ```lua
 -- The color schemes are in a subdirectory of the repository
-vim.pack.add({ "https://codeberg.org/beem/monochromator" }, {
+vim.pack.add({ "https://github.com/josiasbeem/monochromator" }, {
   load = function(plugin)
     vim.opt.rtp:append(plugin.path .. "/editors/neovim")
   end,
@@ -113,7 +113,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim), install nvim-treesitter as
 
 ```lua
 {
-  url = "https://codeberg.org/beem/monochromator",
+  url = "https://github.com/josiasbeem/monochromator",
   lazy = false,
   priority = 1000,
   config = function(plugin)
@@ -135,7 +135,7 @@ Then add the `termguicolors` line and the `colorscheme` line of the example to y
 
 ## Font
 
-[Monochromator Mono](https://codeberg.org/beem/monochromator-mono) is the matching code font, and the screenshots use it. You do not need it, because the theme works with every font. But a monochrome theme shows the structure of the code with font styles, not with colors. For this reason, this font makes the difference between the font styles much larger than in most code fonts:
+[Monochromator Mono](https://github.com/josiasbeem/monochromator-mono) is the matching code font, and the screenshots use it. You do not need it, because the theme works with every font. But a monochrome theme shows the structure of the code with font styles, not with colors. For this reason, this font makes the difference between the font styles much larger than in most code fonts:
 
 - Its bold cuts are much heavier than the bold cuts of most code fonts.
 - Its italic cuts look much more different from the upright text than in most code fonts.
@@ -193,7 +193,7 @@ Neovim uses the font of your terminal. Set **Monochromator Mono** as the font in
 
 ## How to contribute
 
-If the syntax highlighting is not correct, [open an issue](https://codeberg.org/beem/monochromator/issues). Include the editor, the language, a screenshot, and a description of the correct appearance.
+If the syntax highlighting is not correct, [open an issue](https://github.com/josiasbeem/monochromator/issues). Include the editor, the language, a screenshot, and a description of the correct appearance.
 
 My main focus is the Visual Studio Code variant. The quality in other editors can vary.
 

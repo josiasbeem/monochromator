@@ -28,10 +28,10 @@
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://codeberg.org/beem/monochromator.git"
+    "url": "https://github.com/josiasbeem/monochromator.git"
   },
   "bugs": {
-    "url": "https://codeberg.org/beem/monochromator/issues",
+    "url": "https://github.com/josiasbeem/monochromator/issues",
     "email": "josias@beem.at"
   },
   "contributes": {
@@ -273,6 +273,6 @@
     ]
   },
   "vsce": {
-    "baseContentUrl": "https://codeberg.org/beem/monochromator/raw/branch/master"
+    "baseContentUrl": "https://raw.githubusercontent.com/josiasbeem/monochromator/master"
   }
 }

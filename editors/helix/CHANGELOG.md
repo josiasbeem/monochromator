@@ -10,4 +10,4 @@ The format of this file follows [Keep a Changelog](https://keepachangelog.com/en
 
 - First release
 
-[0.1.0]: https://codeberg.org/beem/monochromator/src/tag/helix/v0.1.0
+[0.1.0]: https://github.com/josiasbeem/monochromator/tree/helix/v0.1.0

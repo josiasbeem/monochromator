@@ -132,6 +132,17 @@ var injections = []injection{
 			}},
 		},
 	},
+	// self is dim only before a dot, as the object of a field; alone and as
+	// parameter it looks like a variable. As path (use a::{self}, self::m) it
+	// stays dim like super. Copy of lvariables with a lookahead.
+	{
+		file:     "rust-self.json",
+		injectTo: []string{"source.rust"},
+		selector: "L:source.rust - (comment | string | meta.use)",
+		patterns: []rule{
+			{Match: `\bself\b(?!\s*(?:\.|::))`, Name: metaName + " variable.language.self.rust"},
+		},
+	},
 	// The C grammar gives the name after struct, union and enum, the library
 	// types without _t and the dot of a designator no scope.
 	{

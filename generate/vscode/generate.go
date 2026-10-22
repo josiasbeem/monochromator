@@ -170,6 +170,7 @@ var scopeText = []string{
 	"meta.embedded.line.swift source.swift",
 	metaFlag + " keyword.operator.logical.shell",
 	"meta.interpolation.rust",
+	metaName + " variable.language.self.rust",
 	metaName + " variable.language.special.self.python",
 	"meta.template.expression",
 	"punctuation.definition.variable",

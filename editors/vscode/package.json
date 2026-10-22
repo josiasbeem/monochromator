@@ -140,6 +140,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.rust-self",
+        "path": "./syntaxes/rust-self.json",
+        "injectTo": [
+          "source.rust"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.c",
         "path": "./syntaxes/c.json",
         "injectTo": [

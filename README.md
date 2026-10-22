@@ -21,7 +21,7 @@
 You can also get all the themes from [Actions](https://github.com/josiasbeem/monochromator/actions).
 
 <details>
-<summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
+<summary><picture><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></picture></summary>
 
 <br>
 
@@ -42,7 +42,7 @@ To make sure that the theme works correctly, add these settings to your `setting
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></picture></summary>
 
 <br>
 
@@ -51,7 +51,7 @@ Install the theme from the [Zed extension registry](https://zed.dev/extensions/m
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></picture></summary>
 
 <br>
 
@@ -73,7 +73,7 @@ true-color = true
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></picture></summary>
 
 <br>
 
@@ -141,7 +141,7 @@ Then add the `termguicolors` line and the `colorscheme` line of the example to y
 - Its italic cuts look much more different from the upright text than in most code fonts.
 
 <details>
-<summary><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></summary>
+<summary><picture><img src="https://custom-icon-badges.demolab.com/badge/VS%20Code-0078d7.svg?logo=vsc&logoColor=white&style=flat-square" alt="VS Code" /></picture></summary>
 
 <br>
 
@@ -159,7 +159,7 @@ Add these settings to your `settings.json`:
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Zed-white?logo=zedindustries&logoColor=084CCF&style=flat-square" alt="Zed" /></picture></summary>
 
 <br>
 
@@ -174,7 +174,7 @@ Add this setting to your `settings.json`:
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Helix-706bc8?logo=helix&logoColor=fff&style=flat-square" alt="Helix" /></picture></summary>
 
 <br>
 
@@ -183,7 +183,7 @@ Helix uses the font of your terminal. Set **Monochromator Mono** as the font in 
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></summary>
+<summary><picture><img src="https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=fff&style=flat-square" alt="Neovim" /></picture></summary>
 
 <br>
 

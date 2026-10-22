@@ -271,8 +271,5 @@
         ]
       }
     ]
-  },
-  "vsce": {
-    "baseContentUrl": "https://raw.githubusercontent.com/josiasbeem/monochromator/master"
   }
 }

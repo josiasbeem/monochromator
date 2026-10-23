@@ -238,6 +238,29 @@ var injections = []injection{
 			}},
 		},
 	},
+	// this is dim only before a dot (also ?. and !.), as the object of a
+	// member; alone it looks like a variable. this(...) and base(...) in a
+	// constructor initializer call a constructor and get the style of a
+	// function. The grammar starts its constructor-initializer region at the
+	// name. For this reason the injection copies that region and marks the
+	// name: a plain match would win against the region and leave the
+	// arguments to the rule for parameter lists. A this before a name is the
+	// modifier of an extension method (this string s) and stays out; is, as,
+	// switch and with after this are operators.
+	{
+		file:     "csharp-this.json",
+		injectTo: []string{"source.cs"},
+		selector: "L:source.cs - (comment | (string - meta.embedded.interpolation))",
+		patterns: []rule{
+			{
+				Begin:         `\b(base|this)\b\s*(?=\()`,
+				BeginCaptures: map[string]rule{"1": {Name: metaConstructor + " variable.language.$1.cs"}},
+				End:           `(?<=\))`,
+				Patterns:      []rule{{Include: "source.cs#argument-list"}},
+			},
+			{Match: `\bthis\b(?!\s*(?:[?!]?\.|\())(?!\s+(?!(?:is|as|switch|with)\b)[@_[:alpha:]])`, Name: metaName + " variable.language.this.cs"},
+		},
+	},
 	// Braces after commands like \title have no scope.
 	{
 		file:     "latex.json",

@@ -182,6 +182,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.csharp-this",
+        "path": "./syntaxes/csharp-this.json",
+        "injectTo": [
+          "source.cs"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.latex",
         "path": "./syntaxes/latex.json",
         "injectTo": [

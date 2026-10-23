@@ -170,6 +170,8 @@ var scopeText = []string{
 	"meta.embedded.line.swift source.swift",
 	metaFlag + " keyword.operator.logical.shell",
 	"meta.interpolation.rust",
+	// ">": only the object of the item access, not a self in the index.
+	"meta.item-access.python > variable.language.special.self.python",
 	metaName + " variable.language.self.rust",
 	metaName + " variable.language.this",
 	metaName + " variable.language.special.self.python",

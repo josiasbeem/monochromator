@@ -479,15 +479,17 @@ var injections = []injection{
 	// special-variables with a lookahead. f-strings stay out, because their
 	// text and their fields share one scope, and so do parameter lists of
 	// functions and lambdas, where a theme rule gives self the color of a
-	// parameter. self before a parenthesis also stays out: meta.function-call
-	// starts there with an empty match, and an L: injection would win against
-	// it. A theme rule gives the name of the call the style of a function.
+	// parameter. self before a parenthesis or a bracket also stays out:
+	// meta.function-call and meta.item-access start there with an empty match,
+	// and an L: injection would win against it. Theme rules give the name of
+	// the call the style of a function and the name of the item access the
+	// style of a variable.
 	{
 		file:     "python.json",
 		injectTo: []string{"source.python"},
 		selector: "L:source.python - (comment | string | meta.fstring | meta.function.parameters | meta.function.lambda.parameters)",
 		patterns: []rule{
-			{Match: `\b(?<!\.)(self)\b(?!\s*[.(])`, Captures: map[string]rule{
+			{Match: `\b(?<!\.)(self)\b(?!\s*[.(\[])`, Captures: map[string]rule{
 				"1": {Name: metaName + " variable.language.special.self.python"},
 			}},
 			{Match: `\b(?<!\.)(cls)\b(?=\s*\.)`, Captures: map[string]rule{

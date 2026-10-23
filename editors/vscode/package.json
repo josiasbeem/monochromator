@@ -348,6 +348,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.swift-self",
+        "path": "./syntaxes/swift-self.json",
+        "injectTo": [
+          "source.swift"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.julia",
         "path": "./syntaxes/julia.json",
         "injectTo": [

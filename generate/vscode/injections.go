@@ -499,6 +499,19 @@ var injections = []injection{
 			{Match: `[.,]`, Name: metaPunctuation},
 		},
 	},
+	// self, super and Self share variable.language.swift. self and super are
+	// dim only before a dot (also ?. and !.), as the object of a member; alone
+	// self looks like a variable. Self is a type, as in Rust. Copies of the
+	// rule in keywords with a lookahead.
+	{
+		file:     "swift-self.json",
+		injectTo: []string{"source.swift"},
+		selector: "L:source.swift - (comment | (string - meta.embedded.line))",
+		patterns: []rule{
+			{Match: `(?<!\.)\b(?:self|super)\b(?=\s*[?!]?\.(?!\.))`, Name: metaSelf + " variable.language.swift"},
+			{Match: `(?<!\.)\bSelf\b`, Name: metaType + " variable.language.swift"},
+		},
+	},
 	// The $ of $name and $( ) has no scope of its own. Copies of the two
 	// interpolation rules; the first one copies the name pattern of the Julia
 	// grammar. Only the strings that interpolate: raw"", r"", '' and var""

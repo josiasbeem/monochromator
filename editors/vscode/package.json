@@ -175,6 +175,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.java-this",
+        "path": "./syntaxes/java-this.json",
+        "injectTo": [
+          "source.java"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.latex",
         "path": "./syntaxes/latex.json",
         "injectTo": [

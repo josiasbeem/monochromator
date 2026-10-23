@@ -217,6 +217,27 @@ var injections = []injection{
 			}},
 		},
 	},
+	// this is dim only before a dot or :: (this.x, this::m), as the object of
+	// a member; alone it looks like a variable. this(...) and super(...) call
+	// a constructor and get the style of a function. Copies of
+	// constants-and-special-vars with a lookahead. A qualified this
+	// (Outer.this.x) is a property for the grammar: a copy of its property
+	// rule makes this dim there too. Method headers stay out, because the
+	// grammar gives the receiver parameter (Outer this) variable.parameter.
+	{
+		file:     "java-this.json",
+		injectTo: []string{"source.java"},
+		selector: "L:source.java - (comment | string | meta.method.identifier)",
+		patterns: []rule{
+			{Match: `\bthis\b(?=\s*\()`, Name: metaConstructor + " variable.language.this.java"},
+			{Match: `\bsuper\b(?=\s*\()`, Name: metaConstructor + " variable.language.java"},
+			{Match: `\bthis\b(?!\s*(?:\.|::|\())`, Name: metaName + " variable.language.this.java"},
+			{Match: `(\.)\s*(this)(?=\s*\.\s*[a-zA-Z_$][\w$]*)`, Captures: map[string]rule{
+				"1": {Name: "punctuation.separator.period.java"},
+				"2": {Name: metaSelf + " variable.other.object.property.java"},
+			}},
+		},
+	},
 	// Braces after commands like \title have no scope.
 	{
 		file:     "latex.json",

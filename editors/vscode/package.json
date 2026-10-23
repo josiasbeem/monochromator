@@ -254,6 +254,34 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.javascript-this",
+        "path": "./syntaxes/javascript-this.json",
+        "injectTo": [
+          "source.js"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.javascript-this-call",
+        "path": "./syntaxes/javascript-this-call.json",
+        "injectTo": [
+          "source.js"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.javascriptreact-this",
+        "path": "./syntaxes/javascriptreact-this.json",
+        "injectTo": [
+          "source.js.jsx"
+        ]
+      },
+      {
+        "scopeName": "monochromator.injection.javascriptreact-this-call",
+        "path": "./syntaxes/javascriptreact-this-call.json",
+        "injectTo": [
+          "source.js.jsx"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.regexp",
         "path": "./syntaxes/regexp.json",
         "injectTo": [

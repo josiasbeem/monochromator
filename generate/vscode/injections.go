@@ -335,6 +335,39 @@ var injections = []injection{
 			{Match: scriptSuperCall, Name: metaConstructor + " variable.language.super.tsx"},
 		},
 	},
+	// VS Code also gives source.js.jsx the injections of source.js (scope
+	// prefix). The two JavaScript injections leave JSX to the javascriptreact
+	// injections, which keep the scope names of JSX.
+	{
+		file:     "javascript-this.json",
+		injectTo: []string{"source.js"},
+		selector: "L:source.js - source.js.jsx" + scriptThisExclude,
+		patterns: []rule{{Match: scriptThisAlone, Name: metaName + " variable.language.this.js"}},
+	},
+	{
+		file:     "javascript-this-call.json",
+		injectTo: []string{"source.js"},
+		selector: "L:meta.function-call.js - meta.function-call.js.jsx",
+		patterns: []rule{
+			{Match: scriptThisCall, Name: metaConstructor + " variable.language.this.js"},
+			{Match: scriptSuperCall, Name: metaConstructor + " variable.language.super.js"},
+		},
+	},
+	{
+		file:     "javascriptreact-this.json",
+		injectTo: []string{"source.js.jsx"},
+		selector: "L:source.js.jsx" + scriptThisExclude,
+		patterns: []rule{{Match: scriptThisAlone, Name: metaName + " variable.language.this.js.jsx"}},
+	},
+	{
+		file:     "javascriptreact-this-call.json",
+		injectTo: []string{"source.js.jsx"},
+		selector: "L:meta.function-call.js.jsx",
+		patterns: []rule{
+			{Match: scriptThisCall, Name: metaConstructor + " variable.language.this.js.jsx"},
+			{Match: scriptSuperCall, Name: metaConstructor + " variable.language.super.js.jsx"},
+		},
+	},
 	// The dot shares constant.other.character-class.regexp with \s \d \w.
 	// Copy of regex-character-class without the dot.
 	{

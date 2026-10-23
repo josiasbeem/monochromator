@@ -321,6 +321,18 @@ var injections = []injection{
 			}},
 		},
 	},
+	// self is dim only before a dot (also &. and ::), as the receiver of a
+	// method; alone it looks like a variable. Copy of the self rule with a
+	// lookahead. self: is the key of a hash and stays out. Method heads stay
+	// out too: the grammar reads def +@ = self as a parameter list.
+	{
+		file:     "ruby-self.json",
+		injectTo: []string{"source.ruby"},
+		selector: "L:source.ruby - (comment | (string - meta.embedded) | meta.function.method)",
+		patterns: []rule{
+			{Match: `\bself\b(?![?!])(?!\s*(?:&?\.|::))(?!:)`, Name: metaName + " variable.language.self.ruby"},
+		},
+	},
 	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
 	// flag rule.
 	{

@@ -226,6 +226,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.ruby-self",
+        "path": "./syntaxes/ruby-self.json",
+        "injectTo": [
+          "source.ruby"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.shell",
         "path": "./syntaxes/shell.json",
         "injectTo": [

@@ -174,6 +174,7 @@ var scopeText = []string{
 	"meta.interpolation.rust",
 	// ">": only the object of the item access, not a self in the index.
 	"meta.item-access.python > variable.language.special.self.python",
+	metaName + " variable.language.self.ruby",
 	metaName + " variable.language.self.rust",
 	metaName + " variable.language.this",
 	metaName + " variable.language.special.self.python",

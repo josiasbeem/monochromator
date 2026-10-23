@@ -246,7 +246,8 @@ var injections = []injection{
 	// name: a plain match would win against the region and leave the
 	// arguments to the rule for parameter lists. A this before a name is the
 	// modifier of an extension method (this string s) and stays out; is, as,
-	// switch and with after this are operators.
+	// switch and with after this are operators. base before an index
+	// (base[0]) is not the object of a member and looks like a variable.
 	{
 		file:     "csharp-this.json",
 		injectTo: []string{"source.cs"},
@@ -259,6 +260,7 @@ var injections = []injection{
 				Patterns:      []rule{{Include: "source.cs#argument-list"}},
 			},
 			{Match: `\bthis\b(?!\s*(?:[?!]?\.|\())(?!\s+(?!(?:is|as|switch|with)\b)[@_[:alpha:]])`, Name: metaName + " variable.language.this.cs"},
+			{Match: `\bbase\b(?=\s*\[)`, Name: metaName + " variable.language.base.cs"},
 		},
 	},
 	// Braces after commands like \title have no scope.

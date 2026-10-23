@@ -369,6 +369,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.dart-this",
+        "path": "./syntaxes/dart-this.json",
+        "injectTo": [
+          "source.dart"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.groovy",
         "path": "./syntaxes/groovy.json",
         "injectTo": [

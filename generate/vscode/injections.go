@@ -564,6 +564,19 @@ var injections = []injection{
 			}},
 		},
 	},
+	// this and super are dim only before a dot (also ?. and the cascade ..),
+	// as the object of a member; alone this looks like a variable. this(...)
+	// and super(...) call a constructor and get the style of a function.
+	// Copies of the rule in constants-and-special-vars with a lookahead.
+	{
+		file:     "dart-this.json",
+		injectTo: []string{"source.dart"},
+		selector: "L:source.dart - (comment | (string - meta.embedded.expression))",
+		patterns: []rule{
+			{Match: `(?<!\$)\b(?:this|super)\b(?!\$)(?=\s*\??\.)`, Name: metaSelf + " variable.language.dart"},
+			{Match: `(?<!\$)\b(?:this|super)\b(?!\$)(?=\s*\()`, Name: metaConstructor + " variable.language.dart"},
+		},
+	},
 	// The rule for $name takes $ and the first letter. Copy of that rule. A dot
 	// is part of $name only before a name: in "$major.$minor" it is text of
 	// the string. Strings in """ """ have a scope of their own.

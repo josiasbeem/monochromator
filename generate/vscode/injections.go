@@ -162,11 +162,13 @@ var injections = []injection{
 	},
 	// self is dim only before a dot, as the object of a field; alone and as
 	// parameter it looks like a variable. As path (use a::{self}, self::m) it
-	// stays dim like super. Copy of lvariables with a lookahead.
+	// stays dim like super. Copy of lvariables with a lookahead. Attributes
+	// (#[instrument(skip(self))]) and extern crate self stay out: there the
+	// grammar gives self no scope of its own.
 	{
 		file:     "rust-self.json",
 		injectTo: []string{"source.rust"},
-		selector: "L:source.rust - (comment | string | meta.use)",
+		selector: "L:source.rust - (comment | string | meta.use | meta.import | meta.attribute)",
 		patterns: []rule{
 			{Match: `\bself\b(?!\s*(?:\.|::))`, Name: metaName + " variable.language.self.rust"},
 		},

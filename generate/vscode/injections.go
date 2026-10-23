@@ -333,6 +333,19 @@ var injections = []injection{
 			{Match: `\bself\b(?![?!])(?!\s*(?:&?\.|::))(?!:)`, Name: metaName + " variable.language.self.ruby"},
 		},
 	},
+	// self is dim only before a dot or a colon (self.x, self:m()), as the
+	// object of a member; alone it looks like a variable. .. joins strings and
+	// does not count as a dot. Copy of the self rule with a lookahead.
+	// Parameter lists stay out, because there the grammar gives self
+	// variable.parameter.
+	{
+		file:     "lua-self.json",
+		injectTo: []string{"source.lua"},
+		selector: "L:source.lua - (comment | string | meta.parameter)",
+		patterns: []rule{
+			{Match: `(?<![^.]\.|:)\b(self)\b(?!\s*(?:\.(?!\.)|:))`, Name: metaName + " variable.language.self.lua"},
+		},
+	},
 	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
 	// flag rule.
 	{

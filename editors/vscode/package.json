@@ -233,6 +233,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.lua-self",
+        "path": "./syntaxes/lua-self.json",
+        "injectTo": [
+          "source.lua"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.shell",
         "path": "./syntaxes/shell.json",
         "injectTo": [

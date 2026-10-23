@@ -390,6 +390,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.groovy-this",
+        "path": "./syntaxes/groovy-this.json",
+        "injectTo": [
+          "source.groovy"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.python",
         "path": "./syntaxes/python.json",
         "injectTo": [

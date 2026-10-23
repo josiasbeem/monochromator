@@ -603,6 +603,20 @@ var injections = []injection{
 			{Match: `[-+*/%=!<>&|?:.,()\[\]]`, Name: metaPunctuation},
 		},
 	},
+	// this and super are dim only before a dot (also ?.), as the object of a
+	// member; alone this looks like a variable. this(...) and super(...) call
+	// a constructor and get the style of a function. Copies of
+	// language-variables with a lookahead. Strings stay out: the grammar gives
+	// the content of ${ } no scopes.
+	{
+		file:     "groovy-this.json",
+		injectTo: []string{"source.groovy"},
+		selector: "L:source.groovy - (comment | string)",
+		patterns: []rule{
+			{Match: `\b(?:this|super)\b(?=\s*\??\.(?!\.))`, Name: metaSelf + " variable.language.groovy"},
+			{Match: `\b(?:this|super)\b(?=\s*\()`, Name: metaConstructor + " variable.language.groovy"},
+		},
+	},
 	// self is dim only before a dot, as the object of an attribute; alone it
 	// looks like a variable, and cls before a dot is dim too. Copies of
 	// special-variables with a lookahead. f-strings stay out, because their

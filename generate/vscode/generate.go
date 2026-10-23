@@ -334,6 +334,9 @@ var scopeItalicText = []string{
 	metaConstructor + " variable.language.super",
 	metaConstructor + " variable.language.this",
 	"meta.function-call.generic.python",
+	// ">": only the name of the call, not a self or cls in its arguments.
+	"meta.function-call.python > variable.language.special.cls.python",
+	"meta.function-call.python > variable.language.special.self.python",
 	"support.function",
 }
 

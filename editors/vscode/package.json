@@ -397,6 +397,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.powershell-this",
+        "path": "./syntaxes/powershell-this.json",
+        "injectTo": [
+          "source.powershell"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.python",
         "path": "./syntaxes/python.json",
         "injectTo": [

@@ -617,6 +617,22 @@ var injections = []injection{
 			{Match: `\b(?:this|super)\b(?=\s*\()`, Name: metaConstructor + " variable.language.groovy"},
 		},
 	},
+	// $this is dim only before a member ($this.x, $this.Foo()), as the object
+	// of the member; alone it looks like a variable. The grammar takes $this
+	// and its members in one match. Copy of that match for $this with at least
+	// one member. Strings stay out, except for $( ).
+	{
+		file:     "powershell-this.json",
+		injectTo: []string{"source.powershell"},
+		selector: "L:source.powershell - (comment | (string - meta.embedded))",
+		patterns: []rule{
+			{Match: `(\$)((?i:This)\b)((?:\.(?:\p{L}|\d|_)+)+\b)`, Captures: map[string]rule{
+				"0": {Name: metaSelf + " support.variable.automatic.powershell"},
+				"1": {Name: "punctuation.definition.variable.powershell"},
+				"3": {Name: "variable.other.member.powershell"},
+			}},
+		},
+	},
 	// self is dim only before a dot, as the object of an attribute; alone it
 	// looks like a variable, and cls before a dot is dim too. Copies of
 	// special-variables with a lookahead. f-strings stay out, because their

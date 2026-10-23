@@ -61,6 +61,7 @@ var scopeGray = []string{
 	metaSelf + " variable.language.swift",
 	metaSelf + " variable.language.dart",
 	metaSelf + " variable.language.groovy",
+	metaSelf + " support.variable.automatic.powershell",
 	"meta.separator.markdown",
 	"punctuation",
 	"punctuation.definition.annotation",

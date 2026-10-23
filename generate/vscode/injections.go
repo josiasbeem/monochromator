@@ -289,6 +289,23 @@ var injections = []injection{
 			{Match: `[{}]`, Name: metaPunctuation},
 		},
 	},
+	// this is dim only before ->, as the object of a member; alone (return
+	// *this, run(this), [this]) it looks like a variable. Copy of
+	// the_this_keyword with a lookahead. The grammar starts that match at the
+	// white space before this, and the copy does the same: only a match at the
+	// same position wins. Parameter lists stay out: there the grammar starts
+	// each parameter at its first word, and it reads this Self&& self as a
+	// type.
+	{
+		file:     "cpp-this.json",
+		injectTo: []string{"source.cpp"},
+		selector: "L:source.cpp - (comment | string | meta.function.definition.parameters | meta.parameter)",
+		patterns: []rule{
+			{Match: `(\s*+)((?<!\w)this(?!\w))(?!\s*->)`, Captures: map[string]rule{
+				"2": {Name: metaName + " variable.language.this.cpp"},
+			}},
+		},
+	},
 	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
 	// flag rule.
 	{

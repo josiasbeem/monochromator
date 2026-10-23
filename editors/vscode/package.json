@@ -212,6 +212,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.cpp-this",
+        "path": "./syntaxes/cpp-this.json",
+        "injectTo": [
+          "source.cpp"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.shell",
         "path": "./syntaxes/shell.json",
         "injectTo": [

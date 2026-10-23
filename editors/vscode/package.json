@@ -219,6 +219,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.php-this",
+        "path": "./syntaxes/php-this.json",
+        "injectTo": [
+          "text.html.php"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.shell",
         "path": "./syntaxes/shell.json",
         "injectTo": [

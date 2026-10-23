@@ -306,6 +306,21 @@ var injections = []injection{
 			}},
 		},
 	},
+	// $this is dim only before -> or :: ($this->x, $this::C), as the object of
+	// a member; alone it looks like a variable. Copy of var_language with a
+	// lookahead. Strings stay out: in "$this->x" the grammar reads this as a
+	// plain variable. VS Code gives PHP files the root text.html.php, which
+	// embeds source.php.
+	{
+		file:     "php-this.json",
+		injectTo: []string{"text.html.php"},
+		selector: "L:source.php - (comment | string)",
+		patterns: []rule{
+			{Match: `(\$)this\b(?!\s*(?:\??->|::|\())`, Name: metaName + " variable.language.this.php", Captures: map[string]rule{
+				"1": {Name: "punctuation.definition.variable.php"},
+			}},
+		},
+	},
 	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
 	// flag rule.
 	{

@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.javascriptreact-this-call",
+	"injectionSelector": "L:meta.function-call.js.jsx",
+	"patterns": [
+		{
+			"match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))this\\b(?!\\$)(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.this.js.jsx"
+		},
+		{
+			"match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))super\\b(?!\\$)(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.super.js.jsx"
+		}
+	]
+}

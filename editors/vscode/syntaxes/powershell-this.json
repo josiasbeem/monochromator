@@ -1,0 +1,20 @@
+{
+	"scopeName": "monochromator.injection.powershell-this",
+	"injectionSelector": "L:source.powershell - (comment | (string - meta.embedded))",
+	"patterns": [
+		{
+			"match": "(\\$)((?i:This)\\b)((?:\\.(?:\\p{L}|\\d|_)+)+\\b)",
+			"captures": {
+				"0": {
+					"name": "meta.self.monochromator support.variable.automatic.powershell"
+				},
+				"1": {
+					"name": "punctuation.definition.variable.powershell"
+				},
+				"3": {
+					"name": "variable.other.member.powershell"
+				}
+			}
+		}
+	]
+}

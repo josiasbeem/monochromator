@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.dart-this",
+	"injectionSelector": "L:source.dart - (comment | (string - meta.embedded.expression))",
+	"patterns": [
+		{
+			"match": "(?<!\\$)\\b(?:this|super)\\b(?!\\$)(?=\\s*\\??\\.)",
+			"name": "meta.self.monochromator variable.language.dart"
+		},
+		{
+			"match": "(?<!\\$)\\b(?:this|super)\\b(?!\\$)(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.dart"
+		}
+	]
+}

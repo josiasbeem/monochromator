@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.rust-self",
+	"injectionSelector": "L:source.rust - (comment | string | meta.use | meta.import | meta.attribute)",
+	"patterns": [
+		{
+			"match": "\\bself\\b(?!\\s*(?:\\.|::))",
+			"name": "meta.name.monochromator variable.language.self.rust"
+		}
+	]
+}

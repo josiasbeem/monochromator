@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.ruby-self",
+	"injectionSelector": "L:source.ruby - (comment | (string - meta.embedded) | meta.function.method)",
+	"patterns": [
+		{
+			"match": "\\bself\\b(?![?!])(?!\\s*(?:&?\\.|::))(?!:)",
+			"name": "meta.name.monochromator variable.language.self.ruby"
+		}
+	]
+}

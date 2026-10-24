@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.groovy-this",
+	"injectionSelector": "L:source.groovy - (comment | string)",
+	"patterns": [
+		{
+			"match": "\\b(?:this|super)\\b(?=\\s*\\??\\.(?!\\.))",
+			"name": "meta.self.monochromator variable.language.groovy"
+		},
+		{
+			"match": "\\b(?:this|super)\\b(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.groovy"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.cpp-this",
+	"injectionSelector": "L:source.cpp - (comment | string | meta.function.definition.parameters | meta.parameter)",
+	"patterns": [
+		{
+			"match": "(\\s*+)((?<!\\w)this(?!\\w))(?!\\s*->)",
+			"captures": {
+				"2": {
+					"name": "meta.name.monochromator variable.language.this.cpp"
+				}
+			}
+		}
+	]
+}

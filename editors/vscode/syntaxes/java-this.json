@@ -1,0 +1,29 @@
+{
+	"scopeName": "monochromator.injection.java-this",
+	"injectionSelector": "L:source.java - (comment | string | meta.method.identifier)",
+	"patterns": [
+		{
+			"match": "\\bthis\\b(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.this.java"
+		},
+		{
+			"match": "\\bsuper\\b(?=\\s*\\()",
+			"name": "meta.constructor.monochromator variable.language.java"
+		},
+		{
+			"match": "\\bthis\\b(?!\\s*(?:\\.|::|\\())",
+			"name": "meta.name.monochromator variable.language.this.java"
+		},
+		{
+			"match": "(\\.)\\s*(this|super)(?=\\s*\\.\\s*[a-zA-Z_$][\\w$]*)",
+			"captures": {
+				"1": {
+					"name": "punctuation.separator.period.java"
+				},
+				"2": {
+					"name": "meta.self.monochromator variable.other.object.property.java"
+				}
+			}
+		}
+	]
+}

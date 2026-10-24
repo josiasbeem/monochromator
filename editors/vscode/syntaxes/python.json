@@ -1,0 +1,22 @@
+{
+	"scopeName": "monochromator.injection.python",
+	"injectionSelector": "L:source.python - (comment | string | meta.fstring | meta.function.parameters | meta.function.lambda.parameters)",
+	"patterns": [
+		{
+			"match": "\\b(?<!\\.)(self)\\b(?!\\s*[.(\\[])",
+			"captures": {
+				"1": {
+					"name": "meta.name.monochromator variable.language.special.self.python"
+				}
+			}
+		},
+		{
+			"match": "\\b(?<!\\.)(cls)\\b(?=\\s*\\.)",
+			"captures": {
+				"1": {
+					"name": "meta.self.monochromator variable.language.special.cls.python"
+				}
+			}
+		}
+	]
+}

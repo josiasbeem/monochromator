@@ -1,0 +1,28 @@
+{
+	"scopeName": "monochromator.injection.csharp-this",
+	"injectionSelector": "L:source.cs - (comment | (string - meta.embedded.interpolation))",
+	"patterns": [
+		{
+			"begin": "\\b(base|this)\\b\\s*(?=\\()",
+			"end": "(?<=\\))",
+			"beginCaptures": {
+				"1": {
+					"name": "meta.constructor.monochromator variable.language.$1.cs"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.cs#argument-list"
+				}
+			]
+		},
+		{
+			"match": "\\bthis\\b(?!\\s*(?:[?!]?\\.|\\())(?!\\s+(?!(?:is|as|switch|with)\\b)[@_[:alpha:]])",
+			"name": "meta.name.monochromator variable.language.this.cs"
+		},
+		{
+			"match": "\\bbase\\b(?=\\s*\\[)",
+			"name": "meta.name.monochromator variable.language.base.cs"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.lua-self",
+	"injectionSelector": "L:source.lua - (comment | string | meta.parameter)",
+	"patterns": [
+		{
+			"match": "(?<![^.]\\.|:)\\b(self)\\b(?!\\s*(?:\\.(?!\\.)|:))",
+			"name": "meta.name.monochromator variable.language.self.lua"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"scopeName": "monochromator.injection.swift-self",
+	"injectionSelector": "L:source.swift - (comment | (string - meta.embedded.line))",
+	"patterns": [
+		{
+			"match": "(?<!\\.)\\b(?:self|super)\\b(?=\\s*[?!]?\\.(?!\\.))",
+			"name": "meta.self.monochromator variable.language.swift"
+		},
+		{
+			"match": "(?<!\\.)\\bSelf\\b",
+			"name": "meta.type.monochromator variable.language.swift"
+		}
+	]
+}

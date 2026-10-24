@@ -1,0 +1,15 @@
+{
+	"scopeName": "monochromator.injection.php-this",
+	"injectionSelector": "L:source.php - (comment | string)",
+	"patterns": [
+		{
+			"match": "(\\$)this\\b(?!\\s*(?:\\??->|::|\\())",
+			"name": "meta.name.monochromator variable.language.this.php",
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.variable.php"
+				}
+			}
+		}
+	]
+}

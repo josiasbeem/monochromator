@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.javascript-this",
+	"injectionSelector": "L:source.js - source.js.jsx - (comment | (string - meta.template.expression) | meta.type.annotation | meta.return.type | meta.type.parameters | meta.type.declaration | meta.type.function.return | meta.type.paren.cover | meta.type.tuple | meta.parameters | (meta.arrow - (meta.arrow meta.block)) | (meta.jsx.children - meta.embedded.expression) | (meta.embedded.expression meta.jsx.children))",
+	"patterns": [
+		{
+			"match": "(?<!=>)(?<!=>\\s)(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))this\\b(?!\\$)(?!\\s*(?:[?!]?\\.|\\(|:))",
+			"name": "meta.name.monochromator variable.language.this.js"
+		}
+	]
+}

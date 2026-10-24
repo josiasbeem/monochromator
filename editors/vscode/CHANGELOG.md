@@ -4,6 +4,49 @@ This file shows all important changes to the Monochromator extension for VS Code
 
 The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.36.0] - 2026-10-24
+
+### Added
+
+- Injection grammars for 19 languages, to fix scopes that the built-in grammars get wrong or do not set: Bash, C, C#, C++, Dart, Groovy, Java, JavaScript, Julia, LaTeX, Lua, PHP, PowerShell, Python, Ruby, Rust, Swift, TypeScript, and Zig
+
+### Changed
+
+- Darker accent colors in the light themes. Literals now have at least 6.8:1 contrast on the cursor line, and color-blind readers can tell them apart from comments
+- The light Amethyst theme now uses the violet of the dark theme
+- Brighter red in the dark themes (`#fe303a` -> `#ff4a4b`)
+- Quieter cursor line in the dark themes (`#202024` -> `#161619`)
+- More even blue tint in the grays, with the same lightness
+- `this` and `self` are now gray only before a dot or an arrow (`this.name`, `self.x`, `this->x`). Alone or as a parameter, they look like a variable
+    - Calls such as `super()`, `this()`, `base()`, `cls()`, and `new this()` are now italic like other calls
+    - `Self` in Swift is now underlined like a type, as in Rust
+- Word operators such as `and`, `or`, `not`, `in`, `is`, `as`, and `instanceof` are now bold like other keywords
+- Words written like a call are now italic: `sizeof`, `typeof`, `nameof`, `alignof`, `alignas`, `typeid`, and `import()`
+- Names in string interpolation now look like the same names outside the string
+- The delimiters and format specs of interpolation, such as `${`, `#{`, `$(`, and `:>8`, are now underlined in the accent color, also the `$` before a name
+- Type names are now underlined also in their declaration, for example `class Box`, `enum Kind`, and Rust structs and traits
+- `null`, `undefined`, `true`, and `false` in TypeScript types now look like literals, and `this` in a type is gray
+- Rust enum variants such as `Some`, `Ok`, and your own variants are now italic like constructors
+- Python docstrings now look like comments. Doctest prompts (`>>>`, `...`) and code tags such as `TODO` and `FIXME` are bold, like doc tags
+- Diff lines are now green and red
+- Prefixes and suffixes of numbers, such as `0x` and `j` in Python and `n` in JavaScript, now have the literal color
+- Regex escapes such as `\d` in JavaScript and TypeScript are now underlined in the accent color
+- Test operators in Bash and PowerShell, such as `-f`, `-eq`, and `-and`, now use the text color, like other flags
+- The extension now links to the repository on GitHub
+
+### Fixed
+
+- Keys in YAML and INI, namespaces, and variables in Typst were not in the text color
+- Some parts of doc comments did not look like comments: type names in Javadoc, type braces in JSDoc, attribute values in C# doc comments, and types in LuaDoc
+- Tags in C# doc comments and LuaDoc did not look like doc tags
+- Brackets in Julia, TSX, and Zig, regex anchors, the YAML folded block indicator, the Typst `#`, the Makefile `@`, the PowerShell `@` in `@(` and `@{`, and Bash heredoc delimiters were not gray
+- String prefixes in Python and Rust (`f`, `r`, `b`) were underlined
+- The Markdown escape (`\*`) was not underlined in the accent color
+- CSS pseudo-elements, the C# `event` keyword, and TOML array table names were not bold
+- Integer types, C types, and type keywords in Zig were not underlined
+- Built-in Python decorators such as `@property` were not gray like other decorators
+- Automatic variables in PowerShell strings did not have the text color
+
 ## [0.35.0] - 2026-10-02
 
 ### Changed
@@ -694,6 +737,7 @@ The format of this file follows [Keep a Changelog](https://keepachangelog.com/en
 - Monochromator Dark
 - Monochromator Light
 
+[0.36.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.35.0...vscode/v0.36.0
 [0.35.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.34.0...vscode/v0.35.0
 [0.34.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.33.1...vscode/v0.34.0
 [0.33.1]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.33.0...vscode/v0.33.1

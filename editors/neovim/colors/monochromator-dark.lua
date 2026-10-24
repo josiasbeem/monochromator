@@ -5,32 +5,33 @@ vim.g.colors_name = "monochromator-dark"
 local c = {
   accent = "#02a9ff",
   bg = "#08080a",
+  bg_line = "#161619",
   bg_secondary = "#202024",
-  bg_selection = "#393941",
+  bg_selection = "#393940",
   blue = "#02a9ff",
   border = "#505058",
   cyan = "#00f3ff",
   diff_add = "#0e281c",
   diff_change = "#2d2113",
-  diff_delete = "#2d0e11",
+  diff_delete = "#2d1214",
   diff_text = "#533a1d",
   diff_text_add = "#14492e",
-  fg = "#ccccce",
+  fg = "#cbccd0",
   fg_contrast = "#ffffff",
   fg_faint = "#2e2e31",
-  fg_muted = "#808086",
+  fg_muted = "#808087",
   fold = "#141417",
   green = "#30df81",
   inlay_hint = "#202024",
   magenta = "#d559ff",
   orange = "#ffae49",
-  red = "#fe303a",
-  reference = "#212126",
+  red = "#ff4a4b",
+  reference = "#212125",
   reference_write = "#063047",
-  search = "#2d2d33",
+  search = "#2d2d32",
   selection = "#063954",
   terminal_black = "#08080a",
-  terminal_white = "#ccccce",
+  terminal_white = "#cbccd0",
   yellow = "#fff556",
 }
 
@@ -251,7 +252,7 @@ set(0, "Constant", { fg = c.accent, nocombine = true })
 set(0, "CurSearch", { bg = c.bg_selection })
 set(0, "Cursor", { fg = c.bg, bg = c.fg })
 set(0, "CursorColumn", { bg = c.bg_secondary })
-set(0, "CursorLine", { bg = c.bg_secondary })
+set(0, "CursorLine", { bg = c.bg_line })
 set(0, "CursorLineNr", { fg = c.fg })
 set(0, "Delimiter", { fg = c.fg_muted, nocombine = true })
 set(0, "DiagnosticDeprecated", { strikethrough = true })

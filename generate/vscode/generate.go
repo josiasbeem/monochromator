@@ -513,7 +513,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"editor.foldBackground":                               p.BGSecondary + "80",
 		"editor.foreground":                                   p.FG,
 		"editor.hoverHighlightBackground":                     p.BGSelection + "80",
-		"editor.lineHighlightBackground":                      p.BGSecondary,
+		"editor.lineHighlightBackground":                      p.BGLine,
 		"editor.selectionBackground":                          p.BGSelection,
 		"editor.selectionHighlightBackground":                 p.BGSelection,
 		"editor.stackFrameHighlightBackground":                p.Yellow + "33",

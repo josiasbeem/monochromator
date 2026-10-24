@@ -48,7 +48,7 @@
 "ui.cursor" = { fg = "bg", bg = "fg_muted" }
 "ui.cursor.match" = { bg = "bg_selection" }
 "ui.cursor.primary" = { fg = "bg", bg = "fg" }
-"ui.cursorline.primary" = { bg = "bg_secondary" }
+"ui.cursorline.primary" = { bg = "bg_line" }
 "ui.help" = { fg = "fg", bg = "bg_secondary" }
 "ui.highlight" = { bg = "bg_secondary" }
 "ui.linenr" = { fg = "fg_muted" }
@@ -76,16 +76,17 @@
 [palette]
 accent = "#d559ff"
 bg = "#08080a"
+bg_line = "#161619"
 bg_secondary = "#202024"
-bg_selection = "#393941"
+bg_selection = "#393940"
 blue = "#02a9ff"
 border = "#505058"
-fg = "#ccccce"
+fg = "#cbccd0"
 fg_contrast = "#ffffff"
 fg_faint = "#2e2e31"
-fg_muted = "#808086"
+fg_muted = "#808087"
 green = "#30df81"
 inlay_hint = "#202024"
 orange = "#ffae49"
-red = "#fe303a"
+red = "#ff4a4b"
 selection = "#462054"

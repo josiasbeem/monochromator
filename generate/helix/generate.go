@@ -18,6 +18,7 @@ type color string
 const (
 	accent      color = "accent"
 	bg          color = "bg"
+	bgLine      color = "bg_line"
 	bgSecondary color = "bg_secondary"
 	bgSelection color = "bg_selection"
 	blue        color = "blue"
@@ -132,7 +133,7 @@ func buildUI(jumpLabel color) map[string]style {
 		"ui.cursor":                {fg: bg, bg: fgMuted},
 		"ui.cursor.match":          {bg: bgSelection},
 		"ui.cursor.primary":        {fg: bg, bg: fg},
-		"ui.cursorline.primary":    {bg: bgSecondary},
+		"ui.cursorline.primary":    {bg: bgLine},
 		"ui.help":                  {fg: fg, bg: bgSecondary},
 		"ui.highlight":             {bg: bgSecondary},
 		"ui.linenr":                {fg: fgMuted},
@@ -162,6 +163,7 @@ func buildUI(jumpLabel color) map[string]style {
 func buildPalette(mode string, p palette.Palette, accentHex string) (map[color]string, error) {
 	colors := map[color]string{
 		bg:          p.BG,
+		bgLine:      p.BGLine,
 		bgSecondary: p.BGSecondary,
 		bgSelection: p.BGSelection,
 		blue:        p.Blue,

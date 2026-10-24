@@ -9,12 +9,16 @@ import (
 	"path/filepath"
 )
 
-// Palette is the full color set for one mode (dark or light).
+// Palette is the full color set for one mode (dark or light). BGLine is
+// the background of the line with the cursor. It has its own key because
+// BGSecondary also colors the side bar, and in the dark mode that step is
+// too strong for a line inside the code.
 type Palette struct {
 	BG          string `json:"bg"`
 	BGSecondary string `json:"bg_secondary"`
 	BGSelection string `json:"bg_selection"`
 	BGElevated  string `json:"bg_elevated"`
+	BGLine      string `json:"bg_line"`
 	FG          string `json:"fg"`
 	FGContrast  string `json:"fg_contrast"`
 	FGMuted     string `json:"fg_muted"`
@@ -67,12 +71,17 @@ type Config struct {
 	Variants []Variant
 }
 
-// Validate makes sure that both mode palettes exist, that a "default"
-// variant exists, and that each variant has a name and a known color.
+// Validate makes sure that both mode palettes exist and have a line
+// background, that a "default" variant exists, and that each variant has
+// a name and a known color.
 func (c *Config) Validate() error {
 	for _, mode := range []string{"dark", "light"} {
-		if _, ok := c.Palettes[mode]; !ok {
+		p, ok := c.Palettes[mode]
+		if !ok {
 			return fmt.Errorf("missing %q palette", mode)
+		}
+		if p.BGLine == "" {
+			return fmt.Errorf("%q palette has no bg_line", mode)
 		}
 	}
 

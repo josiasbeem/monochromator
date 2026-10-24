@@ -18,6 +18,7 @@ type color string
 const (
 	accent         color = "accent"
 	bg             color = "bg"
+	bgLine         color = "bg_line"
 	bgSecondary    color = "bg_secondary"
 	bgSelection    color = "bg_selection"
 	blue           color = "blue"
@@ -384,7 +385,7 @@ func buildUI() map[string]style {
 		"CurSearch":                {bg: bgSelection},
 		"Cursor":                   {fg: bg, bg: fg},
 		"CursorColumn":             {bg: bgSecondary},
-		"CursorLine":               {bg: bgSecondary},
+		"CursorLine":               {bg: bgLine},
 		"CursorLineNr":             {fg: fg},
 		"DiagnosticDeprecated":     {attrs: []attr{strikethrough}},
 		"DiagnosticError":          {fg: red},
@@ -468,6 +469,7 @@ var terminalColors = []color{
 func buildPalette(mode string, p palette.Palette, accentHex string) (map[color]string, error) {
 	colors := map[color]string{
 		bg:            p.BG,
+		bgLine:        p.BGLine,
 		bgSecondary:   p.BGSecondary,
 		bgSelection:   p.BGSelection,
 		blue:          p.Blue,

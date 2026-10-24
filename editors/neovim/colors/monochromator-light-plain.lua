@@ -4,33 +4,34 @@ vim.g.colors_name = "monochromator-light-plain"
 
 local c = {
   bg = "#ffffff",
+  bg_line = "#f0f0f2",
   bg_secondary = "#f0f0f2",
   bg_selection = "#d8d8dc",
-  blue = "#2563eb",
-  border = "#a2a2a5",
-  cyan = "#007b94",
-  diff_add = "#d9ece3",
-  diff_change = "#f5e5d9",
-  diff_delete = "#faddde",
-  diff_text = "#eccab2",
-  diff_text_add = "#b2d8c7",
-  fg = "#303034",
+  blue = "#0745cb",
+  border = "#a1a2a8",
+  cyan = "#005b6e",
+  diff_add = "#d9e7e0",
+  diff_change = "#eee1d9",
+  diff_delete = "#f2d9dc",
+  diff_text = "#ddc3b2",
+  diff_text_add = "#b2cfc1",
+  fg = "#303035",
   fg_contrast = "#000000",
   fg_faint = "#d4d4d6",
-  fg_muted = "#76767c",
+  fg_muted = "#76767d",
   fold = "#f7f7f8",
-  green = "#017f45",
+  green = "#006032",
   inlay_hint = "#f7f7f8",
-  magenta = "#cf207e",
-  orange = "#bf4e00",
-  red = "#e01b24",
+  magenta = "#8714a9",
+  orange = "#8d3800",
+  red = "#aa0012",
   reference = "#ebebed",
-  reference_write = "#c8d8fa",
+  reference_write = "#c1d0f2",
   search = "#e2e2e5",
   selection = "#d8d8dc",
-  terminal_black = "#303034",
+  terminal_black = "#303035",
   terminal_white = "#ffffff",
-  yellow = "#856e00",
+  yellow = "#635100",
 }
 
 local set = vim.api.nvim_set_hl
@@ -250,7 +251,7 @@ set(0, "Constant", { fg = c.fg, nocombine = true })
 set(0, "CurSearch", { bg = c.bg_selection })
 set(0, "Cursor", { fg = c.bg, bg = c.fg })
 set(0, "CursorColumn", { bg = c.bg_secondary })
-set(0, "CursorLine", { bg = c.bg_secondary })
+set(0, "CursorLine", { bg = c.bg_line })
 set(0, "CursorLineNr", { fg = c.fg })
 set(0, "Delimiter", { fg = c.fg, nocombine = true })
 set(0, "DiagnosticDeprecated", { strikethrough = true })

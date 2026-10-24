@@ -77,7 +77,7 @@ func buildStyle(mode string, p palette.Palette, syntax map[string]any, accent st
 		"created":                       p.Green,
 		"deleted":                       p.Red,
 		"drop_target.background":        p.BGSelection + "80",
-		"editor.active_line.background": p.BGSecondary,
+		"editor.active_line.background": p.BGLine,
 		"editor.active_line_number":     p.FG,
 		"editor.active_wrap_guide":      p.FGMuted + "50",
 		"editor.background":             p.BG,

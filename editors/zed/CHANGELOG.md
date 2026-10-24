@@ -4,6 +4,17 @@ This file shows all important changes to the Monochromator extension for Zed.
 
 The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-10-24
+
+### Changed
+
+- Darker accent colors in the light themes. Literals now have at least 6.8:1 contrast on the cursor line, and color-blind readers can tell them apart from comments
+- The light Amethyst theme now uses the violet of the dark theme
+- Brighter red in the dark themes (`#fe303a` -> `#ff4a4b`)
+- Quieter cursor line in the dark themes (`#202024` -> `#161619`)
+- More even blue tint in the grays, with the same lightness
+- The extension now links to the repository on GitHub
+
 ## [0.4.0] - 2026-09-22
 
 ### Changed
@@ -65,6 +76,7 @@ The format of this file follows [Keep a Changelog](https://keepachangelog.com/en
 
 - First release
 
+[0.5.0]: https://github.com/josiasbeem/monochromator/compare/zed/v0.4.0...zed/v0.5.0
 [0.4.0]: https://github.com/josiasbeem/monochromator/compare/zed/v0.3.0...zed/v0.4.0
 [0.3.0]: https://github.com/josiasbeem/monochromator/compare/zed/v0.2.2...zed/v0.3.0
 [0.2.2]: https://github.com/josiasbeem/monochromator/compare/zed/v0.2.1...zed/v0.2.2

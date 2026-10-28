@@ -708,6 +708,18 @@ var injections = []injection{
 			{Match: goPackageQualifier, Name: metaName + " entity.name.type.go"},
 		},
 	},
+	// The grammar gives the whole content of a rune ('a', '\n') one scope; an
+	// escape has no scope of its own as in a string. Copy of the escape branch
+	// of runes. The marker is the innermost scope, so its own rule wins against
+	// the rule of the rune.
+	{
+		file:     "go-rune.json",
+		injectTo: []string{"source.go"},
+		selector: "L:string.quoted.rune.go",
+		patterns: []rule{
+			{Match: `\G\\(?:[0-7]{3}|[abfnrtv\\'"]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8})(?=')`, Name: "constant.other.rune.go " + metaPlaceholder},
+		},
+	},
 }
 
 func (in injection) scopeName() string {

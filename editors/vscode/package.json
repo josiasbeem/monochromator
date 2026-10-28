@@ -416,6 +416,13 @@
         "injectTo": [
           "source.go"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.go-rune",
+        "path": "./syntaxes/go-rune.json",
+        "injectTo": [
+          "source.go"
+        ]
       }
     ]
   }

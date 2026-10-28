@@ -113,6 +113,7 @@ var scopeBoldItalicGray = []string{
 	"entity.name.tag.localname.cs",
 	"keyword.codetag",
 	"keyword.other.documentation",
+	metaDocTag,
 	"meta.shebang.shell",
 	"punctuation.definition.block.tag.jsdoc",
 	"storage.type.annotation.lua",

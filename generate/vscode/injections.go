@@ -22,6 +22,7 @@ const (
 	metaSelf         = "meta.self.monochromator"         // rule 7: self and this
 	metaName         = "meta.name.monochromator"         // rule 1: names
 	metaFlag         = "meta.flag.monochromator"         // rule 1: shell flags
+	metaDocTag       = "meta.doctag.monochromator"       // rule 9: doc tags
 	metaRawString    = "meta.rawstring.monochromator"    // marker without a style
 	metaTypeOperator = "meta.typeoperator.monochromator" // marker without a style
 	metaEnumBody     = "meta.enumbody.monochromator"     // marker without a style
@@ -718,6 +719,19 @@ var injections = []injection{
 		selector: "L:string.quoted.rune.go",
 		patterns: []rule{
 			{Match: `\G\\(?:[0-7]{3}|[abfnrtv\\'"]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8})(?=')`, Name: "constant.other.rune.go " + metaPlaceholder},
+		},
+	},
+	// Code tags in comments (TODO, BUG(name)) have no scope in Go; Python shows
+	// them as doc tags. A selector like context.TODO is a name: the first
+	// pattern takes it without a scope.
+	{
+		file:     "go-codetag.json",
+		injectTo: []string{"source.go"},
+		// Without the parentheses vscode-textmate reads only the first part.
+		selector: "(comment.line.double-slash.go | comment.block.go)",
+		patterns: []rule{
+			{Match: `\.(?:TODO|FIXME|XXX|BUG|NOTE|HACK)\b`},
+			{Match: `\b(?:TODO|FIXME|XXX|BUG|NOTE|HACK)\b`, Name: metaDocTag},
 		},
 	},
 }

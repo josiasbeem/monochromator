@@ -423,6 +423,13 @@
         "injectTo": [
           "source.go"
         ]
+      },
+      {
+        "scopeName": "monochromator.injection.go-codetag",
+        "path": "./syntaxes/go-codetag.json",
+        "injectTo": [
+          "source.go"
+        ]
       }
     ]
   }

@@ -84,6 +84,46 @@ const (
 	scriptSuperCall   = `(?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))super\b(?!\$)(?=\s*\()`
 )
 
+// The package name of a qualified type (testing.T, *http.Request) is one match
+// of the \w+ rule in a type capture of the Go grammar, and it gets the scope of
+// the type. vscode-textmate searches a capture with patterns only up to the
+// end of the capture, so \z finds a name that ends the capture. On the line
+// itself \z never matches, because the line ends with an added newline: there
+// the package name has another scope already. The type captures have no names,
+// so the lookbehinds name the places where a type starts. One regex, because
+// each pattern of an injection costs one more search at each position.
+const (
+	goName = `[A-Za-z_]\w*+`
+	// More names in the same capture: a, b *pkg.T or x, y pkg.T.
+	goMoreNames = `(?:,[ \t]*\**` + goName + `(?:\.` + goName + `)?)*`
+	goTypeStart = `(?:` +
+		`[(\]]` + // (pkg.T, ]pkg.T
+		`|\.\.\.` + // ...pkg.T
+		`|\(\*+` + // (*pkg.T
+		`|[\w)]\s+\*+` + // x *pkg.T
+		`|\[\]\*+` + // []*pkg.T
+		`|\bmap\[[^\[\]]*\]\*+` + // map[K]*pkg.T
+		`|[\s(\[{,=]&` + // &pkg.T{
+		`|[\w)]\s+` + // x pkg.T
+		`|\([^()]*,\s*\**` + // (a, pkg.T
+		`|(?:[\w)\]]\s|:)=\s` + // = pkg.T, := pkg.T
+		`|[\w"\']:\s+` + // Key: pkg.T{
+		`)`
+	// A case of a select (case v := <-c.x) has the same text as a type.
+	goPackageAtCaptureEnd = `(?=\.` + goName + goMoreNames + `(?:[ \t]*=|[,)])?[ \t]*\z)(?<=` + goTypeStart + `\w+)(?<!\bcase\s+\**\w+)`
+	// map[pkg.K]V: the capture of the key type also holds the rest of the line.
+	goPackageInMapKey = `(?=\.` + goName + `\][^\n]*\z)(?<=\bmap\[\**\w+)`
+	goPackageInNew    = `(?=\.` + goName + `\))(?<=\bnew\(\w+)`
+	// var x pkg.T and type X pkg.T at the line end: there the capture is the
+	// whole line, and such a line always reaches the same rule of the grammar.
+	goPackageAtLineEnd = `(?=\.` + goName + `[ \t]*\n(?![\s\S]))(?<=^[ \t]*(?:var[ \t]+\w+(?:[ \t]*,[ \t]*\w+)*|type[ \t]+\w+(?:[ \t]+=)?)[ \t]+[*\[\]0-9]*\w+)`
+	// The grammar also reads the words after if, for, range and switch as
+	// types. Predeclared names and keywords are no package names.
+	goNotPackage = `(?<!\b(?:if|for|range)\s+[*&!]*\w+)(?<!\bswitch\b.*)` +
+		`(?<!\b(?:bool|byte|error|complex64|complex128|float32|float64|int|int8|int16|int32|int64|uint|uint8|uint16|uint32|uint64|uintptr|rune|string|any|comparable|true|false|nil|iota|break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var))`
+	goPackageQualifier = `\b` + goName + `(?=\.[A-Za-z_])(?:` + goPackageAtCaptureEnd + `|` + goPackageInMapKey + `|` + goPackageInNew + `|` + goPackageAtLineEnd + `)` + goNotPackage
+)
+
 var injections = []injection{
 	// Self and self share variable.language.self.rust, the anonymous lifetime
 	// '_ shares the scope of 'a. Copies of lvariables and lifetimes. Raw strings
@@ -656,6 +696,16 @@ var injections = []injection{
 			{Match: `\b(?<!\.)(cls)\b(?=\s*\.)`, Captures: map[string]rule{
 				"1": {Name: metaSelf + " variable.language.special.cls.python"},
 			}},
+		},
+	},
+	// The package name of a qualified type looks like a name (rule 1), as std
+	// in std::vector. See goPackageQualifier.
+	{
+		file:     "go-package.json",
+		injectTo: []string{"source.go"},
+		selector: "L:source.go - (comment | string)",
+		patterns: []rule{
+			{Match: goPackageQualifier, Name: metaName + " entity.name.type.go"},
 		},
 	},
 }

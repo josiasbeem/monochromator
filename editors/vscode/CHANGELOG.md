@@ -4,6 +4,19 @@ This file shows all important changes to the Monochromator extension for VS Code
 
 The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.36.1] - 2026-10-28
+
+### Changed
+
+- Go package names before a type (`testing.T`) now have the text color
+- Go code tags such as `TODO` are now bold, like doc tags
+
+### Fixed
+
+- The icon was too large for the VS Marketplace
+- Go rune escapes (`'\n'`) were not underlined
+- Lua brackets and punctuation were not gray
+
 ## [0.36.0] - 2026-10-24
 
 ### Added

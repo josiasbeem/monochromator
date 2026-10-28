@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.go-rune",
+	"injectionSelector": "L:string.quoted.rune.go",
+	"patterns": [
+		{
+			"match": "\\G\\\\(?:[0-7]{3}|[abfnrtv\\\\'\"]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8})(?=')",
+			"name": "constant.other.rune.go meta.placeholder.monochromator"
+		}
+	]
+}

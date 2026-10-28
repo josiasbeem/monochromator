@@ -1,0 +1,10 @@
+{
+	"scopeName": "monochromator.injection.lua-punctuation",
+	"injectionSelector": "source.lua - (comment | string)",
+	"patterns": [
+		{
+			"match": "[()\\[\\]{},;]|(?<!:):(?!:)|(?<!\\.)\\.(?![.\\d])",
+			"name": "meta.punctuation.monochromator"
+		}
+	]
+}

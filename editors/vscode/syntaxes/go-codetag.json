@@ -1,0 +1,13 @@
+{
+	"scopeName": "monochromator.injection.go-codetag",
+	"injectionSelector": "(comment.line.double-slash.go | comment.block.go)",
+	"patterns": [
+		{
+			"match": "\\.(?:TODO|FIXME|XXX|BUG|NOTE|HACK)\\b"
+		},
+		{
+			"match": "\\b(?:TODO|FIXME|XXX|BUG|NOTE|HACK)\\b",
+			"name": "meta.doctag.monochromator"
+		}
+	]
+}

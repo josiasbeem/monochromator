@@ -240,6 +240,13 @@
         ]
       },
       {
+        "scopeName": "monochromator.injection.lua-punctuation",
+        "path": "./syntaxes/lua-punctuation.json",
+        "injectTo": [
+          "source.lua"
+        ]
+      },
+      {
         "scopeName": "monochromator.injection.shell",
         "path": "./syntaxes/shell.json",
         "injectTo": [

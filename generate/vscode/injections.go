@@ -389,6 +389,18 @@ var injections = []injection{
 			{Match: `(?<![^.]\.|:)\b(self)\b(?!\s*(?:\.(?!\.)|:))`, Name: metaName + " variable.language.self.lua"},
 		},
 	},
+	// The Lua grammar gives brackets, commas, dots and colons no scope, so they
+	// keep the text color. Without L: the injection only fills these gaps:
+	// where the grammar matches at the same place (a parameter list, a long
+	// string [[, a label ::x::, a number .5), the grammar wins.
+	{
+		file:     "lua-punctuation.json",
+		injectTo: []string{"source.lua"},
+		selector: "source.lua - (comment | string)",
+		patterns: []rule{
+			{Match: `[()\[\]{},;]|(?<!:):(?!:)|(?<!\.)\.(?![.\d])`, Name: metaPunctuation},
+		},
+	},
 	// Test flags share keyword.operator.logical.shell with && == !. Copy of the
 	// flag rule.
 	{

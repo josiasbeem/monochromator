@@ -623,6 +623,7 @@ func buildPlainColors(p palette.Palette, mode string) map[string]string {
 		"minimap.warningHighlight":                            p.Orange,
 		"multiDiffEditor.border":                              p.Border,
 		"multiDiffEditor.headerBackground":                    p.BGSecondary,
+		"notebook.focusedCellBorder":                          p.FGMuted, // If not set, VS Code uses the transparent focusBorder.
 		"notifications.background":                            p.BGSecondary,
 		"notifications.foreground":                            p.FG,
 		"notificationsErrorIcon.foreground":                   p.FG,

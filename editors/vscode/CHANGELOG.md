@@ -4,6 +4,12 @@ This file shows all important changes to the Monochromator extension for VS Code
 
 The format of this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the version numbers follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.36.2] - 2026-11-16
+
+### Fixed
+
+- The cell focus indicator in notebooks was not visible ([#1](https://github.com/josiasbeem/monochromator/issues/1))
+
 ## [0.36.1] - 2026-10-28
 
 ### Changed
@@ -750,6 +756,8 @@ The format of this file follows [Keep a Changelog](https://keepachangelog.com/en
 - Monochromator Dark
 - Monochromator Light
 
+[0.36.2]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.36.1...vscode/v0.36.2
+[0.36.1]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.36.0...vscode/v0.36.1
 [0.36.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.35.0...vscode/v0.36.0
 [0.35.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.34.0...vscode/v0.35.0
 [0.34.0]: https://github.com/josiasbeem/monochromator/compare/vscode/v0.33.1...vscode/v0.34.0

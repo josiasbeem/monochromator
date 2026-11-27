@@ -1,4 +1,4 @@
-(deftheme monochromator-dark
+(deftheme monochromator-dark-xyaam
   "Distraction-free monochromatic dark theme with an electric-blue accent."
   :background-mode 'dark
   :kind 'color-scheme
@@ -236,26 +236,7 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'monochromator-dark)
-
- xyen@nonq  …/monochromator/editors/emacs  master? ❯ cd ..                                                                                                                           
- xyen@nonq  …/varOSS/monochromator/editors  master? ❯ cd ..                                                                                                                          
- xyen@nonq  ~/varOSS/monochromator  master? ❯                                                                                                                                        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                                                                       
 
 
 
